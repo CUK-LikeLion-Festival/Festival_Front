@@ -20,13 +20,13 @@ const options = {
 function IndexPage() {
   return (
     <div>
-      <Layout>
-        <SectionsContainer {...options}>
-          <Section>Page 1</Section>
-          <Section>Page 2</Section>
-          <Section>Page 3</Section>
-        </SectionsContainer>
-      </Layout>
+      <SectionsContainer {...options}>
+        <Section>Page 1</Section>
+        <Section>Page 2</Section>
+        <Section>
+          <Layout>Page 3</Layout>
+        </Section>
+      </SectionsContainer>
     </div>
   );
 }
