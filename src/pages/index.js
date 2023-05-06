@@ -21,7 +21,7 @@ function IndexPage() {
   return (
     <div>
       <SectionsContainer {...options}>
-        <Section>Page 1</Section>
+        <Section>s</Section>
         <Section>Page 2</Section>
         <Section>
           <Layout>Page 3</Layout>

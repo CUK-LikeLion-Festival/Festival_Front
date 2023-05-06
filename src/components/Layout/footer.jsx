@@ -5,8 +5,8 @@ import { FaGithub, FaInstagram, FaHome } from "react-icons/fa";
 const Footer = () => {
   const { data, copyright } = useFooterDetail();
   return (
-    <footer className="text-white border-t-[2px] border-solid border-cyan-900  py-4 px-4 sm:flex sm:justify-between sm:text-xs">
-      <div className="flex  justify-center sm:justify-start mb-2 sm:mb-0">
+    <footer className="text-white border-t-[2px] border-solid border-cyan-900  py-4 px-4 sm:flex sm:flex-col sm:justify-center  sm:text-xs">
+      <div className="flex justify-center  mb-2 sm:mb-0">
         <a
           href="https://github.com/CUK-LikeLion-Festival/festival_front"
           target="_blank"
@@ -31,7 +31,7 @@ const Footer = () => {
           <FaHome size={32} />
         </a>
       </div>
-      <div className="flex justify-center sm:justify-start mb-2 sm:mb-0">
+      <div className="flex justify-center  mb-2 sm:mb-0">
         <p className="text-center sm:text-left ">
           {copyright.map((item, index) => {
             return (
@@ -43,7 +43,7 @@ const Footer = () => {
           <span>ⓒ.All rights reserved.</span>
         </p>
       </div>
-      <div className="flex justify-center sm:justify-end">
+      <div className="flex justify-center ">
         <ul className="flex flex-row justify-between mb-[10px]">
           {data.map((item, index) => {
             return (
