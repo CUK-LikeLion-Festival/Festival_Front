@@ -1,7 +1,7 @@
 import { FaTimes } from "react-icons/fa";
 
 const NoticeModal = (props) => {
-  const { open, close, header } = props;
+  const { open, close, header, closeButton } = props;
 
   return (
     <div
@@ -28,7 +28,7 @@ const NoticeModal = (props) => {
               className="px-3 py-1 text-sm text-white bg-gray-600 rounded-md"
               onClick={close}
             >
-              close
+              {closeButton}
             </button>
           </footer>
         </section>
