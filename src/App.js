@@ -18,7 +18,7 @@ function App() {
         <NoticeModal
           open={modalOpen}
           close={closeModal}
-          header="공지"
+          header="공지사항"
           closeButton="닫기"
         >
           {data.map((item, index) => (
