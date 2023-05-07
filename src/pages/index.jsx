@@ -1,10 +1,11 @@
 import Layout from "../components/Layout/layout";
 import React from "react";
 import { SectionsContainer, Section } from "react-fullpage";
+import Booth from "../components/booth";
 
 const options = {
   activeClass: "active", // the class that is appended to the sections links
-  anchors: [1, 2, 3], // the anchors for each sections
+  anchors: [1, 2, "booth", 4], // the anchors for each sections
   arrowNavigation: true, // use arrow keys
   className: "SectionContainer", // the class name for the section container
   delay: 1000, // the scroll animation speed
@@ -24,7 +25,10 @@ function IndexPage() {
         <SectionsContainer {...options}>
           <Section>Page 1</Section>
           <Section>Page 2</Section>
-          <Section>Page 3</Section>
+          <Section>
+            <Booth />
+          </Section>
+          <Section>Page 4</Section>
         </SectionsContainer>
       </Layout>
     </div>
