@@ -2,6 +2,8 @@ import Layout from "../components/Layout/layout";
 import React from "react";
 import { SectionsContainer, Section } from "react-fullpage";
 import BannerImg from "../components/Banner/banner";
+import Wednesday from "../components/TimeTable/wednesday";
+import ThursDay from "../components/TimeTable/thursday";
 
 const options = {
   activeClass: "active",
@@ -24,9 +26,13 @@ function IndexPage() {
         <Section>
           <BannerImg />
         </Section>
-        <Section>Page 2</Section>
         <Section>
-          <Layout>Page 3</Layout>
+          <Wednesday />
+        </Section>
+        <Section>
+          <Layout>
+            <ThursDay />
+          </Layout>
         </Section>
       </SectionsContainer>
     </div>

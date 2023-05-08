@@ -2,7 +2,7 @@ import Banner from "../../assets/cuk_festival.png";
 
 const BannerImg = () => {
   return (
-    <div className="flex justify-center items-cente mt-10 h-5/6">
+    <div className="flex justify-center items-cente mt-10 h-5/6 opacity-70">
       <img
         src={Banner}
         alt="Banner"
