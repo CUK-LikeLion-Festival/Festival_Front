@@ -1,7 +1,8 @@
 import { FaTimes } from "react-icons/fa";
 
 const NoticeModal = (props) => {
-  const { open, close, header, closeButton } = props;
+  const { open, close, header, closeButton, closeModal, closeModalButton } =
+    props;
 
   return (
     <div
@@ -23,12 +24,18 @@ const NoticeModal = (props) => {
           <main className="px-4 py-6 border-t border-b border-gray-300">
             {props.children}
           </main>
-          <footer className="px-4 py-3 text-right">
+          <footer className="px-4 py-3 flex justify-between">
             <button
               className="px-3 py-1 text-sm text-white bg-gray-600 rounded-md"
               onClick={close}
             >
               {closeButton}
+            </button>
+            <button
+              className="px-3 py-1 text-sm text-white bg-gray-600 rounded-md"
+              onClick={closeModal}
+            >
+              {closeModalButton}
             </button>
           </footer>
         </section>
