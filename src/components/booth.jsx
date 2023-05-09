@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import BoothImg from "../assets/booth.png";
+import BoothImg from "../assets/booth_final.png";
+import { useNavigate } from "react-router-dom";
 
 const Img = styled.div`
+  padding-top: 20px;
   width: 600px;
   height: 600px;
-  margin: auto;
   @media (min-width: 350px) and (max-width: 720px) {
     width: 350px;
     height: 350px;
+    padding-top: 10px;
   }
 `;
 const Container = styled.div`
@@ -32,6 +34,7 @@ const Button = styled.button`
 `;
 
 function Booth() {
+  const navigate = useNavigate();
   const [isClicked, setIsClicked] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
   const handleButtonClick = (id) => {
@@ -51,8 +54,18 @@ function Booth() {
 
   return (
     <div>
+      <button
+        style={{
+          color: "white",
+        }}
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        뒤로가기
+      </button>
       <Img>
-        <img src={BoothImg}></img>
+        <img src={BoothImg} alt="boothImage"></img>
       </Img>
       <Container>
         {buttons.map((button) => (
