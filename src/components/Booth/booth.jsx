@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import BoothImg from "../assets/booth_final.png";
+import BoothImg from "../../assets/booth_final.png";
 import { useNavigate } from "react-router-dom";
-import Location from "../assets/location.png";
+import Location from "../../assets/location.png";
 
 const Img = styled.div`
   float: right;
