@@ -31,7 +31,7 @@ function App() {
     if (appCookies["MODAL_EXPIRES"]) return;
     console.log(appCookies["MODAL_EXPIRES"]);
     setHasCookie(false);
-  }, []);
+  }, [appCookies]);
 
   const closeModal = () => {
     setModalOpen(false);

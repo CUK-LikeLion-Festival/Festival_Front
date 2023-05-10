@@ -3,7 +3,6 @@ import React from "react";
 import { SectionsContainer, Section } from "react-fullpage";
 import BannerImg from "../components/Banner/banner";
 import Wednesday from "../components/TimeTable/wednesday";
-import ThursDay from "../components/TimeTable/thursday";
 
 const options = {
   activeClass: "active",
@@ -30,9 +29,7 @@ function IndexPage() {
           <Wednesday />
         </Section>
         <Section>
-          <Layout>
-            <ThursDay />
-          </Layout>
+          <Layout>hi</Layout>
         </Section>
       </SectionsContainer>
     </div>
