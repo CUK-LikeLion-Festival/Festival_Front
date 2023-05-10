@@ -1,7 +1,6 @@
 import Layout from "../components/Layout/layout";
 import React from "react";
 import { SectionsContainer, Section } from "react-fullpage";
-import Booth from "../components/booth";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
