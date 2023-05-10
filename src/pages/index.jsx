@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const options = {
   activeClass: "active", // the class that is appended to the sections links
-  anchors: [1, 2, 3, "booth"], // the anchors for each sections
+  anchors: [1, 2, "booth"], // the anchors for each sections
   arrowNavigation: true, // use arrow keys
   className: "SectionContainer", // the class name for the section container
   delay: 1000, // the scroll animation speed
@@ -41,7 +41,6 @@ function IndexPage() {
         <SectionsContainer {...options}>
           <Section>Page 1</Section>
           <Section>Page 2</Section>
-          <Section>Page 3</Section>
           <Section anchors="booth">
             <Wrapper>
               <BoothButton

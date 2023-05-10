@@ -2,17 +2,15 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import BoothImg from "../assets/booth_final.png";
 import { useNavigate } from "react-router-dom";
+import Location from "../assets/location.png";
 
 const Img = styled.div`
+  float: right;
   padding-top: 20px;
-  width: 600px;
-  height: 600px;
-  @media (min-width: 350px) and (max-width: 720px) {
-    width: 350px;
-    height: 350px;
-    padding-top: 10px;
-  }
+  width: 250px;
+  height: 250px;
 `;
+
 const Container = styled.div`
   margin-top: 30px;
   display: flex;
@@ -33,6 +31,10 @@ const Button = styled.button`
   margin: 17px;
 `;
 
+const Line = styled.div`
+  border-top: 7px solid white;
+  margin: 10px 0;
+`;
 function Booth() {
   const navigate = useNavigate();
   const [isClicked, setIsClicked] = useState(false);
@@ -64,20 +66,33 @@ function Booth() {
       >
         뒤로가기
       </button>
-      <Img>
-        <img src={BoothImg} alt="boothImage"></img>
-      </Img>
-      <Container>
-        {buttons.map((button) => (
-          <Button
-            key={button.id}
-            onClick={() => handleButtonClick(button.id)}
-            isClicked={selectedId === button.id}
-          >
-            {button.label}
-          </Button>
-        ))}
-      </Container>
+      <div>
+        <Img>
+          <img src={BoothImg} alt="boothImage"></img>
+          <img src={Location} alt="locatoin"></img>
+        </Img>
+        <Container>
+          {buttons.map((button) => (
+            <Button
+              key={button.id}
+              onClick={() => handleButtonClick(button.id)}
+              isClicked={selectedId === button.id}
+            >
+              {button.label}
+            </Button>
+          ))}
+        </Container>
+      </div>
+      <Line />
+      <div
+        style={{
+          width: "400px",
+          height: "400px",
+          backgroundColor: "white",
+        }}
+      >
+        <p>여기에 이제 각 건물 누르면 해당 부스 나오게 할거에요</p>
+      </div>
     </div>
   );
 }
