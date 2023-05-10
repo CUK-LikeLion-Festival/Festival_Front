@@ -3,10 +3,12 @@ import React from "react";
 import { SectionsContainer, Section } from "react-fullpage";
 import BannerImg from "../components/Banner/banner";
 import Wednesday from "../components/TimeTable/wednesday";
+import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
 
 const options = {
   activeClass: "active",
-  anchors: [1, 2, 3],
+  anchors: [1, 2, "booth"],
   arrowNavigation: true,
   className: "SectionContainer",
   delay: 1000,
@@ -17,8 +19,22 @@ const options = {
   sectionPaddingBottom: "0",
   verticalAlign: false,
 };
+const BoothButton = styled.button`
+  color: white;
+  background-color: tomato;
+  width: 200px;
+  height: 120px;
+  border-radius: 50px;
+`;
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
 
 function IndexPage() {
+  const navigate = useNavigate();
   return (
     <div>
       <SectionsContainer {...options}>
@@ -28,8 +44,18 @@ function IndexPage() {
         <Section>
           <Wednesday />
         </Section>
-        <Section>
-          <Layout>hi</Layout>
+        <Section anchors="booth">
+          <Layout>
+            <Wrapper>
+              <BoothButton
+                onClick={() => {
+                  navigate("/booth/detail");
+                }}
+              >
+                부스 전체보기
+              </BoothButton>
+            </Wrapper>
+          </Layout>
         </Section>
       </SectionsContainer>
     </div>

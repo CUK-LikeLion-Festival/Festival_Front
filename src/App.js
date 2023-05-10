@@ -1,6 +1,12 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import IndexPage from "./pages";
+import { ThemeProvider } from "styled-components";
+import Booth from "./components/Booth/booth";
+import { useEffect, useState } from "react";
+import NoticeModal from "./components/Modals/Modal";
+import ModalDetail from "./hooks/components/Modals/Modal/hook";
+import { useCookies } from "react-cookie";
 
 function App() {
   const { data } = ModalDetail();
@@ -32,12 +38,49 @@ function App() {
     setModalOpen(false);
   };
 
+  const theme = {
+    colors: {
+      white: "#ffffff",
+      green: "#779c4f",
+    },
+  };
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" exact={true} element={<IndexPage />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <div>
+        {modalOpen && !hasCookie && (
+          <NoticeModal
+            open={modalOpen}
+            close={closeModal}
+            header="공지사항"
+            closeButton="닫기"
+            closeModal={closeModalUntilExpires}
+            closeModalButton="하루동안 보지않기"
+          >
+            {data.map((item, index) => (
+              <div key={index} className="border p-4 my-4">
+                <h2 className="text-xl font-bold mb-2">
+                  {index + 1}.{item.title}
+                </h2>
+                <div className="space-y-2 leading-6">
+                  {item.description.map((text, index) => (
+                    <p key={index}>💡{text}</p>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </NoticeModal>
+        )}
+      </div>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" exact={true} element={<IndexPage />} />
+            <Route path="/booth/detail" element={<Booth />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
+    </>
   );
 }
 
