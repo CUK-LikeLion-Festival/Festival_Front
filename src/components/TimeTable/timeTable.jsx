@@ -6,7 +6,7 @@ import WednesDay_Day from "../../assets/TimeTable/Wednesday_day.jpg";
 import WednesDay_Night from "../../assets/TimeTable/Wednesday.jpg";
 import ThursDay_Day from "../../assets/TimeTable/Thursday.jpg";
 
-const Wednesday = () => {
+const TimeTable = () => {
   const settings = {
     dots: true,
     infinite: false,
@@ -20,7 +20,7 @@ const Wednesday = () => {
   };
 
   return (
-    <div className="mt-24 sm:mt-24">
+    <div className="mt-24 sm:mt-24 overflow-hidden">
       <Slider {...settings}>
         <div className="ml-[580px] sm:ml-0">
           <h2 className="text-5xl sm:text-2xl font-bold my-5 ">
@@ -41,4 +41,4 @@ const Wednesday = () => {
   );
 };
 
-export default Wednesday;
+export default TimeTable;

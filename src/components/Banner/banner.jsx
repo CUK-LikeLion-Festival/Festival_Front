@@ -6,7 +6,7 @@ const BannerImg = () => {
   useEffect(() => {
     const jsConfetti = new JSConfetti({
       startVelocity: 50, // Set initial velocity to a positive value
-      angle: 90, // Set angle to 90 degrees (straight up)
+      angle: 0, // Set angle to 90 degrees (straight up)
       spread: 360, // Spread particles in all directions
       elementCount: 50, // Number of particles to create
     });

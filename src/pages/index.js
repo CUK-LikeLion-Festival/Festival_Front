@@ -2,9 +2,10 @@ import Layout from "../components/Layout/layout";
 import React from "react";
 import { SectionsContainer, Section } from "react-fullpage";
 import BannerImg from "../components/Banner/banner";
-import Wednesday from "../components/TimeTable/wednesday";
+
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import TimeTable from "../components/TimeTable/timeTable";
 
 const options = {
   activeClass: "active",
@@ -42,7 +43,7 @@ function IndexPage() {
           <BannerImg />
         </Section>
         <Section>
-          <Wednesday />
+          <TimeTable />
         </Section>
         <Section anchors="booth">
           <Layout>
