@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import BoothImg from "../assets/booth_final.png";
+import BoothImg from "../../assets/booth_final.png";
 import { useNavigate } from "react-router-dom";
-import Location from "../assets/location.png";
+import Location from "../../assets/location.png";
+import BoothCard from "../Booth/boothCard";
 
 const Img = styled.div`
   float: right;
@@ -69,7 +70,7 @@ function Booth() {
       <div>
         <Img>
           <img src={BoothImg} alt="boothImage"></img>
-          <img src={Location} alt="locatoin"></img>
+          {/* <img src={Location} alt="locatoin"></img> */}
         </Img>
         <Container>
           {buttons.map((button) => (
@@ -84,15 +85,9 @@ function Booth() {
         </Container>
       </div>
       <Line />
-      <div
-        style={{
-          width: "400px",
-          height: "400px",
-          backgroundColor: "white",
-        }}
-      >
-        <p>여기에 이제 각 건물 누르면 해당 부스 나오게 할거에요</p>
-      </div>
+      <Container>
+        <BoothCard />
+      </Container>
     </div>
   );
 }
