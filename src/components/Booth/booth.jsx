@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import BoothImg from "../../assets/booth_final.png";
 import { useNavigate } from "react-router-dom";
-import Location from "../../assets/location.png";
+
 import BoothCard from "../Booth/boothCard";
+import BoothDetail from "../../hooks/components/Booth/hook";
 
 const Img = styled.div`
   float: right;
@@ -40,20 +41,16 @@ function Booth() {
   const navigate = useNavigate();
   const [isClicked, setIsClicked] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
+  const [showBoothCard, setShowBoothCard] = useState(false);
+
   const handleButtonClick = (id) => {
     setSelectedId(id);
+    setShowBoothCard((prev) => !prev);
   };
   const handleClick = () => {
     setIsClicked(!isClicked);
   };
-  const buttons = [
-    { id: 1, label: "김수환관" },
-    { id: 2, label: "니콜스관" },
-    { id: 3, label: "마리아관" },
-    { id: 4, label: "다솔관" },
-    { id: 5, label: "콘서트홀" },
-    { id: 6, label: "대운동장" },
-  ];
+  const { data } = BoothDetail();
 
   return (
     <div>
@@ -70,23 +67,19 @@ function Booth() {
       <div>
         <Img>
           <img src={BoothImg} alt="boothImage"></img>
-          {/* <img src={Location} alt="locatoin"></img> */}
         </Img>
         <Container>
-          {buttons.map((button) => (
-            <Button
-              key={button.id}
-              onClick={() => handleButtonClick(button.id)}
-              isClicked={selectedId === button.id}
-            >
-              {button.label}
-            </Button>
-          ))}
+          <Button onClick={() => handleButtonClick(0)}>
+            {data[0].boothName}
+          </Button>
+          <Button onClick={() => handleButtonClick(1)}>
+            {data[1].boothName}
+          </Button>
         </Container>
       </div>
       <Line />
       <Container>
-        <BoothCard />
+        {showBoothCard && <BoothCard selectedId={selectedId} />}
       </Container>
     </div>
   );

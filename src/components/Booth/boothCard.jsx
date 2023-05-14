@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import emotion1 from "../../assets/emotion1.png";
-import pin from "../../assets/pin.png";
+import useBoothDetail from "../../hooks/components/Booth/hook";
 const CardContainer = styled.div`
   position: absolute;
   top: 65%;
@@ -42,8 +42,8 @@ const Image = styled.img`
   height: 200px;
   border-radius: 8px;
 `;
-const BoothName = styled.h2`
-  font-size: 50px;
+const BoothName = styled.h1`
+  font-size: 30px;
   margin-top: 0px;
   color: black;
   font-weight: bold;
@@ -84,15 +84,17 @@ const Discript = styled.p`
   position: absolute;
   bottom: 50px;
 `;
-function BoothCard() {
+function BoothCard(props) {
+  const { data } = useBoothDetail();
+  const { selectedId } = props;
   return (
     <CardContainer>
       <ImageWrapper>
         <Image src={emotion1} alt="Booth Image" />
       </ImageWrapper>
-      <BoothName>국제관</BoothName>
-      <ClubName>가홍이</ClubName>
-      <Discript>예시</Discript>
+      <BoothName>{data[selectedId].boothName}</BoothName>
+      <ClubName>{data[selectedId].clubName[selectedId]}</ClubName>
+      <Discript>{data[selectedId].discript[selectedId]}</Discript>
     </CardContainer>
   );
 }
