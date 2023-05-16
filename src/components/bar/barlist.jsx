@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
-
+import BarModal from "../Modals/BarModal";
+import BarName from "./barname";
 const bars = ["A구역", "B 구역", "C 구역", "D 구역"];
 
 const BarContainer = styled.div`
@@ -38,7 +39,14 @@ const BarContainer = styled.div`
     background-color: #ffffff;
   }
 `;
+const Container= styled.div `
+  .position {
+    display: flex;
+    margin:auto;
+    flex-wrap: wrap;
+  }
 
+`;
 function BarList() {
   const [activeIndex, setActiveIndex] = useState(null);
   const [fontSize, setFontSize] = useState(4);
@@ -64,10 +72,26 @@ function BarList() {
   };
 
   return (
+    <React.Fragment>
+    <Container >
+      {activeIndex !== null && (
+            <BarModal className="position" 
+              open={activeIndex !== null}
+              close={() => {
+                setActiveIndex(null);
+              }}
+              closeButton={"모달창 닫기"}
+            >
+            <BarName/>
+            </BarModal>
+          )}
+      
+    </Container>
     <BarContainer fontSize={fontSize}>
       <ul>
         {bars.map((bar, index) => (
           <li key={index}>
+            
             <a
               href="#!"
               className={activeIndex === index ? "active" : ""}
@@ -75,6 +99,7 @@ function BarList() {
             >
               {bar}
             </a>
+            
             {activeIndex === index && <div className="divider"></div>}
           </li>
         ))}
@@ -85,6 +110,7 @@ function BarList() {
         )}
       </ul>
     </BarContainer>
+    </React.Fragment>
   );
 }
 
