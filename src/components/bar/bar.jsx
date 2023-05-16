@@ -1,7 +1,8 @@
 import React from "react";
-import Playground from "../img/playground.png";
+import Playground from "../../assets/playground.png";
 import styled from "styled-components";
 import BarList from "./barlist";
+
 
 const Container = styled.div`
   display: flex;
