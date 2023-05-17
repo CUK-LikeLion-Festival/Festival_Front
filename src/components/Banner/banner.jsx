@@ -1,23 +1,24 @@
 import { useEffect } from "react";
-import Banner from "../../assets/cuk_festival.png";
+import Banner from "../../assets/cuk_festivals.png";
 import JSConfetti from "js-confetti";
 
 const BannerImg = () => {
   useEffect(() => {
     const jsConfetti = new JSConfetti({
-      startVelocity: 50, // Set initial velocity to a positive value
-      angle: 0, // Set angle to 90 degrees (straight up)
-      spread: 360, // Spread particles in all directions
-      elementCount: 50, // Number of particles to create
+      startVelocity: 50,
+      angle: 0,
+      spread: 360,
+      elementCount: 50,
     });
     jsConfetti.addConfetti();
   }, []);
+
   return (
-    <div className="flex justify-center items-cente mt-10 h-5/6 opacity-70">
+    <div className="flex justify-center items-cente mt-10 h-5/6 ">
       <img
         src={Banner}
         alt="Banner"
-        className="object-contain max-w-full max-h-full"
+        className={`object-contain max-w-full max-h-full transition-opacity duration-1000 hover:opacity-40`}
       />
     </div>
   );

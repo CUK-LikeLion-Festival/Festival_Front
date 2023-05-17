@@ -2,9 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import WednesDay_Day from "../../assets/TimeTable/Wednesday_day.jpg";
-import WednesDay_Night from "../../assets/TimeTable/Wednesday.jpg";
-import ThursDay_Day from "../../assets/TimeTable/Thursday.jpg";
+import WednesDayTimeTable from "./WednesDay/wednesDayTimetable";
+import ThursDayTimeTable from "./ThursDay/thursDayTimeTable";
 
 const TimeTable = () => {
   const settings = {
@@ -20,21 +19,13 @@ const TimeTable = () => {
   };
 
   return (
-    <div className="mt-24 sm:mt-24 overflow-hidden">
+    <div className="mt-10 overflow-hidden">
       <Slider {...settings}>
-        <div className="ml-[580px] sm:ml-0">
-          <h2 className="text-5xl sm:text-2xl font-bold my-5 ">
-            수요일 길거리
-          </h2>
-          <img src={WednesDay_Day} alt="WednesDay_Day" />
+        <div className="ml-[540px] xl:mt-[100px] sm:ml-0 md:ml-[0px] md:mt-[130px] md:px-4 ">
+          <WednesDayTimeTable />
         </div>
-        <div className="ml-[580px] sm:ml-0">
-          <h2 className="text-5xl sm:text-2xl font-bold my-5 ">수요일</h2>
-          <img src={WednesDay_Night} alt="WednesDay_Night" />
-        </div>
-        <div className="ml-[580px] sm:ml-0">
-          <h2 className="text-5xl sm:text-2xl font-bold my-5">목요일</h2>
-          <img src={ThursDay_Day} alt="WednesDay_Night" />
+        <div className="ml-[640px] xl:mt-[50px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
+          <ThursDayTimeTable />
         </div>
       </Slider>
     </div>
