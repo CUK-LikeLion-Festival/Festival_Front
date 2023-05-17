@@ -1,17 +1,74 @@
 function BoothDetail() {
-  const data = [
+  const Kim = [
     {
-      boothName: "김수환관", //건물이름
-      clubName: ["예시1", "예시2"], //동아리이름
-      discript: ["설명1", "설명2"], //설명
+      boothName: "김수환관",
+      clubName: "동아리 이름1", //동아리이름
+      discript: "설명1", //설명
+      location: "1층",
+    },
+    {
+      boothName: "김수환관",
+      clubName: "동아리 이름2", //동아리이름
+      discript: "설명2", //설명
+      location: "2층",
+    },
+    {
+      boothName: "김수환관",
+      clubName: "동아리 이름3", //동아리이름
+      discript: "설명3", //설명
+      location: "3층",
+    },
+  ];
+  const Nichols = [
+    //(location = [100, 200]),
+    {
+      boothName: "니콜스관",
+      clubName: "동아리 이름1", //동아리이름
+      discript: "설명1", //설명
+      location: "1층",
     },
     {
       boothName: "니콜스관",
-      clubName: ["예시1", "예시2"],
-      discript: ["설명1", "설명2"],
+
+      clubName: "동아리 이름2", //동아리이름
+      discript: "설명2", //설명
+      location: "2층",
+    },
+    {
+      boothName: "니콜스관",
+
+      clubName: "동아리 이름3", //동아리이름
+      discript: "설명3", //설명
+      location: "3층",
     },
   ];
-  return { data };
-}
+  const Maria = [
+    {
+      boothName: "마리아관",
+      clubName: "동아리 이름1", //동아리이름
+      discript: "설명1", //설명
+      location: "1층",
+    },
+    {
+      boothName: "마리아관",
 
+      clubName: "동아리 이름2", //동아리이름
+      discript: "설명2", //설명
+      location: "2층",
+    },
+    {
+      boothName: "마리아관",
+
+      clubName: "동아리 이름3", //동아리이름
+      discript: "설명3", //설명
+      location: "3층",
+    },
+  ];
+  const Pin = [
+    [100, 200],
+    [200, 200],
+    [300, 200],
+  ];
+  return { Nichols, Kim, Maria, Pin };
+}
 export default BoothDetail;
