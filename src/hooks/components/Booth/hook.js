@@ -38,16 +38,15 @@ function BoothDetail() {
     },
   ];
   const Nichols = [
-    //(location = [100, 200]),
     {
       boothName: "니콜스관",
       clubName: "동아리 이름1", //동아리이름
-      discript: "설명1", //설명
+      discript:
+        "집가고 싶습니다. 집에 가고 싶기 때문입니다. 아! 배가 고파서 앞이 안보이는군요", //설명
       location: "1층",
     },
     {
       boothName: "니콜스관",
-
       clubName: "동아리 이름2", //동아리이름
       discript: "설명2", //설명
       location: "2층",

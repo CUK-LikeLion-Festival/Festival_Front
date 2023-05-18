@@ -7,6 +7,8 @@ import BoothDetail from "../../hooks/components/Booth/hook";
 import mapKim from "../../assets/booth_final_Kim.png";
 import mapM from "../../assets/booth_final_Maria.png";
 import mapNi from "../../assets/booth_final_Ni.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Img = styled.div`
   float: right;
@@ -28,9 +30,13 @@ const BuildingName = styled.div`
   }
 `;
 const Button = styled.button`
+  font-size: 50px;
   @media (min-width: 350px) and (max-width: 720px) {
     font-size: 15px;
   }
+  @media (min-width: 721px) and (max-width: 1080px) {
+    font-size: 30px;
+  } //medium
   align-self: flex-start;
   color: ${(props) =>
     props.isClicked ? props.theme.colors.green : props.theme.colors.white};
@@ -69,15 +75,17 @@ function Booth() {
   return (
     <div>
       <button
-        style={{
-          color: "white",
-        }}
         onClick={() => {
           navigate("/");
         }}
+        style={{
+          color: "white",
+          fontSize: "25px",
+        }}
       >
-        뒤로가기
+        <FontAwesomeIcon icon={faArrowLeft} />
       </button>
+
       <div>
         <Img>
           <img src={mapimg} alt="boothImage"></img>

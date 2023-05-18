@@ -3,7 +3,8 @@ import React from "react";
 import { SectionsContainer, Section } from "react-fullpage";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTents } from "@fortawesome/free-solid-svg-icons";
 const options = {
   activeClass: "active", // the class that is appended to the sections links
   anchors: [1, 2, "booth"], // the anchors for each sections
@@ -20,11 +21,12 @@ const options = {
 };
 
 const BoothButton = styled.button`
-  color: white;
-  background-color: tomato;
-  width: 200px;
-  height: 120px;
+  color: black;
+  background-color: #7bed9f;
+  width: 300px;
+  height: 220px;
   border-radius: 50px;
+  font-size: 100px;
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -47,7 +49,16 @@ function IndexPage() {
                   navigate("/booth/detail");
                 }}
               >
-                부스 전체보기
+                <FontAwesomeIcon icon={faTents} />
+                <p
+                  style={{
+                    paddingTop: "50px",
+                    fontSize: "18px",
+                    fontWeight: "bolder",
+                  }}
+                >
+                  부스 전체보기
+                </p>
               </BoothButton>
             </Wrapper>
           </Section>

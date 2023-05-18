@@ -4,6 +4,18 @@ import useBoothDetail from "../../hooks/components/Booth/hook";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 // import Slider from "react-slick";
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 200px;
+  margin-left: 100px;
+  @media (min-width: 350px) and (max-width: 720px) {
+    margin-left: 50px;
+  } //small
+  @media (min-width: 721px) and (max-width: 1080px) {
+    margin-top: 265px;
+  } //medium
+`;
 const Wrapper = styled.div`
   flex: 0 0 33.33%;
   display: flex;
@@ -11,7 +23,7 @@ const Wrapper = styled.div`
 `;
 const CardContainer = styled.div`
   // position: absolute;
-  //margin-left: 100px;
+  margin-left: 90px;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
@@ -22,9 +34,14 @@ const CardContainer = styled.div`
   border-radius: 10px;
   box-shadow: 2px 5px 12px 2px rgb(0, 0, 0);
   @media (min-width: 350px) and (max-width: 720px) {
-    margin-left: 15px;
-    width: 110px;
-    height: 200px;
+    margin-left: 140px;
+    width: 260px;
+    height: 330px;
+  }
+  @media (min-width: 721px) and (max-width: 1080px) {
+    margin-left: 260px;
+    width: 500px;
+    height: 480px;
   }
 `;
 const ImageWrapper = styled.div`
@@ -36,6 +53,12 @@ const ImageWrapper = styled.div`
   background-color: #64c964;
   border-radius: 10px;
   @media (min-width: 350px) and (max-width: 720px) {
+    width: 260px;
+    height: 150px;
+  }
+  @media (min-width: 721px) and (max-width: 1080px) {
+    width: 500px;
+    height: 300px;
   }
 `;
 const Image = styled.img`
@@ -44,7 +67,7 @@ const Image = styled.img`
   border-radius: 8px;
   @media (min-width: 350px) and (max-width: 720px) {
     width: 110px;
-    height: 150px;
+    height: 100px;
     border-radius: 4px;
   }
 `;
@@ -59,6 +82,10 @@ const BoothName = styled.h1`
     font-size: 17px;
     margin-top: -50px;
   }
+  @media (min-width: 721px) and (max-width: 1080px) {
+    margin-top: -60px;
+    font-size: 40px;
+  }
 `;
 const ClubName = styled.p`
   font-size: 30px;
@@ -72,6 +99,10 @@ const ClubName = styled.p`
     font-size: 15px;
     margin-top: -20px;
   }
+  @media (min-width: 721px) and (max-width: 1080px) {
+    margin-top: 110px;
+    font-size: 30px;
+  }
 `;
 
 const Discript = styled.p`
@@ -79,21 +110,21 @@ const Discript = styled.p`
   margin-top: 10px;
   font-weight: 500;
   padding-bottom: 0px;
-  color: #888888;
+  color: #313d79;
   position: absolute;
+  font-weight: bold;
   bottom: 50px;
   @media (min-width: 350px) and (max-width: 720px) {
     font-size: 17px;
     margin-top: 30px;
     bottom: 10px;
   }
+  @media (min-width: 721px) and (max-width: 1080px) {
+    bottom: 15px;
+    font-size: 25px;
+  }
 `;
-const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 250px;
-  margin-left: 46px;
-`;
+
 const BoothCard = (props) => {
   const { Nichols, Kim, Maria, Andrea } = useBoothDetail();
   const { selectedId } = props;
