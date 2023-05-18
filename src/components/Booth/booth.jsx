@@ -92,16 +92,20 @@ function Booth() {
         </Img>
         <BuildingName>
           <Button onClick={() => handleButtonClick(0)}>
-            {Kim[0].boothName}
+            {/* {Kim[0].boothName} */}
+            김수환관
           </Button>
           <Button onClick={() => handleButtonClick(1)}>
-            {Nichols[0].boothName}
+            {/* {Nichols[0].boothName} */}
+            니콜스관
           </Button>
           <Button onClick={() => handleButtonClick(2)}>
-            {Maria[0].boothName}
+            {/* {Maria[0].boothName} */}
+            마리아관
           </Button>
           <Button onClick={() => handleButtonClick(3)}>
-            {Andrea[0].boothName}
+            {/* {Andrea[0].boothName} */}
+            안드레아관
           </Button>
         </BuildingName>
       </div>

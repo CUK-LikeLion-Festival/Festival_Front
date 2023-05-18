@@ -50,7 +50,6 @@ const ImageWrapper = styled.div`
   justify-content: center;
   /* width: 100%;
   height: 100%; */
-  background-color: #64c964;
   border-radius: 10px;
   @media (min-width: 350px) and (max-width: 720px) {
     width: 260px;
@@ -80,7 +79,8 @@ const BoothName = styled.h1`
   position: absolute;
   @media (min-width: 350px) and (max-width: 720px) {
     font-size: 17px;
-    margin-top: -50px;
+    margin-top: -75px;
+    font-weight: bolder;
   }
   @media (min-width: 721px) and (max-width: 1080px) {
     margin-top: -60px;
@@ -138,11 +138,27 @@ const BoothCard = (props) => {
             {Kim.map((item, index) => (
               <div key={index}>
                 <CardContainer>
-                  <ImageWrapper>
-                    <Image src={emotion1} alt="Booth Image" />
+                  <ImageWrapper
+                    style={{
+                      backgroundColor: item.background,
+                    }}
+                  >
+                    <Image src={item.img} alt="Booth Image" />
                   </ImageWrapper>
-                  <BoothName>{item.boothName}</BoothName>
-                  <ClubName>{item.clubName}</ClubName>
+                  <BoothName
+                    style={{
+                      color: item.color,
+                    }}
+                  >
+                    {item.boothName}
+                  </BoothName>
+                  <ClubName
+                    style={{
+                      color: item.color,
+                    }}
+                  >
+                    {item.clubName}
+                  </ClubName>
                   <Discript>{item.discript}</Discript>
                 </CardContainer>
               </div>
