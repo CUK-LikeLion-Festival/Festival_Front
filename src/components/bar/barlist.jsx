@@ -4,13 +4,16 @@ import BarModal from "../Modals/BarModal";
 import Department from "../../assets/department.png";
 
 
-const bars = ["A구역", "B 구역", "C 구역", "D 구역"];
+const bars = [ "주점 배치보기"];
 
 const BarContainer = styled.div`
   ul {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     margin-bottom: -1px;
+    color: #e5e3e8;
   }
 
   li {
@@ -42,18 +45,17 @@ const BarContainer = styled.div`
   }
 `;
 const Container= styled.div `
+  
   .position {
-    
-  }
 
+    @media (min-width: 350px) and (max-width: 720px) {
+      text-align: center;
+    }
 `;
 
 const BarImage = styled.img.attrs({ src: `${Department}` })`
-  max-width: 80%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 100%;
+  height: 20rem;
 `;
 
 
@@ -84,26 +86,24 @@ function BarList() {
 
   return (
     <React.Fragment>
-    <Container >
-    {activeIndex !== null && (
-  <BarModal className="position" 
-    open={activeIndex !== null}
-    close={() => {
-      setActiveIndex(null);
-    }}
-    closeButton={"창 닫기"}
-  >
-    <BarImage/>
-  </BarModal>
-)}
+      <Container>
+      {activeIndex !== null && (
+        <BarModal className="position"
+          open={activeIndex !== null}
+          close={() => {
+            setActiveIndex(null);
+          }}
+          closeButton={"창 닫기"}
+        >
+          <BarImage className="position"/>
+        </BarModal>
+      )}
     </Container>
 
     <BarContainer fontSize={fontSize}>
-      
       <ul>
         {bars.map((bar, index) => (
           <li key={index}>
-            
             <a
               href="#!"
               className={activeIndex === index ? "active" : ""}
@@ -111,7 +111,6 @@ function BarList() {
             >
               {bar}
             </a>
-            
             {activeIndex === index && <div className="divider"></div>}
           </li>
         ))}
