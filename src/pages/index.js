@@ -6,10 +6,11 @@ import BannerImg from "../components/Banner/banner";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import TimeTable from "../components/TimeTable/timeTable";
+import Bar from "./bar";
 
 const options = {
   activeClass: "active",
-  anchors: [1, 2, "booth"],
+  anchors: [1, 2, "booth", 4],
   arrowNavigation: true,
   className: "SectionContainer",
   delay: 1000,
@@ -57,6 +58,9 @@ function IndexPage() {
               </BoothButton>
             </Wrapper>
           </Layout>
+        </Section>
+        <Section>
+          <Bar />
         </Section>
       </SectionsContainer>
     </div>
