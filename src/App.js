@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import IndexPage from "./pages";
 import { ThemeProvider } from "styled-components";
-import Booth from "./components/Booth/booth";
+import Booth from "./pages/Booth/booth";
 
 const theme = {
   colors: {
