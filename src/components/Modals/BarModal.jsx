@@ -1,7 +1,7 @@
 import { FaTimes } from "react-icons/fa";
 
 const BarModal = (props) => {
-  const { open, close, header, closeButton, closeModal, closeModalButton } =
+  const { open, close, header, closeButton } =
     props;
 
   return (
@@ -30,12 +30,6 @@ const BarModal = (props) => {
               onClick={close}
             >
               {closeButton}
-            </button>
-            <button
-              className="px-3 py-1 text-sm text-white bg-gray-600 rounded-md"
-              onClick={closeModal}
-            >
-              {closeModalButton}
             </button>
           </footer>
         </section>
