@@ -5,8 +5,7 @@ import BannerImg from "../components/Banner/banner";
 import Wednesday from "../components/TimeTable/wednesday";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import Bar from "../components/bar/bar";
-import BarModal from "../components/Modals/BarModal";
+import Bar from "./bar";
 
 const options = {
   activeClass: "active",
