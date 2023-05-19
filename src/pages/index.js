@@ -47,20 +47,20 @@ function IndexPage() {
           <TimeTable />
         </Section>
         <Section anchors="booth">
-          <Layout>
-            <Wrapper>
-              <BoothButton
-                onClick={() => {
-                  navigate("/booth/detail");
-                }}
-              >
-                부스 전체보기
-              </BoothButton>
-            </Wrapper>
-          </Layout>
+          <Wrapper>
+            <BoothButton
+              onClick={() => {
+                navigate("/booth/detail");
+              }}
+            >
+              부스 전체보기
+            </BoothButton>
+          </Wrapper>
         </Section>
         <Section>
-          <Bar />
+          <Layout>
+            <Bar />
+          </Layout>
         </Section>
       </SectionsContainer>
     </div>
