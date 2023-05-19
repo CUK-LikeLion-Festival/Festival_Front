@@ -11,10 +11,12 @@ export default function WednesDayTimeTable() {
         </h2>
         {wedDay.map((item, index) => (
           <div key={index} className="bg-white rounded-3xl p-4 mb-4 ">
-            <p className="text-lg mb-2 sm:text-[12px] sm:mb-0">{item.time}</p>
-            <h3 className="text-xl font-bold mb-2 sm:text-[12px] sm:mb-0">
-              {item.title}
-            </h3>
+            <div className="flex flex-col justify-center items-center">
+              <p className="text-lg sm:text-[12px] sm:mb-0">{item.time}</p>
+              <h3 className="text-xl font-bold mb-5 sm:text-[12px] sm:mb-0">
+                {item.title}
+              </h3>
+            </div>
 
             {item.description.map((desc, idx) => (
               <p
@@ -33,10 +35,12 @@ export default function WednesDayTimeTable() {
         </h2>
         {wedNight.map((item, index) => (
           <div key={index} className="bg-white rounded-3xl p-4 mb-4">
-            <p className="text-lg mb-2 sm:text-[12px] sm:mb-0">{item.time}</p>
-            <h3 className="text-xl font-bold mb-2 sm:text-[12px] sm:mb-0">
-              {item.title}
-            </h3>
+            <div className="flex flex-col justify-center items-center">
+              <p className="text-lg mb-2 sm:text-[12px] sm:mb-0">{item.time}</p>
+              <h3 className="text-xl font-bold mb-2 sm:text-[12px] sm:mb-0">
+                {item.title}
+              </h3>
+            </div>
             {item.description.map((desc, idx) => (
               <p key={idx} className="list-disc font-bold sm:text-[12px]">
                 {desc ? `${idx + 1}. ${desc}` : desc}

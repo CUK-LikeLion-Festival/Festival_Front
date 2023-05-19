@@ -7,6 +7,7 @@ const Footer = () => {
   return (
     <footer className="text-white border-t-[2px] border-solid border-cyan-900  py-4 px-4 sm:flex sm:flex-col sm:justify-center  sm:text-xs">
       <div className="flex justify-center  mb-2 sm:mb-0">
+        {/* 추후에 hook으로 묶을 예정 */}
         <a
           href="https://github.com/CUK-LikeLion-Festival/festival_front"
           target="_blank"
@@ -30,6 +31,7 @@ const Footer = () => {
         >
           <FaHome size={32} />
         </a>
+        {/*  */}
       </div>
       <div className="flex justify-center  mb-2 sm:mb-0">
         <p className="text-center sm:text-left ">

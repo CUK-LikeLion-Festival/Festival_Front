@@ -29,11 +29,6 @@ function ThursDayTimeTableDetail() {
       title: "연예인 공연",
       description: ["케이시", "10cm"],
     },
-    // {
-    //   time: "22:30 ~ 22:50",
-    //   title: "클로징",
-    //   description: [""],
-    // },
   ];
 
   return { ThursNight };
