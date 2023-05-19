@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import BoothImg from "../../assets/booth_final.png";
+import BoothImg from "../assets/booth_final.png";
 import { useNavigate } from "react-router-dom";
-import BoothCard from "../Booth/boothCard";
-import BoothDetail from "../../hooks/components/Booth/hook";
-import mapKim from "../../assets/booth_final_Kim.png";
-import mapM from "../../assets/booth_final_Maria.png";
-import mapNi from "../../assets/booth_final_Ni.png";
+import BoothCard from "../components/Booth/boothCard";
+import BoothDetail from "../hooks/components/Booth/hook";
+import mapKim from "../assets/booth_final_Kim.png";
+import mapM from "../assets/booth_final_Maria.png";
+import mapNi from "../assets/booth_final_Ni.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
