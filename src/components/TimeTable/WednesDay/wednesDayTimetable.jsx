@@ -6,7 +6,7 @@ export default function WednesDayTimeTable() {
   return (
     <div>
       <div className="w-1/3 sm:w-full ">
-        <h2 className="text-xl text-center font-bold mb-4">5/24</h2>
+        <h2 className="text-3xl text-center font-bold mb-4">5/24</h2>
         {wedNight.map((item, index) => (
           <div
             key={index}
@@ -15,7 +15,7 @@ export default function WednesDayTimeTable() {
             <p className="text-lg mb-2 text-center sm:text-[8px] sm:mb-0">
               {item.time}
             </p>
-            <h3 className="text-xl font-bold mb-2 text-center text-blue-400 sm:text-[8px] sm:mb-0">
+            <h3 className="text-xl font-bold mb-2 text-center text-blue-400 sm:text-[12px] sm:mb-0">
               {item.title}
             </h3>
 
