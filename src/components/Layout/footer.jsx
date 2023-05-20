@@ -34,7 +34,7 @@ const Footer = () => {
         {/*  */}
       </div>
       <div className="flex justify-center  mb-2 sm:mb-0">
-        <p className="text-center sm:text-left ">
+        <p className="text-center sm:text-left hover:text-red-500 hover:font-bold">
           {copyright.map((item, index) => {
             return (
               <a href={item.url} key={index}>

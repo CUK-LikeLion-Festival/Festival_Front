@@ -7,7 +7,7 @@ function useFooterDetail() {
   ];
   const copyright = [
     {
-      name: "가톨릭대학교",
+      name: "가톨릭대학교 멋쟁이 사자처럼",
       url: "https://www.catholic.ac.kr/index.do",
     },
   ];

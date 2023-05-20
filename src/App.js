@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import NoticeModal from "./components/Modals/Modal";
 import ModalDetail from "./hooks/components/Modals/Modal/hook";
 import { useCookies } from "react-cookie";
+import SponcerStamp from "./pages/sponser";
 
 function App() {
   const { data } = ModalDetail();
@@ -83,6 +84,7 @@ function App() {
           <Routes>
             <Route path="/" exact={true} element={<IndexPage />} />
             <Route path="/booth/detail" element={<Booth />} />
+            <Route path="/sponser" element={<SponcerStamp />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
