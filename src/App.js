@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import NoticeModal from "./components/Modals/Modal";
 import ModalDetail from "./hooks/components/Modals/Modal/hook";
 import { useCookies } from "react-cookie";
-
+import Bar from "./pages/bar";
 function App() {
   const { data } = ModalDetail();
   const [modalOpen, setModalOpen] = useState(true);
@@ -77,6 +77,7 @@ function App() {
           <Routes>
             <Route path="/" exact={true} element={<IndexPage />} />
             <Route path="/booth/detail" element={<Booth />} />
+            <Route path="/booth/bar" element={<Bar />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
