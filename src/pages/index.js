@@ -11,7 +11,7 @@ import { faTents, faTruck } from "@fortawesome/free-solid-svg-icons";
 
 const options = {
   activeClass: "active",
-  anchors: [1, 2, "booth", 4],
+  anchors: [1, 2, "booth"],
   arrowNavigation: true,
   className: "SectionContainer",
   delay: 1000,
@@ -69,11 +69,6 @@ function IndexPage() {
               </p>
             </BoothButton>
           </Wrapper>
-        </Section>
-        <Section>
-          <Layout>
-            <Bar />
-          </Layout>
         </Section>
       </SectionsContainer>
     </div>
