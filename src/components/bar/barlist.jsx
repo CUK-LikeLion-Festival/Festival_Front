@@ -4,7 +4,7 @@ import BarModal from "../Modals/BarModal";
 import Department from "../../assets/department.png";
 
 
-const bars = [ "주점 배치보기"];
+const bars = ["주점 배치보기"];
 
 const BarContainer = styled.div`
   ul {
