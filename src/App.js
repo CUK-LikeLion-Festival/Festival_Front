@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import NoticeModal from "./components/Modals/Modal";
 import ModalDetail from "./hooks/components/Modals/Modal/hook";
 import { useCookies } from "react-cookie";
+import Bar from "./pages/bar";
 import SponcerStamp from "./pages/sponserstamp";
 
 function App() {
@@ -85,6 +86,7 @@ function App() {
             <Route path="/" exact={true} element={<IndexPage />} />
             <Route path="/booth/detail" element={<Booth />} />
             <Route path="/sponser" element={<SponcerStamp />} />
+            <Route path="/booth/bar" element={<Bar />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

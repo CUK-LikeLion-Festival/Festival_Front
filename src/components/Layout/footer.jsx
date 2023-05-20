@@ -45,7 +45,7 @@ const Footer = () => {
           <span>ⓒ.All rights reserved.</span>
         </p>
       </div>
-      <div className="flex justify-center ">
+      <div className="flex justify-center">
         <ul className="flex flex-row justify-between mb-[10px]">
           {data.map((item, index) => {
             return (
