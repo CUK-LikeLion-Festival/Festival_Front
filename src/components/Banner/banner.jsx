@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Banner from "../../assets/cuk_festivals.png";
+import Banner from "../../assets/cuk_back.png";
 import JSConfetti from "js-confetti";
 
 const BannerImg = () => {
