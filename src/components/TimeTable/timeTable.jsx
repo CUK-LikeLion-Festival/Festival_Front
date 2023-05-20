@@ -21,10 +21,10 @@ const TimeTable = () => {
   return (
     <div className="mt-10 overflow-hidden">
       <Slider {...settings}>
-        <div className="ml-[540px] xl:mt-[100px] sm:ml-0 md:ml-[0px] md:mt-[130px] md:px-4 ">
+        <div className=" ml-[640px] xl:mt-[50px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
           <WednesDayTimeTable />
         </div>
-        <div className="ml-[640px] xl:mt-[50px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
+        <div className="ml-[540px] xl:mt-[50px] sm:ml-0  md:ml-[0px] md:mt-[130px] md:px-4">
           <ThursDayTimeTable />
         </div>
       </Slider>

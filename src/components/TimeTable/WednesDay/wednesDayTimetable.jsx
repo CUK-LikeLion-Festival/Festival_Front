@@ -1,48 +1,29 @@
 import TimeTableDetail from "../../../hooks/components/TimeTable/WednesDay/hook";
 
 export default function WednesDayTimeTable() {
-  const { wedDay, wedNight } = TimeTableDetail();
+  const { wedNight } = TimeTableDetail();
 
   return (
-    <div className="flex space-x-20 sm:mx-3">
-      <div className="w-96 ">
-        <h2 className="text-xl text-center font-bold mb-4 sm:text-lg">
-          수요일 낮
-        </h2>
-        {wedDay.map((item, index) => (
-          <div key={index} className="bg-white rounded-3xl p-4 mb-4 ">
-            <div className="flex flex-col justify-center items-center">
-              <p className="text-lg sm:text-[12px] sm:mb-0">{item.time}</p>
-              <h3 className="text-xl font-bold mb-5 sm:text-[12px] sm:mb-0">
-                {item.title}
-              </h3>
-            </div>
+    <div>
+      <div className="w-1/3 sm:w-full ">
+        <h2 className="text-xl text-center font-bold mb-4">5/24</h2>
+        {wedNight.map((item, index) => (
+          <div
+            key={index}
+            className={`bg-white rounded-3xl p-4 mb-4 sm:h-auto sm:mb-2 sm:mx-5 sm:p-2 `}
+          >
+            <p className="text-lg mb-2 text-center sm:text-[8px] sm:mb-0">
+              {item.time}
+            </p>
+            <h3 className="text-xl font-bold mb-2 text-center text-blue-400 sm:text-[8px] sm:mb-0">
+              {item.title}
+            </h3>
 
             {item.description.map((desc, idx) => (
               <p
                 key={idx}
-                className="list-disc font-bold sm:text-[12px] sm:font-semibold"
+                className={`list-disc mb-2 font-bold sm:text-[4px] sm:font-semibold sm:mb-1`}
               >
-                {idx + 1}. {desc}
-              </p>
-            ))}
-          </div>
-        ))}
-      </div>
-      <div className="w-96">
-        <h2 className="text-xl text-center font-bold mb-4 sm:text-lg">
-          수요일 밤
-        </h2>
-        {wedNight.map((item, index) => (
-          <div key={index} className="bg-white rounded-3xl p-4 mb-4">
-            <div className="flex flex-col justify-center items-center">
-              <p className="text-lg mb-2 sm:text-[12px] sm:mb-0">{item.time}</p>
-              <h3 className="text-xl font-bold mb-2 sm:text-[12px] sm:mb-0">
-                {item.title}
-              </h3>
-            </div>
-            {item.description.map((desc, idx) => (
-              <p key={idx} className="list-disc font-bold sm:text-[12px]">
                 {desc ? `${idx + 1}. ${desc}` : desc}
               </p>
             ))}

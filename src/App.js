@@ -58,14 +58,20 @@ function App() {
             closeModalButton="하루동안 보지않기"
           >
             {data.map((item, index) => (
-              <div key={index} className="border p-4 my-4">
-                <h2 className="text-xl font-bold mb-2">
+              <div
+                key={index}
+                className="border p-4 my-4 sm:text-[12px] sm:my-0 sm:p-1 md:p-10 md:my-0"
+              >
+                <h2 className="text-xl font-bold mb-2 sm:text-[14px]">
                   {index + 1}.{item.title}
                 </h2>
                 <div className="space-y-2 leading-6">
-                  {item.description.map((text, index) => (
-                    <p key={index}>💡{text}</p>
-                  ))}
+                  {item.description.map((text, index) => {
+                    if (text.trim() !== "") {
+                      return <p key={index}>🎆{text}</p>;
+                    }
+                    return null;
+                  })}
                 </div>
               </div>
             ))}

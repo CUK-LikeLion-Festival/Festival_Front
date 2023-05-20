@@ -1,20 +1,26 @@
 function ModalDetail() {
   const data = [
     {
-      title: "화장실 사용",
+      title: "외부 협찬 안내",
       description: [
-        "화장실 사용 안내는 교내 각 건물 화장실 사용",
-        "(니콜스, 밤비노, 비루투스, 학관 개방)",
-        "올해의 경우 간이 이동식 화장실 설치 X",
+        "작심랩 콤부차",
+        "치카면",
+        "우유꽉",
+        "구도로 통닭",
+        "인쌩맥주",
       ],
     },
     {
-      title: "흡연 구역",
-      description: ["추후 결정"],
+      title: "스탬프 투어",
+      description: ["경품 추첨인원 총 10명", "5/25일만 진행"],
     },
     {
-      title: "기숙사 통금 연장",
-      description: ["추후 결정"],
+      title: "아우름제 팔찌 증정",
+      description: [""],
+    },
+    {
+      title: "기숙사 통금시간",
+      description: ["1일차 : 기존 01시 유지", "2일차 : 02:00까지"],
     },
   ];
   return { data };

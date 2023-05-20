@@ -1,26 +1,4 @@
 function WednesDayTimeTableDetail() {
-  const wedDay = [
-    {
-      time: "15:05 ~ 15:15",
-      title: "김민지",
-      description: ["ㄹㅇㅇ", "ㄴㄴㅇㅇ", "ㅇㄹㅇX"],
-    },
-    {
-      time: "15:15 ~ 15:30",
-      title: "박예나",
-      description: ["박예나", "ㅇㅇ", "ㅇㄹㄴ"],
-    },
-    {
-      time: "15:30 ~ 16:05",
-      title: "밴드실험",
-      description: ["밴드실험", "동아리", "이이잉"],
-    },
-    {
-      time: "16:05 ~ 16:30",
-      title: "태권도부",
-      description: ["태권도", "부", "머시기머시기"],
-    },
-  ];
   const wedNight = [
     {
       time: "18:30 ~ 18:40",
@@ -44,7 +22,7 @@ function WednesDayTimeTableDetail() {
     },
   ];
 
-  return { wedDay, wedNight };
+  return { wedNight };
 }
 
 export default WednesDayTimeTableDetail;

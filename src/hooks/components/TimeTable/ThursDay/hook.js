@@ -1,4 +1,31 @@
 function ThursDayTimeTableDetail() {
+  const ThursDay = [
+    {
+      time: "14:20 ~ 14:40",
+      title: "태권도부",
+      description: [""],
+    },
+    {
+      time: "14:40 ~ 15:00",
+      title: "세이크리드",
+      description: [""],
+    },
+    {
+      time: "15:00 ~ 15:15",
+      title: "밴드실험(28기)",
+      description: [""],
+    },
+    {
+      time: "15:15 ~ 15:30",
+      title: "콘서트홀등반가",
+      description: [""],
+    },
+    {
+      time: "15:30 ~ 15:45",
+      title: "남현식밴드",
+      description: [""],
+    },
+  ];
   const ThursNight = [
     {
       time: "19:00 ~ 19:10",
@@ -21,7 +48,7 @@ function ThursDayTimeTableDetail() {
     },
     {
       time: "20:30 ~ 21:20",
-      title: "총장 인사말 & 추첨 & 불꽃놀이",
+      title: "추첨 & 불꽃놀이",
       description: [""],
     },
     {
@@ -31,7 +58,7 @@ function ThursDayTimeTableDetail() {
     },
   ];
 
-  return { ThursNight };
+  return { ThursDay, ThursNight };
 }
 
 export default ThursDayTimeTableDetail;
