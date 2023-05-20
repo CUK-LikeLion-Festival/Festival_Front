@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import NoticeModal from "./components/Modals/Modal";
 import ModalDetail from "./hooks/components/Modals/Modal/hook";
 import { useCookies } from "react-cookie";
-import SponcerStamp from "./pages/sponser";
+import SponcerStamp from "./pages/sponserstamp";
 
 function App() {
   const { data } = ModalDetail();

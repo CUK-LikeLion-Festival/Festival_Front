@@ -1,4 +1,5 @@
 import ThursDayTimeTableDetail from "../../../hooks/components/TimeTable/ThursDay/hook";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function ThursDayTimeTable() {
   const { ThursDay, ThursNight } = ThursDayTimeTableDetail();
@@ -51,6 +52,11 @@ export default function ThursDayTimeTable() {
             ))}
           </div>
         ))}
+        <div className="flex justify-end items-center">
+          <p className="mr-2 font-semibold text-blue-200">옆으로 넘기세요</p>
+
+          <FaArrowRight size={42} color="red" />
+        </div>
       </div>
     </div>
   );
