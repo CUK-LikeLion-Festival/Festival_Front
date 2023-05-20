@@ -27,7 +27,7 @@ const BoothButton = styled.button`
   width: 300px;
   height: 220px;
   border-radius: 50px;
-  font-size: 100px;
+  font-size: 70px;
 `;
 const Wrapper = styled.div`
   display: flex;

@@ -14,44 +14,53 @@ import shield from "../../../assets/clubImg/shield.jpeg";
 import cine from "../../../assets/clubImg/cine.png";
 import mod from "../../../assets/clubImg/mod.png";
 import anicat from "../../../assets/clubImg/anicat.jpg";
+import taekwondo from "../../../assets/clubImg/태권도.jpg";
+import sacred from "../../../assets/clubImg/sacred.jpeg";
+import silhum from "../../../assets/clubImg/silhum.jpg";
+import foodtruck from "../../../assets/clubImg/foodtruck.png";
+import special from "../../../assets/clubImg/특수교육과.jpeg";
+import child from "../../../assets/clubImg/아동학과.jpg";
+import default_Img from "../../../assets/default_Img.png";
 
 function BoothDetail() {
   const Kim = [
     {
-      boothName: "국제관",
-      clubName: "동아리 이름1", //동아리이름
-      discript:
-        "집가고 싶습니다. 집에 가고 싶기 때문입니다. 아! 배가 고파서 앞이 안보이는군요", //설명
+      boothName: "태권도부",
+
+      discript: "2:20 ~ 2:40", //설명
       location: "1층",
+      background: "#ECECEC",
+      color: "balck",
+      img: taekwondo,
     },
     {
-      boothName: "국제관",
-      clubName: "동아리 이름2", //동아리이름
-      discript: "설명2", //설명
+      boothName: "세이크리드",
+
+      discript: "2:40 ~ 3:00", //설명
       location: "2층",
+      img: sacred,
+      background: "#FFFFFF",
+      color: "black",
     },
     {
-      boothName: "국제관",
-      clubName: "동아리 이름3", //동아리이름
-      discript: "설명3", //설명
+      boothName: "밴드실험",
+
+      discript: "3:00 ~ 3:15", //설명
       location: "3층",
+      img: silhum,
+      background: "#E61F2E",
+      color: "white",
     },
     {
-      boothName: "국제관",
-      clubName: "동아리 이름4", //동아리이름
-      discript: "설명4", //설명
+      boothName: "콘서트홀등반가",
+
+      discript: "3:15 ~ 3:30", //설명
       location: "층",
     },
     {
-      boothName: "국제관",
-      clubName: "동아리 이름5", //동아리이름
-      discript: "설명5", //설명
-      location: "3층",
-    },
-    {
-      boothName: "국제관",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+      boothName: "남현식밴드",
+
+      discript: "3:30 ~ 3:45", //설명
       location: "3층",
     },
   ];
@@ -59,8 +68,7 @@ function BoothDetail() {
   const Plaza = [
     {
       boothName: "씨네필",
-      clubName: "동아리 이름2", //동아리이름
-      discript: "설명2", //설명
+      discript: "준비중", //설명
       location: "2층",
       img: cine,
       background: "#1A1A1A",
@@ -68,8 +76,8 @@ function BoothDetail() {
     },
     {
       boothName: "MOD",
-      clubName: "동아리 이름3", //동아리이름
-      discript: "설명3", //설명
+
+      discript: "준비중", //설명
       location: "3층",
       img: mod,
       background: "white",
@@ -77,9 +85,9 @@ function BoothDetail() {
     },
     {
       boothName: "CDZ",
-      clubName: "CDZ와 함께하는 부스", //동아리이름
-      discript:
-        "CDZ는 가톨릭대학교 유일 중앙 댄스 동아리이며 간식 이벤트 부스입니다.", //설명
+
+      discript: "준비중", //설명
+
       location: "1층",
       img: cdz,
       background: "black",
@@ -88,8 +96,9 @@ function BoothDetail() {
 
     {
       boothName: "가대사랑",
-      clubName: "동아리 이름4", //동아리이름
-      discript: "설명4", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
       img: catLove,
       background: "#039ECC",
@@ -97,8 +106,9 @@ function BoothDetail() {
     },
     {
       boothName: "애니캣",
-      clubName: "동아리 이름5", //동아리이름
-      discript: "설명5", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
       img: anicat,
       background: "white",
@@ -106,8 +116,9 @@ function BoothDetail() {
     },
     {
       boothName: "까리따스",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
       img: caritas,
       background: "white",
@@ -115,17 +126,19 @@ function BoothDetail() {
     },
     {
       boothName: "포쿠",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
-      //img: sharp,
-      background: "black",
+      img: default_Img,
+      background: "#CD7988",
       color: "white",
     },
     {
       boothName: "성심극연구회",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
       img: show,
       background: "white",
@@ -133,8 +146,9 @@ function BoothDetail() {
     },
     {
       boothName: "인권위원회",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
       img: peopleRight,
       background: "white",
@@ -142,8 +156,9 @@ function BoothDetail() {
     },
     {
       boothName: "JOY",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
       img: joy,
       background: "#18D8FF",
@@ -151,44 +166,49 @@ function BoothDetail() {
     },
     {
       boothName: "CCC",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
       img: ccc,
-      background: "#313D79",
+      background: "#F7CBCB",
       color: "#EC7052",
     },
     {
       boothName: "특수교육과",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
-      //img: sharp,
-      background: "black",
-      color: "white",
+      img: special,
+      background: "white",
+      color: "black",
     },
     {
       boothName: "식품영양학과",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
-      //img: sharp,
-      background: "black",
+      img: default_Img,
+
+      background: "#CD7988",
       color: "white",
     },
     {
       boothName: "아이섹",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+      discript: "준비중", //설명
+
       location: "3층",
       img: aisec,
-      background: "#313D79",
+      background: "#037EF3",
       color: "white",
     },
     {
       boothName: "가홍이",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
       img: cahong,
       background: "white",
@@ -196,8 +216,9 @@ function BoothDetail() {
     },
     {
       boothName: "캣팩토리",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
       img: catfactory,
       background: "white",
@@ -205,8 +226,9 @@ function BoothDetail() {
     },
     {
       boothName: "COMA",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
       img: coma,
       background: "white",
@@ -214,8 +236,9 @@ function BoothDetail() {
     },
     {
       boothName: "호우회",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
       img: history,
       background: "#FFFFFF",
@@ -223,8 +246,9 @@ function BoothDetail() {
     },
     {
       boothName: "쉴드",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
       img: shield,
       background: "black",
@@ -232,91 +256,58 @@ function BoothDetail() {
     },
     {
       boothName: "아동학과",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
+
+      discript: "준비중", //설명
+
       location: "3층",
-      //img: sharp,
+      img: child,
       background: "black",
       color: "white",
     },
   ];
   const Nichols = [
     {
-      boothName: "니콜스관",
-      clubName: "동아리 이름1", //동아리이름
-      discript:
-        "집가고 싶습니다. 집에 가고 싶기 때문입니다. 아! 배가 고파서 앞이 안보이는군요", //설명
-      location: "1층",
+      boothName: "푸드트럭1", //동아리이름
+      discript: "준비중", //설명
+      img: foodtruck,
     },
     {
-      boothName: "니콜스관",
-      clubName: "동아리 이름2", //동아리이름
-      discript: "설명2", //설명
-      location: "2층",
+      boothName: "푸드트럭2", //동아리이름
+      discript: "준비중", //설명
+      img: foodtruck,
     },
     {
-      boothName: "니콜스관",
-      clubName: "동아리 이름3", //동아리이름
-      discript: "설명3", //설명
-      location: "3층",
+      boothName: "푸드트럭3", //동아리이름
+      discript: "준비중", //설명
+      img: foodtruck,
     },
     {
-      boothName: "니콜스관",
-      clubName: "동아리 이름4", //동아리이름
-      discript: "설명4", //설명
-      location: "층",
+      boothName: "푸드트럭4", //동아리이름
+      discript: "준비중", //설명
+      img: foodtruck,
     },
     {
-      boothName: "니콜스관",
-      clubName: "동아리 이름5", //동아리이름
-      discript: "설명5", //설명
-      location: "3층",
+      boothName: "푸드트럭5", //동아리이름
+      img: foodtruck,
+      discript: "준비중", //설명
     },
     {
-      boothName: "니콜스관",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
-      location: "3층",
+      boothName: "푸드트럭6", //동아리이름
+      img: foodtruck,
+      discript: "준비중", //설명
+    },
+    {
+      boothName: "푸드트럭7", //동아리이름
+      img: foodtruck,
+      discript: "준비중", //설명
+    },
+    {
+      boothName: "푸드트럭8", //동아리이름
+      img: foodtruck,
+      discript: "준비중", //설명
     },
   ];
-  const Andrea = [
-    {
-      boothName: "안드레아관",
-      clubName: "동아리 이름1", //동아리이름
-      discript: "설명1", //설명
-      location: "1층",
-    },
-    {
-      boothName: "안드레아관",
-      clubName: "동아리 이름2", //동아리이름
-      discript: "설명2", //설명
-      location: "2층",
-    },
-    {
-      boothName: "안드레아관",
-      clubName: "동아리 이름3", //동아리이름
-      discript: "설명3", //설명
-      location: "3층",
-    },
-    {
-      boothName: "안드레아관",
-      clubName: "동아리 이름4", //동아리이름
-      discript: "설명4", //설명
-      location: "3층",
-    },
-    {
-      boothName: "안드레아관",
-      clubName: "동아리 이름5", //동아리이름
-      discript: "설명5", //설명
-      location: "3층",
-    },
-    {
-      boothName: "안드레아관",
-      clubName: "동아리 이름6", //동아리이름
-      discript: "설명6", //설명
-      location: "3층",
-    },
-  ];
-  return { Nichols, Kim, Plaza, Andrea };
+
+  return { Nichols, Kim, Plaza };
 }
 export default BoothDetail;

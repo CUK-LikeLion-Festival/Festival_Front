@@ -3,11 +3,13 @@ import styled from "styled-components";
 import BoothImg from "../assets/booth_final.png";
 import { useNavigate } from "react-router-dom";
 import BoothCard from "../components/Booth/boothCard";
-import mapKim from "../assets/booth_final_Kim.png";
-import mapM from "../assets/booth_final_Maria.png";
-import mapNi from "../assets/booth_final_Ni.png";
+import mapKim from "../assets/mapKim.png";
+import mapSquare from "../assets/mapSquare.png";
+import mapNi from "../assets/mapNi.png";
+import default_Img from "../assets/default_Img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Img = styled.div`
   float: right;
@@ -28,6 +30,7 @@ const BuildingName = styled.div`
     margin-top: 15px;
   }
 `;
+
 const Button = styled.button`
   font-size: 30px;
   @media (min-width: 350px) and (max-width: 720px) {
@@ -41,10 +44,55 @@ const Button = styled.button`
     props.isClicked ? props.theme.colors.green : props.theme.colors.white};
   margin: 15px;
 `;
+const SlideContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: auto;
+`;
+
+const Slide = styled.div`
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  height: auto;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+  }
+`;
+
+const SlideButton = styled.button`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #333;
+  }
+
+  ${(props) => (props.right ? "right: 0" : "left: 0")}
+`;
 
 function Booth() {
   const navigate = useNavigate();
-  const Map = [mapKim, mapM, mapNi];
+  const Map = [mapKim, mapSquare, mapNi];
   const [isClicked, setIsClicked] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
   const [showBoothCard, setShowBoothCard] = useState(true);
@@ -55,20 +103,22 @@ function Booth() {
     //setShowBoothCard((prev) => !prev);
     // setPin(Pin[id]);
   };
-  const handleClick = () => {
-    setIsClicked(!isClicked);
-  };
-  const Slide = styled.div`
-    //border: 1px solid black;
-    width: 100%;
-    height: 100%;
-    overflow-x: scroll;
-    @media (min-width: 350px) and (max-width: 720px) {
-      ::-webkit-scrollbar {
-        display: none;
-      }
+
+  // 이전 슬라이드 이동 함수
+  const handlePrevSlide = () => {
+    const slideContainer = document.getElementById("slide-container");
+    if (slideContainer) {
+      slideContainer.scrollLeft -= slideContainer.offsetWidth;
     }
-  `;
+  };
+
+  // 다음 슬라이드 이동 함수
+  const handleNextSlide = () => {
+    const slideContainer = document.getElementById("slide-container");
+    if (slideContainer) {
+      slideContainer.scrollLeft += slideContainer.offsetWidth;
+    }
+  };
 
   return (
     <div>
@@ -89,26 +139,25 @@ function Booth() {
           <img src={mapimg} alt="boothImage"></img>
         </Img>
         <BuildingName>
-          <Button onClick={() => handleButtonClick(0)}>
-            {/* {Kim[0].boothName} */}
-            김수환관
-          </Button>
-          <Button onClick={() => handleButtonClick(1)}>
-            {/* {Nichols[0].boothName} */}
-            광장
-          </Button>
+          <Button onClick={() => handleButtonClick(0)}>김수환관</Button>
+          <Button onClick={() => handleButtonClick(1)}>광장</Button>
           <Button onClick={() => handleButtonClick(2)}>
-            {/* {Maria[0].boothName} */}
             니콜스관 앞 푸드트럭
-          </Button>
-          <Button onClick={() => handleButtonClick(3)}>
-            {/* {Andrea[0].boothName} */}
-            안드레아관 취식공간
           </Button>
         </BuildingName>
       </div>
 
-      <Slide>{showBoothCard && <BoothCard selectedId={selectedId} />}</Slide>
+      <SlideContainer>
+        <Slide id="slide-container">
+          {showBoothCard && <BoothCard selectedId={selectedId} />}
+        </Slide>
+        <SlideButton onClick={handlePrevSlide}>
+          <FaChevronLeft />
+        </SlideButton>
+        <SlideButton right onClick={handleNextSlide}>
+          <FaChevronRight />
+        </SlideButton>
+      </SlideContainer>
     </div>
   );
 }

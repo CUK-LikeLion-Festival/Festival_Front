@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import IndexPage from "./pages";
 import { ThemeProvider } from "styled-components";
 import Booth from "./pages/booth";
-
 const theme = {
   colors: {
     white: "#ffffff",
