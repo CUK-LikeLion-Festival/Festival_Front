@@ -28,6 +28,7 @@ const BoothButton = styled.button`
   width: 200px;
   height: 100px;
   border-radius: 30px;
+  margin-bottom: 50px;
 `;
 
 const BarButton = styled.button`
@@ -38,6 +39,7 @@ const BarButton = styled.button`
   width: 200px;
   height: 100px;
   border-radius: 30px;
+  margin-bottom: 50px;
 `;
 
 const StampButton = styled.button`
@@ -47,7 +49,8 @@ const StampButton = styled.button`
   border: 0.1rem solid white;
   width: 200px;
   height: 70px;
-  border-radius: 30px;
+  border-radius: 20px;
+  margin-bottom: 50px;
 `;
 
 const Wrapper = styled.div`
@@ -72,27 +75,29 @@ function IndexPage() {
         <Section anchors="booth">
           <Layout>
             <Wrapper>
-              <StampButton
-                onClick={() => {
-                  navigate("/sponser");
-                }}
-              >
-                스탬프
-              </StampButton>
-              <BoothButton
-                onClick={() => {
-                  navigate("/booth/detail");
-                }}
-              >
-                부스 전체보기
-              </BoothButton>
-              <BarButton
-                onClick={() => {
-                  navigate("/booth/bar");
-                }}
-              >
-                주점 전체보기
-              </BarButton>
+              <div>
+                <StampButton
+                  onClick={() => {
+                    navigate("/sponser");
+                  }}
+                >
+                  스탬프
+                </StampButton>
+                <BoothButton
+                  onClick={() => {
+                    navigate("/booth/detail");
+                  }}
+                >
+                  부스 전체보기
+                </BoothButton>
+                <BarButton
+                  onClick={() => {
+                    navigate("/booth/bar");
+                  }}
+                >
+                  주점 전체보기
+                </BarButton>
+              </div>
             </Wrapper>
           </Layout>
         </Section>
