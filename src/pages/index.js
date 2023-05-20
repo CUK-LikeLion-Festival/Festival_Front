@@ -46,7 +46,7 @@ const StampButton = styled.button`
   display: block;
   border: 0.1rem solid white;
   width: 200px;
-  height: 100px;
+  height: 70px;
   border-radius: 30px;
 `;
 

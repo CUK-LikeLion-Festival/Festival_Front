@@ -71,7 +71,7 @@ const Image = styled.img`
   }
 `;
 const BoothName = styled.h1`
-  font-size: 30px;
+  font-size: 28px;
   margin-top: -70px;
   color: black;
   font-weight: bolder;
@@ -126,7 +126,7 @@ const Discript = styled.p`
 `;
 
 const BoothCard = (props) => {
-  const { Nichols, Kim, Plaza, Andrea } = useBoothDetail();
+  const { Nichols, Kim, Plaza } = useBoothDetail();
   const { selectedId } = props;
 
   //const [index, setIndex] = useState(null);
@@ -204,39 +204,6 @@ const BoothCard = (props) => {
         <Container>
           <Wrapper>
             {Nichols.map((item, index) => (
-              <CardContainer>
-                <ImageWrapper
-                  style={{
-                    backgroundColor: item.background,
-                  }}
-                >
-                  <Image src={item.img} alt="Booth Image" />
-                </ImageWrapper>
-                <BoothName
-                  style={{
-                    color: item.color,
-                  }}
-                >
-                  {item.boothName}
-                </BoothName>
-                <ClubName
-                  style={{
-                    color: item.color,
-                  }}
-                >
-                  {item.clubName}
-                </ClubName>
-                <Discript>{item.discript}</Discript>
-              </CardContainer>
-            ))}
-          </Wrapper>
-        </Container>
-      );
-    } else if (selectedId == 3) {
-      return (
-        <Container>
-          <Wrapper>
-            {Andrea.map((item, index) => (
               <CardContainer>
                 <ImageWrapper
                   style={{

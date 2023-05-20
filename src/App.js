@@ -39,7 +39,6 @@ function App() {
   const closeModal = () => {
     setModalOpen(false);
   };
-
   const theme = {
     colors: {
       white: "#ffffff",
