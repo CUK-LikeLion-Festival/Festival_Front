@@ -6,9 +6,6 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import TimeTable from "../components/TimeTable/timeTable";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTents, faTruck } from "@fortawesome/free-solid-svg-icons";
-
 const options = {
   activeClass: "active",
   anchors: [1, 2, "booth"],
@@ -77,7 +74,7 @@ function IndexPage() {
             <Wrapper>
               <StampButton
                 onClick={() => {
-                  navigate("/booth/stamp");
+                  navigate("/sponser");
                 }}
               >
                 스탬프
@@ -89,7 +86,6 @@ function IndexPage() {
               >
                 부스 전체보기
               </BoothButton>
-
               <BarButton
                 onClick={() => {
                   navigate("/booth/bar");
