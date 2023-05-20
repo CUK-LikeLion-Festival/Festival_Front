@@ -20,24 +20,40 @@ const options = {
   sectionPaddingBottom: "0",
   verticalAlign: false,
 };
+
 const BoothButton = styled.button`
   color: white;
-  background-color: tomato;
+  display: block;
+  border: 0.1rem solid white;
+  margin:auto;
   width: 200px;
-  height: 120px;
-  border-radius: 50px;
+  height: 100px;
+  border-radius: 30px;
 `;
 
 const BarButton = styled.button`
   color: white;
-  background-color: #0097e6;
+  margin: auto;
+  display: block;
+  border: 0.1rem solid white;
   width: 200px;
-  height: 120px;
-  border-radius: 50px;
+  height: 100px;
+  border-radius: 30px;
+`;
+
+const StampButton = styled.button`
+  color: white;
+  margin: auto;
+  display: block;
+  border: 0.1rem solid white;
+  width: 200px;
+  height: 100px;
+  border-radius: 30px;
 `;
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column; /* Add this line to arrange buttons vertically */
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -57,6 +73,12 @@ function IndexPage() {
         <Section anchors="booth">
           <Layout>
             <Wrapper>
+              <StampButton 
+                onClick={() => {
+                  navigate("/booth/stamp");
+                }}>
+                  스탬프 
+              </StampButton>
               <BoothButton
                 onClick={() => {
                   navigate("/booth/detail");
