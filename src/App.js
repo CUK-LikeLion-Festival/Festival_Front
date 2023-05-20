@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import IndexPage from "./pages";
 import { ThemeProvider } from "styled-components";
-import Booth from "./pages/Booth/booth";
+import Booth from "./pages/booth";
 import { useEffect, useState } from "react";
 import NoticeModal from "./components/Modals/Modal";
 import ModalDetail from "./hooks/components/Modals/Modal/hook";
