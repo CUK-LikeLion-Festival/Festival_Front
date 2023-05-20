@@ -30,7 +30,7 @@ const BuildingName = styled.div`
   }
 `;
 const Button = styled.button`
-  font-size: 50px;
+  font-size: 30px;
   @media (min-width: 350px) and (max-width: 720px) {
     font-size: 15px;
   }
@@ -40,7 +40,7 @@ const Button = styled.button`
   align-self: flex-start;
   color: ${(props) =>
     props.isClicked ? props.theme.colors.green : props.theme.colors.white};
-  margin: 17px;
+  margin: 15px;
 `;
 
 function Booth() {
@@ -49,7 +49,6 @@ function Booth() {
   const [isClicked, setIsClicked] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
   const [showBoothCard, setShowBoothCard] = useState(true);
-  const [showPin, setPin] = useState(null);
   const [mapimg, setImg] = useState(BoothImg);
   const handleButtonClick = (id) => {
     setSelectedId(id);
@@ -61,7 +60,7 @@ function Booth() {
     setIsClicked(!isClicked);
   };
   const Slide = styled.div`
-    border: 1px solid black;
+    //border: 1px solid black;
     width: 100%;
     height: 100%;
     overflow-x: scroll;
@@ -97,15 +96,15 @@ function Booth() {
           </Button>
           <Button onClick={() => handleButtonClick(1)}>
             {/* {Nichols[0].boothName} */}
-            니콜스관
+            광장
           </Button>
           <Button onClick={() => handleButtonClick(2)}>
             {/* {Maria[0].boothName} */}
-            마리아관
+            니콜스관 앞 푸드트럭
           </Button>
           <Button onClick={() => handleButtonClick(3)}>
             {/* {Andrea[0].boothName} */}
-            안드레아관
+            안드레아관 취식공간
           </Button>
         </BuildingName>
       </div>

@@ -4,7 +4,8 @@ import { SectionsContainer, Section } from "react-fullpage";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTents } from "@fortawesome/free-solid-svg-icons";
+import { faTents, faTruck } from "@fortawesome/free-solid-svg-icons";
+
 const options = {
   activeClass: "active", // the class that is appended to the sections links
   anchors: [1, 2, "booth"], // the anchors for each sections
@@ -50,6 +51,8 @@ function IndexPage() {
                 }}
               >
                 <FontAwesomeIcon icon={faTents} />
+
+                <FontAwesomeIcon icon={faTruck} />
                 <p
                   style={{
                     paddingTop: "50px",
@@ -57,7 +60,7 @@ function IndexPage() {
                     fontWeight: "bolder",
                   }}
                 >
-                  부스 전체보기
+                  부스, 푸드트럭 전체보기
                 </p>
               </BoothButton>
             </Wrapper>

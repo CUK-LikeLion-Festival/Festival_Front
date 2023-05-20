@@ -72,9 +72,9 @@ const Image = styled.img`
 `;
 const BoothName = styled.h1`
   font-size: 30px;
-  margin-top: 0px;
+  margin-top: -70px;
   color: black;
-  font-weight: bold;
+  font-weight: bolder;
   top: 80px;
   position: absolute;
   @media (min-width: 350px) and (max-width: 720px) {
@@ -88,7 +88,7 @@ const BoothName = styled.h1`
   }
 `;
 const ClubName = styled.p`
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 20px;
   color: black;
   font-weight: 700;
@@ -106,7 +106,7 @@ const ClubName = styled.p`
 `;
 
 const Discript = styled.p`
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 10px;
   font-weight: 500;
   padding-bottom: 0px;
@@ -126,7 +126,7 @@ const Discript = styled.p`
 `;
 
 const BoothCard = (props) => {
-  const { Nichols, Kim, Maria, Andrea } = useBoothDetail();
+  const { Nichols, Kim, Plaza, Andrea } = useBoothDetail();
   const { selectedId } = props;
 
   //const [index, setIndex] = useState(null);
@@ -170,14 +170,30 @@ const BoothCard = (props) => {
       return (
         <Container>
           <Wrapper>
-            {Nichols.map((item, index) => (
-              <CardContainer key={index}>
-                <ImageWrapper>
-                  <Image src={emotion1} alt="Booth Image" />
+            {Plaza.map((item, index) => (
+              <CardContainer>
+                <ImageWrapper
+                  style={{
+                    backgroundColor: item.background,
+                  }}
+                >
+                  <Image src={item.img} alt="Booth Image" />
                 </ImageWrapper>
-                <BoothName key={index}>{item.boothName}</BoothName>
-                <ClubName key={index}>{item.clubName}</ClubName>
-                <Discript key={index}>{item.discript}</Discript>
+                <BoothName
+                  style={{
+                    color: item.color,
+                  }}
+                >
+                  {item.boothName}
+                </BoothName>
+                <ClubName
+                  style={{
+                    color: item.color,
+                  }}
+                >
+                  {item.clubName}
+                </ClubName>
+                <Discript>{item.discript}</Discript>
               </CardContainer>
             ))}
           </Wrapper>
@@ -187,14 +203,30 @@ const BoothCard = (props) => {
       return (
         <Container>
           <Wrapper>
-            {Maria.map((item, index) => (
-              <CardContainer key={index}>
-                <ImageWrapper>
-                  <Image src={emotion1} alt="Booth Image" />
+            {Nichols.map((item, index) => (
+              <CardContainer>
+                <ImageWrapper
+                  style={{
+                    backgroundColor: item.background,
+                  }}
+                >
+                  <Image src={item.img} alt="Booth Image" />
                 </ImageWrapper>
-                <BoothName key={index}>{item.boothName}</BoothName>
-                <ClubName key={index}>{item.clubName}</ClubName>
-                <Discript key={index}>{item.discript}</Discript>
+                <BoothName
+                  style={{
+                    color: item.color,
+                  }}
+                >
+                  {item.boothName}
+                </BoothName>
+                <ClubName
+                  style={{
+                    color: item.color,
+                  }}
+                >
+                  {item.clubName}
+                </ClubName>
+                <Discript>{item.discript}</Discript>
               </CardContainer>
             ))}
           </Wrapper>
@@ -205,13 +237,29 @@ const BoothCard = (props) => {
         <Container>
           <Wrapper>
             {Andrea.map((item, index) => (
-              <CardContainer key={index}>
-                <ImageWrapper>
-                  <Image src={emotion1} alt="Booth Image" />
+              <CardContainer>
+                <ImageWrapper
+                  style={{
+                    backgroundColor: item.background,
+                  }}
+                >
+                  <Image src={item.img} alt="Booth Image" />
                 </ImageWrapper>
-                <BoothName key={index}>{item.boothName}</BoothName>
-                <ClubName key={index}>{item.clubName}</ClubName>
-                <Discript key={index}>{item.discript}</Discript>
+                <BoothName
+                  style={{
+                    color: item.color,
+                  }}
+                >
+                  {item.boothName}
+                </BoothName>
+                <ClubName
+                  style={{
+                    color: item.color,
+                  }}
+                >
+                  {item.clubName}
+                </ClubName>
+                <Discript>{item.discript}</Discript>
               </CardContainer>
             ))}
           </Wrapper>
