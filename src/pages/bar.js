@@ -2,6 +2,7 @@ import React from "react";
 import Playground from "../../src/assets/playground.png"
 import styled from "styled-components";
 import BarList from "../components/bar/barlist";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -22,10 +23,31 @@ const GroundImage = styled.img.attrs({ src: `${Playground}` })`
   height: 50%;
   display: block;
 `;
+const Button = styled.div`
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    padding:1rem;
+`;
 
 function Bar() {
+  const navigate = useNavigate();
   return (
+    <React.Fragment>
+    <Button>
+      <button
+        style={{
+          color: "white",
+        }}
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        Home
+      </button>
+      </Button>
     <Container>
+      
       <InnerContainer>
         <GroundImage />
         <div style={{ marginTop: "1rem" }}>
@@ -33,6 +55,7 @@ function Bar() {
         </div>
       </InnerContainer>
     </Container>
+    </React.Fragment>
   );
 }
 

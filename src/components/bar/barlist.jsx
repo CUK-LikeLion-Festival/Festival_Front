@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 import BarModal from "../Modals/BarModal";
 import Department from "../../assets/department.png";
 
-
 const bars = ["주점 배치보기"];
 
 const BarContainer = styled.div`
@@ -54,11 +53,10 @@ const Container= styled.div `
 `;
 
 const BarImage = styled.img.attrs({ src: `${Department}` })`
+
   max-width: 100%;
-  height: 20rem;
+  height: 10rem;
 `;
-
-
 
 function BarList() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -95,12 +93,14 @@ function BarList() {
           }}
           closeButton={"창 닫기"}
         >
-          <BarImage className="position"/>
+          <BarImage/>
         </BarModal>
       )}
     </Container>
-
+    
+      
     <BarContainer fontSize={fontSize}>
+   
       <ul>
         {bars.map((bar, index) => (
           <li key={index}>

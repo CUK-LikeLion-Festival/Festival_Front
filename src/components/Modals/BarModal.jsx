@@ -23,7 +23,10 @@ const ModalSection = styled.section`
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   animation: modal-show 0.3s;
-
+  @media (min-width: 350px) and (max-width: 720px) {
+    width: 100%;
+    max-width: 600px;
+  }
   @keyframes modal-show {
     from {
       opacity: 0;
@@ -52,6 +55,9 @@ const ModalHeader = styled.header`
 
 
 const ModalMain = styled.main`
+display: flex;
+    align-items: center;
+    justify-content: center;
   padding: 1rem;
   text-align: center; 
   border-top: 1px solid #d1d5db;
