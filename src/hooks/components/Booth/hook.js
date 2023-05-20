@@ -9,7 +9,7 @@ import cahong from "../../../assets/clubImg/cahong.jpg";
 import catfactory from "../../../assets/clubImg/catfactory.jpg";
 import ccc from "../../../assets/clubImg/ccc.png";
 import coma from "../../../assets/clubImg/coma.png";
-import joy from "../../../assets/clubImg/joy.jpeg";
+import joy from "../../../assets/clubImg/joy.jpg";
 import shield from "../../../assets/clubImg/shield.jpeg";
 import cine from "../../../assets/clubImg/cine.png";
 import mod from "../../../assets/clubImg/mod.png";
@@ -146,8 +146,8 @@ function BoothDetail() {
       discript: "설명6", //설명
       location: "3층",
       img: joy,
-      background: "#F1F1F1",
-      color: "black",
+      background: "#18D8FF",
+      color: "white",
     },
     {
       boothName: "CCC",
