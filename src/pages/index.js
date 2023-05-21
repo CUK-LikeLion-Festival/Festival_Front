@@ -8,7 +8,7 @@ import TimeTable from "../components/TimeTable/timeTable";
 
 const options = {
   activeClass: "active",
-  anchors: [1, 2, "booth"],
+  anchors: ["banner", "timetable", "booth"],
   arrowNavigation: true,
   className: "SectionContainer",
   delay: 1000,
@@ -18,6 +18,7 @@ const options = {
   sectionPaddingTop: "0",
   sectionPaddingBottom: "0",
   verticalAlign: false,
+  touchSensitivity: 10,
 };
 
 const BoothButton = styled.button`
@@ -66,10 +67,10 @@ function IndexPage() {
   return (
     <div>
       <SectionsContainer {...options}>
-        <Section>
+        <Section anchors="banner">
           <BannerImg />
         </Section>
-        <Section>
+        <Section anchors="timetable">
           <TimeTable />
         </Section>
         <Section anchors="booth">
