@@ -2,5 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "LOTTERIADDAG";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIADDAG.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 .App {
 }

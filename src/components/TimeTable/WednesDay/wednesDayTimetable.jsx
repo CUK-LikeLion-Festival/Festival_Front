@@ -12,7 +12,7 @@ export default function WednesDayTimeTable() {
             key={index}
             className={`bg-white rounded-3xl p-4 mb-4 sm:h-auto sm:mb-2 sm:mx-5 sm:p-2 `}
           >
-            <p className="text-lg mb-2 text-center sm:text-[8px] sm:mb-0">
+            <p className=" text-lg mb-2 text-center sm:text-[8px] sm:mb-0">
               {item.time}
             </p>
             <h3 className="text-xl font-bold mb-2 text-center text-blue-400 sm:text-[12px] sm:mb-0">

@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
+    fontFamily: {
+      LOTTERIADDAG: ['"LOTTERIADDAG"', "sans-serif"],
+    },
     screens: {
       xs: { min: "0px", max: "350px" },
       sm: { min: "350px", max: "720px" },

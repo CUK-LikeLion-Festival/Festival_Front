@@ -47,7 +47,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className="font-[LOTTERIADDAG]">
       <div>
         {modalOpen && !hasCookie && (
           <NoticeModal
@@ -89,7 +89,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
-    </>
+    </div>
   );
 }
 

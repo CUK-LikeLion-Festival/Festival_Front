@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import BoothCard from "../components/Booth/boothCard";
-import mapKim from "../assets/booth_final_Kim.png";
-import mapM from "../assets/booth_final_Maria.png";
-import mapNi from "../assets/booth_final_Ni.png";
+import booth_Map_default from "../assets/booth_Map_default.png";
+import booth_Map_Kim from "../assets/booth_Map_Kim.png";
+import booth_Map_Ni from "../assets/booth_Map_Ni.png";
+import booth_Map_Square from "../assets/booth_Map_Square.png";
+import default_Img from "../assets/default_Img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -100,20 +102,18 @@ const SlideButton = styled.button`
 `;
 function Booth() {
   const navigate = useNavigate();
-  const Map = [mapKim, mapM, mapNi];
+  const Map = [booth_Map_Kim, booth_Map_Square, booth_Map_Ni];
   const [isClicked, setIsClicked] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
   const [showBoothCard, setShowBoothCard] = useState(true);
-  const [mapimg, setImg] = useState(BoothImg);
+  const [mapimg, setImg] = useState(booth_Map_default);
 
   const handleButtonClick = (id) => {
     setSelectedId(id);
     setImg(Map[id]);
+    setIsClicked(true);
   };
 
-  const handleClick = () => {
-    setIsClicked(!isClicked);
-  };
   // 이전 슬라이드 이동 함수
   const handlePrevSlide = () => {
     const slideContainer = document.getElementById("slide-container");
@@ -150,9 +150,6 @@ function Booth() {
           <Button onClick={() => handleButtonClick(1)}>광장</Button>
           <Button onClick={() => handleButtonClick(2)}>
             니콜스관 앞 푸드트럭
-          </Button>
-          <Button onClick={() => handleButtonClick(3)}>
-            안드레아관 취식공간
           </Button>
         </BuildingName>
       </div>
