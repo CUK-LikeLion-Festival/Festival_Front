@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -16,11 +17,14 @@ const InnerContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 70%;
+  height: 50%;
+  margin: auto;
 `;
 
 const GroundImage = styled.img.attrs({ src: `${Playground}` })`
   max-width: 100%;
-  max-height: 70vh; 
+  max-height: 70vh;
   display: block;
 `;
 
@@ -29,9 +33,9 @@ const Button = styled.div`
   align-items: left;
   justify-content: left;
   padding: 1rem;
-  position: absolute; 
-  top: 1rem; 
-  left: 1rem; 
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 `;
 
 const Bar = () => {

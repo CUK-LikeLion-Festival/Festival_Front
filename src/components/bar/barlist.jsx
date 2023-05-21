@@ -32,9 +32,11 @@ const BarContainer = styled.div`
       color: #666666;
     }
 
-    ${(props) => css`
-      font-size: ${props.fontSize}vw;
-    `}
+    ${(props) =>
+      props.activeIndex === 0 &&
+      css`
+        font-size: ${props.fontSize}vw;
+      `}
   }
 
   .divider {
@@ -44,7 +46,7 @@ const BarContainer = styled.div`
   }
 `;
 const Container= styled.div `
-  
+   
   .position {
 
     @media (min-width: 350px) and (max-width: 720px) {
@@ -55,7 +57,14 @@ const Container= styled.div `
 const BarImage = styled.img.attrs({ src: `${Department}` })`
 
   max-width: 100%;
-  height: 10rem;
+  max-height: 100%;
+
+  height: auto; 
+
+  @media (min-width: 350px) and (max-width: 720px) {
+    max-height: 70vh; 
+  }
+
 `;
 
 function BarList() {
@@ -93,7 +102,7 @@ function BarList() {
           }}
           closeButton={"창 닫기"}
         >
-          <BarImage/>
+         <BarImage />
         </BarModal>
       )}
     </Container>
