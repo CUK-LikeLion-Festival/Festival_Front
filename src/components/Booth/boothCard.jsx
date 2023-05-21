@@ -72,7 +72,7 @@ const Image = styled.img`
 `;
 const BoothName = styled.h1`
   font-size: 28px;
-  margin-top: -70px;
+  margin-top: -80px;
   color: black;
   font-weight: bolder;
   top: 80px;
@@ -114,7 +114,7 @@ const Discript = styled.p`
   position: absolute;
   font-weight: bold;
   white-space: pre-line;
-  bottom: 50px;
+  bottom: 20px;
   @media (min-width: 350px) and (max-width: 720px) {
     font-size: 17px;
     margin-top: 30px;

@@ -53,15 +53,19 @@ function BoothDetail() {
     },
     {
       boothName: "콘서트홀등반가",
-
+      img: default_Img,
       discript: "3:15 ~ 3:30", //설명
       location: "층",
+      background: "#CD7988",
+      color: "white",
     },
     {
       boothName: "남현식밴드",
-
+      img: default_Img,
       discript: "3:30 ~ 3:45", //설명
       location: "3층",
+      background: "#CD7988",
+      color: "white",
     },
   ];
 
@@ -122,7 +126,7 @@ function BoothDetail() {
       location: "3층",
       img: caritas,
       background: "white",
-      color: "black",
+      color: "#2E5A8B",
     },
     {
       boothName: "포쿠",
@@ -182,7 +186,7 @@ function BoothDetail() {
       location: "3층",
       img: special,
       background: "white",
-      color: "black",
+      color: "#FFC9C9",
     },
     {
       boothName: "식품영양학과",
@@ -324,25 +328,25 @@ function BoothDetail() {
     },
     {
       boothName: "고고판다", //동아리이름
-      clubName: "Night Only",
+      clubName: "Night Only 🌙",
       img: foodtruck,
       discript: "목살스테이크-10,000원 ", //설명
     },
     {
       boothName: "스트리트텐동", //동아리이름
-      clubName: "Night Only",
+      clubName: "Night Only 🌙",
       img: foodtruck,
       discript: "텐동-10,000원\n에비텐동-12,000원\n아나고텐동-15,000원", //설명
     },
     {
       boothName: "곱창야시장", //동아리이름
-      clubName: "Night Only",
+      clubName: "Night Only 🌙",
       img: foodtruck,
       discript: "야채곱창순대볶음\n13,000~20,000원", //설명
     },
     {
       boothName: "두리곱창", //동아리이름
-      clubName: "Night Only",
+      clubName: "Night Only 🌙",
       img: foodtruck,
       discript: "닭발-12,000원\n닭갈비-12,000원\n오돌뼈-12,000원", //설명
     },
