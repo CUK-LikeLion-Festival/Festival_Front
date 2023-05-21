@@ -14,7 +14,7 @@ const BannerImg = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-cente h-full sm:justify-start">
+    <div className="flex justify-center items-center h-full sm:justify-start">
       <img
         src={Banner}
         alt="Banner"
