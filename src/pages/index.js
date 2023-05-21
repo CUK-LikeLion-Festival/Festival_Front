@@ -8,7 +8,7 @@ import TimeTable from "../components/TimeTable/timeTable";
 
 const options = {
   activeClass: "active",
-  anchors: [1, 2, "booth"],
+  anchors: ["banner", "timetable", "booth"],
   arrowNavigation: true,
   className: "SectionContainer",
   delay: 1000,
@@ -59,6 +59,13 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin-bottom: 90px;
+  @media (min-width: 350px) and (max-width: 720px) {
+    height: 70vh;
+  } //small
+  @media (min-width: 721px) and (max-width: 1080px) {
+    height: 70vh;
+  } //medium
 `;
 
 function IndexPage() {
@@ -66,10 +73,10 @@ function IndexPage() {
   return (
     <div>
       <SectionsContainer {...options}>
-        <Section>
+        <Section anchors="banner">
           <BannerImg />
         </Section>
-        <Section>
+        <Section anchors="timetable">
           <TimeTable />
         </Section>
         <Section anchors="booth">

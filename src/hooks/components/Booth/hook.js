@@ -267,44 +267,84 @@ function BoothDetail() {
   ];
   const Nichols = [
     {
-      boothName: "푸드트럭1", //동아리이름
-      discript: "준비중", //설명
+      boothName: "연경당", //동아리이름
+      clubName: "AllDay",
+      discript: "팟타이-9,000원", //설명
       img: foodtruck,
     },
     {
-      boothName: "푸드트럭2", //동아리이름
-      discript: "준비중", //설명
+      boothName: "꼬치천국", //동아리이름
+      clubName: "AllDay",
+
+      discript: "타코야끼-5,000원", //설명
       img: foodtruck,
     },
     {
-      boothName: "푸드트럭3", //동아리이름
-      discript: "준비중", //설명
+      boothName: "에스에이치푸드", //동아리이름
+      clubName: "AllDay",
+
+      discript: "탕후루-5,000원", //설명
       img: foodtruck,
     },
     {
-      boothName: "푸드트럭4", //동아리이름
-      discript: "준비중", //설명
+      boothName: "오늘은초밥", //동아리이름
+      clubName: "AllDay",
+
+      discript: "소고기불초밥-10,000원\n연어초밥-10,000원\n새우초밥-10,000원", //설명
       img: foodtruck,
     },
     {
-      boothName: "푸드트럭5", //동아리이름
+      boothName: "빨강트럭", //동아리이름
+      clubName: "AllDay",
+
       img: foodtruck,
-      discript: "준비중", //설명
+      discript: "닭강정-8,000~15,000원", //설명
     },
     {
-      boothName: "푸드트럭6", //동아리이름
+      boothName: "에페스케밥", //동아리이름
+      clubName: "AllDay",
+
       img: foodtruck,
-      discript: "준비중", //설명
+      discript: "케밥-7,000~9,000원\n터키아이스크림-4,000원\n닭꼬치-5,000원", //설명
     },
     {
-      boothName: "푸드트럭7", //동아리이름
+      boothName: "커피볶는낭만곰", //동아리이름
+      clubName: "AllDay",
+
       img: foodtruck,
-      discript: "준비중", //설명
+      discript: "커피,음료,논알콜칵테일\n4,000~6,500원", //설명
     },
     {
-      boothName: "푸드트럭8", //동아리이름
+      boothName: "띠아모", //동아리이름
+      clubName: "AllDay",
+
       img: foodtruck,
-      discript: "준비중", //설명
+      discript:
+        "츄러스-3,000원\n초코스틱츄러스-5,000\n아이스크림-3,000원\n회오리감자-4,000원\n아이스크림츄러스-5.000원", //설명
+    },
+    {
+      boothName: "고고판다", //동아리이름
+      clubName: "Night Only",
+      img: foodtruck,
+      discript: "목살스테이크-10,000원 ", //설명
+    },
+    {
+      boothName: "스트리트텐동", //동아리이름
+      clubName: "Night Only",
+      img: foodtruck,
+      discript: "텐동-10,000원\n에비텐동-12,000원\n아나고텐동-15,000원", //설명
+    },
+    {
+      boothName: "곱창야시장", //동아리이름
+      clubName: "Night Only",
+      img: foodtruck,
+      discript: "야채곱창순대볶음\n13,000~20,000원", //설명
+    },
+    {
+      boothName: "두리곱창", //동아리이름
+      clubName: "Night Only",
+      img: foodtruck,
+      discript: "닭발-12,000원\n닭갈비-12,000원\n오돌뼈-12,000원", //설명
     },
   ];
 

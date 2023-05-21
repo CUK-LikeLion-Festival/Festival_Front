@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import emotion1 from "../../assets/emotion1.png";
+import React from "react";
 import useBoothDetail from "../../hooks/components/Booth/hook";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -113,6 +113,7 @@ const Discript = styled.p`
   color: #313d79;
   position: absolute;
   font-weight: bold;
+  white-space: pre-line;
   bottom: 50px;
   @media (min-width: 350px) and (max-width: 720px) {
     font-size: 17px;
@@ -159,7 +160,14 @@ const BoothCard = (props) => {
                   >
                     {item.clubName}
                   </ClubName>
-                  <Discript>{item.discript}</Discript>
+                  <Discript>
+                    {item.discript.split("\n").map((line, index) => (
+                      <React.Fragment key={index}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))}
+                  </Discript>
                 </CardContainer>
               </div>
             ))}
