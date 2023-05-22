@@ -110,10 +110,6 @@ const Img = styled.div`
     height: 300px;
   }
 `;
-const Line = styled.div`
-  border: "3px solid white";
-  padding-top: 20px;
-`;
 
 const BuildingName = styled.div`
   margin-top: 100px;

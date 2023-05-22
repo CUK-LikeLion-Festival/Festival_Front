@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const BarModal = (props) => {
-  const { open, close, closeButton } = props;
+  const { open } = props;
 
   return (
     <ModalContainer open={open}>
@@ -60,20 +60,6 @@ const ModalMain = styled.main`
   text-align: center;
   border-top: 1px solid #d1d5db;
   border-bottom: 1px solid #d1d5db;
-`;
-
-const ModalFooter = styled.footer`
-  padding: 0.3rem;
-  display: flex;
-  justify-content: space-between;
-`;
-
-const Button = styled.button`
-  padding: 0.25rem 0.75rem;
-  font-size: 0.875rem;
-  color: white;
-  background-color: gray;
-  border-radius: 0.25rem;
 `;
 
 export default BarModal;
