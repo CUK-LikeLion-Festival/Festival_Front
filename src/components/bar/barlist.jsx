@@ -121,14 +121,21 @@ const Container = styled.div`
 `;
 
 const BarImage = styled.img.attrs({ src: `${Department}` })`
-  max-width: 100%;
-  max-height: 100%;
-
+max-width: 100%;
+width: 100%;
+height: 100%;
+object-fit: cover;
+@media (min-width: 350px) and (max-width: 720px) {
+  max-height: 80vh;
+  width: auto;
   height: auto;
+}
 
-  @media (min-width: 350px) and (max-width: 720px) {
-    max-height: 70vh;
-  }
+@media (min-width: 721px) {
+  max-height: 100vh;
+  width: auto;
+  height: auto;
+}
 `;
 
 export default BarList;
