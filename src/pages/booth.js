@@ -6,7 +6,6 @@ import booth_Map_default from "../assets/booth_Map_default.png";
 import booth_Map_Kim from "../assets/booth_Map_Kim.png";
 import booth_Map_Ni from "../assets/booth_Map_Ni.png";
 import booth_Map_Square from "../assets/booth_Map_Square.png";
-import default_Img from "../assets/default_Img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";

@@ -125,7 +125,7 @@ const Discript = styled.p`
 const Slide = styled.div`
   width: 100%;
   height: 100%;
-  overflow-x: scroll;
+  overflow-x: hidden;
   @media (min-width: 350px) and (max-width: 720px) {
     ::-webkit-scrollbar {
       display: none;
