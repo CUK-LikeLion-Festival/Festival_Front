@@ -9,5 +9,16 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "SDSamliphopangcheTTFBasic";
+  src: url("./assets/Font/SDSamliphopangcheTTFBasic.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
 .App {
 }

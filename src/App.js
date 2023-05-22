@@ -1,4 +1,5 @@
 import "./App.css";
+import "./assets/Font/SDSamliphopangcheTTFBasic.ttf";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import IndexPage from "./pages";
 import { ThemeProvider } from "styled-components";
@@ -47,7 +48,7 @@ function App() {
   };
 
   return (
-    <div className="font-[LOTTERIADDAG]">
+    <div className="font-[SDSamliphopangcheTTFBasic]">
       <div>
         {modalOpen && !hasCookie && (
           <NoticeModal
@@ -63,7 +64,7 @@ function App() {
                 key={index}
                 className="border p-4 my-4 sm:text-[12px] sm:my-0 sm:p-1 md:p-10 md:my-0"
               >
-                <h2 className="text-xl font-bold mb-2 sm:text-[14px]">
+                <h2 className="text-xl font-bold mb-2 text-red-400 sm:text-[14px]">
                   {index + 1}.{item.title}
                 </h2>
                 <div className="space-y-2 leading-6">

@@ -1,28 +1,29 @@
 import TimeTableDetail from "../../../hooks/components/TimeTable/WednesDay/hook";
 import { FaArrowRight } from "react-icons/fa";
+
 export default function WednesDayTimeTable() {
   const { wedNight } = TimeTableDetail();
 
   return (
     <div>
       <div className="w-1/3 sm:w-full ">
-        <h2 className="text-3xl text-center font-bold mb-4">5/24</h2>
+        <h2 className="text-3xl text-center font-bold mb-4 sm:text-xl">5/24</h2>
         {wedNight.map((item, index) => (
           <div
             key={index}
-            className={`bg-white rounded-3xl p-4 mb-4 sm:h-auto sm:mb-2 sm:mx-5 sm:p-2 `}
+            className={`bg-white rounded-3xl p-4 mb-4 sm:h-auto sm:mb-5 sm:mx-5 sm:p-2 `}
           >
-            <p className=" text-lg mb-2 text-center sm:text-[8px] sm:mb-0">
+            <p className=" text-lg mb-2 text-center sm:text-[16px] sm:mb-0">
               {item.time}
             </p>
-            <h3 className="text-xl font-bold mb-2 text-center text-blue-400 sm:text-[12px] sm:mb-0">
+            <h3 className="text-xl font-bold mb-2 text-center text-blue-400 sm:text-[18px] sm:mb-0">
               {item.title}
             </h3>
 
             {item.description.map((desc, idx) => (
               <p
                 key={idx}
-                className={`list-disc mb-2 font-bold sm:text-[4px] sm:font-semibold sm:mb-1`}
+                className={`list-disc mb-2 font-bold sm:text-[15px] sm:font-semibold sm:mb-1`}
               >
                 {desc ? `${idx + 1}. ${desc}` : desc}
               </p>
@@ -30,9 +31,9 @@ export default function WednesDayTimeTable() {
           </div>
         ))}
         <div className="flex justify-end items-center">
-          <p className="mr-2 font-semibold text-blue-200">옆으로 넘기세요</p>
+          <p className="mr-2 font-semibold text-white">옆으로 넘기세요</p>
 
-          <FaArrowRight size={42} color="red" />
+          <FaArrowRight size={42} color="white" />
         </div>
       </div>
     </div>

@@ -11,10 +11,10 @@ export default function ThursDayTimeTable() {
           5/25 낮
         </h2>
         {ThursDay.map((item, index) => (
-          <div key={index} className="bg-white rounded-3xl p-4 mb-4 ">
+          <div key={index} className="bg-white rounded-3xl p-4 mb-4 sm:mb-5">
             <div className="flex flex-col justify-center items-center">
-              <p className="text-lg sm:text-[8px] sm:mb-0">{item.time}</p>
-              <h3 className="text-xl font-bold mb-5 text-blue-400 sm:text-[12px] sm:mb-0">
+              <p className="text-lg sm:text-[14px] sm:mb-0">{item.time}</p>
+              <h3 className="text-xl font-bold mb-5 text-blue-400 sm:text-[14px] sm:mb-0">
                 {item.title}
               </h3>
             </div>
@@ -35,9 +35,9 @@ export default function ThursDayTimeTable() {
           5/25 밤
         </h2>
         {ThursNight.map((item, index) => (
-          <div key={index} className="bg-white rounded-3xl p-4 mb-4">
-            <div className="flex flex-col justify-center items-center">
-              <p className="text-lg mb-2 sm:text-[8px] sm:mb-0">{item.time}</p>
+          <div key={index} className="bg-white rounded-3xl p-4 mb-4 sm:mb-5">
+            <div className="flex flex-col xl:mb-2 justify-center items-center">
+              <p className="text-lg mb-2 sm:text-[14px] sm:mb-0">{item.time}</p>
               <h3 className="text-xl font-bold mb-2 text-blue-400 sm:text-[12px] sm:mb-1">
                 {item.title}
               </h3>
@@ -45,7 +45,7 @@ export default function ThursDayTimeTable() {
             {item.description.map((desc, idx) => (
               <p
                 key={idx}
-                className="list-disc font-bold sm:text-[8px] sm:mb-1"
+                className="list-disc font-bold sm:text-[12px] sm:mb-1"
               >
                 {desc ? `${idx + 1}. ${desc}` : desc}
               </p>
@@ -53,9 +53,9 @@ export default function ThursDayTimeTable() {
           </div>
         ))}
         <div className="flex justify-end items-center">
-          <p className="mr-2 font-semibold text-blue-200">옆으로 넘기세요</p>
+          <p className="mr-2 font-semibold text-white">옆으로 넘기세요</p>
 
-          <FaArrowRight size={42} color="red" />
+          <FaArrowRight size={42} color="white" />
         </div>
       </div>
     </div>
