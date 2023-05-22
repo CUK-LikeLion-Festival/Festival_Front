@@ -26,7 +26,7 @@ const TimeTable = () => {
         <div className=" ml-[640px] xl:mt-[50px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
           <WednesDayTimeTable />
         </div>
-        <div className="ml-[640px] xl:mt-[50px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
+        <div className="ml-[640px] xl:mt-[80px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
           <ThursDayDay />
         </div>
         <div className="ml-[640px] xl:mt-[50px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">

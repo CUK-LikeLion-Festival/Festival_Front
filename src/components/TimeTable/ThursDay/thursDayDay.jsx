@@ -5,12 +5,12 @@ export default function ThursDayDay() {
   const { ThursDay } = ThursDayTimeTableDetail();
 
   return (
-    <div className="flex space-x-20 sm:mx-3 sm:space-x-5">
-      <div className="w-96 ">
+    <div>
+      <div className="w-1/3 sm:w-full">
         <h2 className="text-3xl text-center text-white font-bold sm:text-3xl">
           5/25 Day
         </h2>
-        <hr className="border-white border-[1px] my-2 sm:mx-28" />
+        <hr className="border-white border-[1px] my-2 sm:mx-28 xl:mx-24" />
 
         {ThursDay.map((item, index) => (
           <div

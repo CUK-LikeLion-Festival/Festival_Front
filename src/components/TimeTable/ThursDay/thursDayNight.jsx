@@ -21,7 +21,7 @@ export default function ThursDayNight() {
         <h2 className="text-3xl text-center text-white font-bold sm:text-3xl">
           5/25 Night
         </h2>
-        <hr className="border-white border-[1px] my-2 sm:mx-36" />
+        <hr className="border-white border-[1px] my-2 sm:mx-36 xl:mx-48" />
         <p className="text-white text-center">축제 일정 안내</p>
         <hr className="border-white border-[1px] my-4 sm:mx-7" />
         {clubPerformances.map((item, index) => (

@@ -15,9 +15,9 @@ export default function WednesDayTimeTable() {
         <h2 className="text-3xl text-center text-white font-bold sm:text-3xl">
           5/24
         </h2>
-        <hr className="border-white border-[1px] my-2 sm:mx-36" />
+        <hr className="border-white border-[1px] my-2 sm:mx-36 xl:mx-48" />
         <p className="text-white text-center">축제 일정 안내</p>
-        <hr className="border-white border-[1px] my-4 sm:mx-7" />
+        <hr className="border-white border-[1px] my-4 sm:mx-7 " />
 
         {opening && (
           <div className="text-white text-center mb-4 sm:mb-5 sm:mx-5 sm:p-2">
