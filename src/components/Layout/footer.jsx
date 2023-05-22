@@ -5,7 +5,7 @@ import { FaGithub, FaInstagram, FaHome } from "react-icons/fa";
 const Footer = () => {
   const { data, copyright } = useFooterDetail();
   return (
-    <footer className="text-white border-t-[2px] border-solid border-cyan-200  py-4 px-4 sm:flex sm:flex-col sm:justify-center  sm:text-xs">
+    <footer className="text-white border-t-[2px] border-solid border-gray-500  py-4 px-4 sm:flex sm:flex-col sm:justify-center  sm:text-xs">
       <div className="flex justify-center mb-2 sm:mb-2 ">
         {/* 추후에 hook으로 묶을 예정 */}
         <a

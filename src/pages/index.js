@@ -13,13 +13,13 @@ const options = {
   arrowNavigation: true,
   className: "SectionContainer",
   delay: 1000,
-  navigation: true,
+  navigation: false,
   scrollBar: false,
   sectionClassName: "Section",
-  sectionPaddingTop: "0",
-  sectionPaddingBottom: "0",
+  sectionPaddingTop: "10",
+  sectionPaddingBottom: "10",
   verticalAlign: false,
-  touchSensitivity: 10,
+  touchSensitivity: 0,
 };
 
 function IndexPage() {
@@ -54,7 +54,6 @@ function IndexPage() {
           <TimeTable />
         </Section>
         <Section anchors="booth">
-          {/* <Layout> */}
           <Wrapper>
             <div>
               <div className="flex items-center justify-center  mt-20 mb-10 lg:hidden xl:hidden">
@@ -86,7 +85,6 @@ function IndexPage() {
             </div>
           </Wrapper>
           <Footer />
-          {/* </Layout> */}
         </Section>
       </SectionsContainer>
     </div>
