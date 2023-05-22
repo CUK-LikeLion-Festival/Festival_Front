@@ -2,6 +2,49 @@ import styled from "styled-components";
 
 import SponserDetail from "../../hooks/components/Sponser/hook";
 
+function Sponser() {
+  const { data } = SponserDetail();
+
+  return (
+    <div>
+      <Slide>
+        <Container>
+          <Wrapper>
+            {data.map((item, index) => (
+              <div key={index}>
+                <CardContainer>
+                  <ImageWrapper
+                    style={{
+                      backgroundColor: item.background,
+                    }}
+                  >
+                    <Image src={item.img} alt="Booth Image" />
+                  </ImageWrapper>
+                  <BoothName
+                    style={{
+                      color: item.color,
+                    }}
+                  >
+                    {item.boothName}
+                  </BoothName>
+                  <ClubName
+                    style={{
+                      color: item.color,
+                    }}
+                  >
+                    {item.clubName}
+                  </ClubName>
+                  <Discript>{item.discript}</Discript>
+                </CardContainer>
+              </div>
+            ))}
+          </Wrapper>
+        </Container>
+      </Slide>
+    </div>
+  );
+}
+
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -132,48 +175,5 @@ const Slide = styled.div`
     }
   }
 `;
-
-function Sponser() {
-  const { data } = SponserDetail();
-
-  return (
-    <div>
-      <Slide>
-        <Container>
-          <Wrapper>
-            {data.map((item, index) => (
-              <div key={index}>
-                <CardContainer>
-                  <ImageWrapper
-                    style={{
-                      backgroundColor: item.background,
-                    }}
-                  >
-                    <Image src={item.img} alt="Booth Image" />
-                  </ImageWrapper>
-                  <BoothName
-                    style={{
-                      color: item.color,
-                    }}
-                  >
-                    {item.boothName}
-                  </BoothName>
-                  <ClubName
-                    style={{
-                      color: item.color,
-                    }}
-                  >
-                    {item.clubName}
-                  </ClubName>
-                  <Discript>{item.discript}</Discript>
-                </CardContainer>
-              </div>
-            ))}
-          </Wrapper>
-        </Container>
-      </Slide>
-    </div>
-  );
-}
 
 export default Sponser;

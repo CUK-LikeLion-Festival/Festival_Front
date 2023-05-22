@@ -4,6 +4,34 @@ import styled from "styled-components";
 import BarList from "../components/bar/barlist";
 import { useNavigate } from "react-router-dom";
 
+const Bar = () => {
+  const navigate = useNavigate();
+  return (
+    <React.Fragment>
+      <Button>
+        <button
+          style={{
+            color: "white",
+          }}
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Home
+        </button>
+      </Button>
+      <Container>
+        <InnerContainer>
+          <GroundImage />
+          <div style={{ marginTop: "1rem" }}>
+            <BarList />
+          </div>
+        </InnerContainer>
+      </Container>
+    </React.Fragment>
+  );
+};
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -37,33 +65,4 @@ const Button = styled.div`
   top: 1rem;
   left: 1rem;
 `;
-
-const Bar = () => {
-  const navigate = useNavigate();
-  return (
-    <React.Fragment>
-      <Button>
-        <button
-          style={{
-            color: "white",
-          }}
-          onClick={() => {
-            navigate("/");
-          }}
-        >
-          Home
-        </button>
-      </Button>
-      <Container>
-        <InnerContainer>
-          <GroundImage />
-          <div style={{ marginTop: "1rem" }}>
-            <BarList />
-          </div>
-        </InnerContainer>
-      </Container>
-    </React.Fragment>
-  );
-};
-
 export default Bar;

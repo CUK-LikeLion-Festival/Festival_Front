@@ -4,37 +4,6 @@ import BoothImg from "../../assets/booth_final.png";
 import { useNavigate } from "react-router-dom";
 import Location from "../../assets/location.png";
 
-const Img = styled.div`
-  float: right;
-  padding-top: 20px;
-  width: 250px;
-  height: 250px;
-`;
-
-const Container = styled.div`
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  @media (min-width: 350px) and (max-width: 720px) {
-    margin-top: 15px;
-  }
-`;
-const Button = styled.button`
-  @media (min-width: 350px) and (max-width: 720px) {
-    font-size: 15px;
-  }
-  align-self: flex-start;
-  color: ${(props) =>
-    props.isClicked ? props.theme.colors.green : props.theme.colors.white};
-  margin: 17px;
-`;
-
-const Line = styled.div`
-  border-top: 7px solid white;
-  margin: 10px 0;
-`;
 function Booth() {
   const navigate = useNavigate();
   const [isClicked, setIsClicked] = useState(false);
@@ -96,5 +65,37 @@ function Booth() {
     </div>
   );
 }
+
+const Img = styled.div`
+  float: right;
+  padding-top: 20px;
+  width: 250px;
+  height: 250px;
+`;
+
+const Container = styled.div`
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media (min-width: 350px) and (max-width: 720px) {
+    margin-top: 15px;
+  }
+`;
+const Button = styled.button`
+  @media (min-width: 350px) and (max-width: 720px) {
+    font-size: 15px;
+  }
+  align-self: flex-start;
+  color: ${(props) =>
+    props.isClicked ? props.theme.colors.green : props.theme.colors.white};
+  margin: 17px;
+`;
+
+const Line = styled.div`
+  border-top: 7px solid white;
+  margin: 10px 0;
+`;
 
 export default Booth;
