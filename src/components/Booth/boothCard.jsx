@@ -6,54 +6,12 @@ const BoothCard = (props) => {
   const { Nichols, Kim, Plaza } = useBoothDetail();
   const { selectedId } = props;
 
-  {
-    if (selectedId === 0) {
-      return (
-        <Container>
-          <Wrapper>
-            {Kim.map((item, index) => (
-              <div key={index}>
-                <CardContainer>
-                  <ImageWrapper
-                    style={{
-                      backgroundColor: item.background,
-                    }}
-                  >
-                    <Image src={item.img} alt="Booth Image" />
-                  </ImageWrapper>
-                  <BoothName
-                    style={{
-                      color: item.color,
-                    }}
-                  >
-                    {item.boothName}
-                  </BoothName>
-                  <ClubName
-                    style={{
-                      color: item.color,
-                    }}
-                  >
-                    {item.clubName}
-                  </ClubName>
-                  <Discript>
-                    {item.discript.split("\n").map((line, index) => (
-                      <React.Fragment key={index}>
-                        {line}
-                        <br />
-                      </React.Fragment>
-                    ))}
-                  </Discript>
-                </CardContainer>
-              </div>
-            ))}
-          </Wrapper>
-        </Container>
-      );
-    } else if (selectedId === 1) {
-      return (
-        <Container>
-          <Wrapper>
-            {Plaza.map((item, index) => (
+  if (selectedId === 0) {
+    return (
+      <Container>
+        <Wrapper>
+          {Kim.map((item, index) => (
+            <div key={index}>
               <CardContainer>
                 <ImageWrapper
                   style={{
@@ -76,47 +34,90 @@ const BoothCard = (props) => {
                 >
                   {item.clubName}
                 </ClubName>
-                <Discript>{item.discript}</Discript>
+                <Discript>
+                  {item.discript.split("\n").map((line, index) => (
+                    <React.Fragment key={index}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
+                </Discript>
               </CardContainer>
-            ))}
-          </Wrapper>
-        </Container>
-      );
-    } else if (selectedId === 2) {
-      return (
-        <Container>
-          <Wrapper>
-            {Nichols.map((item, index) => (
-              <CardContainer>
-                <ImageWrapper
-                  style={{
-                    backgroundColor: item.background,
-                  }}
-                >
-                  <Image src={item.img} alt="Booth Image" />
-                </ImageWrapper>
-                <BoothName
-                  style={{
-                    color: item.color,
-                  }}
-                >
-                  {item.boothName}
-                </BoothName>
-                <ClubName
-                  style={{
-                    color: item.color,
-                  }}
-                >
-                  {item.clubName}
-                </ClubName>
-                <Discript>{item.discript}</Discript>
-              </CardContainer>
-            ))}
-          </Wrapper>
-        </Container>
-      );
-    }
+            </div>
+          ))}
+        </Wrapper>
+      </Container>
+    );
+  } else if (selectedId === 1) {
+    return (
+      <Container>
+        <Wrapper>
+          {Plaza.map((item, index) => (
+            <CardContainer key={index}>
+              <ImageWrapper
+                style={{
+                  backgroundColor: item.background,
+                }}
+              >
+                <Image src={item.img} alt="Booth Image" />
+              </ImageWrapper>
+              <BoothName
+                style={{
+                  color: item.color,
+                }}
+              >
+                {item.boothName}
+              </BoothName>
+              <ClubName
+                style={{
+                  color: item.color,
+                }}
+              >
+                {item.clubName}
+              </ClubName>
+              <Discript>{item.discript}</Discript>
+            </CardContainer>
+          ))}
+        </Wrapper>
+      </Container>
+    );
+  } else if (selectedId === 2) {
+    return (
+      <Container>
+        <Wrapper>
+          {Nichols.map((item, index) => (
+            <CardContainer key={index}>
+              <ImageWrapper
+                style={{
+                  backgroundColor: item.background,
+                }}
+              >
+                <Image src={item.img} alt="Booth Image" />
+              </ImageWrapper>
+              <BoothName
+                style={{
+                  color: item.color,
+                }}
+              >
+                {item.boothName}
+              </BoothName>
+              <ClubName
+                style={{
+                  color: item.color,
+                }}
+              >
+                {item.clubName}
+              </ClubName>
+              <Discript>{item.discript}</Discript>
+            </CardContainer>
+          ))}
+        </Wrapper>
+      </Container>
+    );
   }
+
+  // Add a default return statement if none of the conditions are met
+  return null;
 };
 
 const Container = styled.div`

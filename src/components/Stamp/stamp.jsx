@@ -12,16 +12,6 @@ export default function Stamp() {
         marginTop: "-30px",
       }}
     >
-      {/* <div className="ml-5 sm:ml-1 md:ml-1">
-        <button
-          onClick={() => {
-            navigate("/");
-          }}
-          className="text-5xl text-red-700 sm:text-4xl"
-        >
-          <FontAwesomeIcon icon={faArrowLeft} />
-        </button>
-      </div> */}
       <div className="flex text-white justify-center my-10 text-5xl font-bold sm:text-3xl sm:my-20">
         <h2 className="text-white">{data.title}</h2>
       </div>
