@@ -22,7 +22,7 @@ const options = {
 
 function IndexPage() {
   return (
-    <div>
+    <div className="bg-gradient-to-b from-blue-300 to-purple-800">
       <SectionsContainer {...options}>
         <Section anchors="banner">
           <Header />

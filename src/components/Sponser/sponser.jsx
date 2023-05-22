@@ -1,5 +1,8 @@
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import SponserDetail from "../../hooks/components/Sponser/hook";
 
 function Sponser() {
@@ -194,9 +197,7 @@ const Slide = styled.div`
   width: 100%;
   height: auto;
   scroll-behavior: smooth;
-  &::-webkit-scrollbar {
-    height: 8px;
-  }
+
   &::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 4px;
@@ -234,48 +235,5 @@ const SlideContainer = styled.div`
   width: 100%;
   height: auto;
 `;
-
-function Sponser() {
-  const { data } = SponserDetail();
-
-  return (
-    <div>
-      <Slide>
-        <Container>
-          <Wrapper>
-            {data.map((item, index) => (
-              <div key={index}>
-                <CardContainer>
-                  <ImageWrapper
-                    style={{
-                      backgroundColor: item.background,
-                    }}
-                  >
-                    <Image src={item.img} alt="Booth Image" />
-                  </ImageWrapper>
-                  <BoothName
-                    style={{
-                      color: item.color,
-                    }}
-                  >
-                    {item.boothName}
-                  </BoothName>
-                  <ClubName
-                    style={{
-                      color: item.color,
-                    }}
-                  >
-                    {item.clubName}
-                  </ClubName>
-                  <Discript>{item.discript}</Discript>
-                </CardContainer>
-              </div>
-            ))}
-          </Wrapper>
-        </Container>
-      </Slide>
-    </div>
-  );
-}
 
 export default Sponser;

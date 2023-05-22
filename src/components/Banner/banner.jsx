@@ -41,16 +41,24 @@ const BannerImg = () => {
 
   return (
     <div className="flex flex-col justify-center items-center mt-10 h-5/6 ">
-      <div className="flex flex-row mt-10 sm:mt-0">
+      <div className="flex flex-row mt-10 sm:mt-0 sm:space-x-7 space-x-16">
         <img src={Lion} alt="Lion" className={`object-contain w-20 h-20 `} />
-        <p className="flex justify-center text-2xl items-center mx-2 text-white">
+        {/* <p className="flex justify-center text-2xl items-center mx-2 text-white">
           <FontAwesomeIcon icon={faTimes} />
-        </p>
+        </p> */}
         <img src={CUK} alt="cuk" className={`object-contain w-20 h-20 `} />
       </div>
-      <div className="my-2 sm:my-0">
+      <div className="my-2 sm:my-0 sm:ml-5 flex flex-row">
         <p className="font-[LOTTERIADDAG] text-white text-2xl sm:text-sm">
-          {text}
+          가톨릭대학교
+          <br /> 멋쟁이 사자처럼
+        </p>
+        <p className="mx-1 flex font-[LOTTERIADDAG] text-white text-2xl sm:text-2xl justify-center items-center text-center">
+          <FontAwesomeIcon icon={faTimes} />
+        </p>
+        <p className="font-[LOTTERIADDAG] text-white text-2xl sm:text-sm">
+          아우름제
+          <br /> 중앙축제운영단
         </p>
       </div>
       <img
