@@ -1,49 +1,6 @@
 import styled from "styled-components";
-
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import SponserDetail from "../../hooks/components/Sponser/hook";
-
-function Sponser() {
-  const { data } = SponserDetail();
-
-  return (
-    <div>
-      <Slide>
-        <Container>
-          <Wrapper>
-            {data.map((item, index) => (
-              <div key={index}>
-                <CardContainer>
-                  <ImageWrapper
-                    style={{
-                      backgroundColor: item.background,
-                    }}
-                  >
-                    <Image src={item.img} alt="Booth Image" />
-                  </ImageWrapper>
-                  <BoothName
-                    style={{
-                      color: item.color,
-                    }}
-                  >
-                    {item.boothName}
-                  </BoothName>
-                  <ClubName
-                    style={{
-                      color: item.color,
-                    }}
-                  >
-                    {item.clubName}
-                  </ClubName>
-                  <Discript>{item.discript}</Discript>
-                </CardContainer>
-              </div>
-            ))}
-          </Wrapper>
-        </Container>
-      </Slide>
-    </div>
-  );
-}
 
 const Container = styled.div`
   display: flex;
@@ -165,15 +122,117 @@ const Discript = styled.p`
     font-size: 25px;
   }
 `;
+
 const Slide = styled.div`
+  display: flex;
+  overflow-x: auto;
   width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  @media (min-width: 350px) and (max-width: 720px) {
-    ::-webkit-scrollbar {
-      display: none;
-    }
+  height: auto;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
   }
 `;
+
+// 화살표 버튼
+const SlideButton = styled.button`
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s;
+  &:hover {
+    color: #333;
+  }
+  @media (min-width: 350px) and (max-width: 720px) {
+    top: 50%;
+  }
+  @media (min-width: 721px) and (max-width: 1080px) {
+    top: 50%;
+  } //medium
+  ${(props) => (props.right ? "right: 0" : "left: 0")}
+`;
+const SlideContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: auto;
+`;
+
+function Sponser() {
+  const { data } = SponserDetail();
+  // 이전 슬라이드 이동 함수
+  const handlePrevSlide = () => {
+    const slideContainer = document.getElementById("slide-container");
+    if (slideContainer) {
+      slideContainer.scrollLeft -= slideContainer.offsetWidth;
+    }
+  };
+  // 다음 슬라이드 이동 함수
+  const handleNextSlide = () => {
+    const slideContainer = document.getElementById("slide-container");
+    if (slideContainer) {
+      slideContainer.scrollLeft += slideContainer.offsetWidth;
+    }
+  };
+
+  return (
+    <div>
+      <SlideContainer>
+        <Slide id="slide-container">
+          <Container>
+            <Wrapper>
+              {data.map((item, index) => (
+                <div key={index}>
+                  <CardContainer>
+                    <ImageWrapper
+                      style={{
+                        backgroundColor: item.background,
+                      }}
+                    >
+                      <Image src={item.img} alt="Booth Image" />
+                    </ImageWrapper>
+                    <BoothName
+                      style={{
+                        color: item.color,
+                      }}
+                    >
+                      {item.boothName}
+                    </BoothName>
+                    <ClubName
+                      style={{
+                        color: item.color,
+                      }}
+                    >
+                      {item.clubName}
+                    </ClubName>
+                    <Discript>{item.discript}</Discript>
+                  </CardContainer>
+                </div>
+              ))}
+            </Wrapper>
+          </Container>
+        </Slide>
+        <SlideButton onClick={handlePrevSlide}>
+          <FaChevronLeft />
+        </SlideButton>
+        <SlideButton right onClick={handleNextSlide}>
+          <FaChevronRight />
+        </SlideButton>
+      </SlideContainer>
+    </div>
+  );
+}
 
 export default Sponser;

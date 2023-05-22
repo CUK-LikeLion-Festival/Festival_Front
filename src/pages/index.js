@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { SectionsContainer, Section } from "react-fullpage";
 import BannerImg from "../components/Banner/banner";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import TimeTable from "../components/TimeTable/timeTable";
 import Footer from "../components/Layout/footer";
+import { FaAngleDoubleUp } from "react-icons/fa";
 
 const options = {
   activeClass: "active",
@@ -20,6 +21,77 @@ const options = {
   verticalAlign: false,
   touchSensitivity: 10,
 };
+
+function IndexPage() {
+  const navigate = useNavigate();
+
+  const scrollButtonRef = useRef(null);
+
+  useEffect(() => {
+    const scrollButton = scrollButtonRef.current;
+
+    const scrollPage = () => {
+      window.scrollTo({
+        top: -window.innerHeight,
+        behavior: "smooth",
+      });
+    };
+
+    scrollButton.addEventListener("click", scrollPage);
+
+    return () => {
+      scrollButton.removeEventListener("click", scrollPage);
+    };
+  }, []);
+
+  return (
+    <div>
+      <SectionsContainer {...options}>
+        <Section anchors="banner">
+          <BannerImg />
+        </Section>
+        <Section anchors="timetable">
+          <TimeTable />
+        </Section>
+        <Section anchors="booth">
+          {/* <Layout> */}
+          <Wrapper>
+            <div>
+              <div className="flex items-center justify-center  mt-20 mb-10 lg:hidden xl:hidden">
+                <button ref={scrollButtonRef}>
+                  <FaAngleDoubleUp color="red" size={40} />
+                </button>
+              </div>
+              <StampButton
+                onClick={() => {
+                  navigate("/sponser");
+                }}
+              >
+                스탬프
+              </StampButton>
+              <BoothButton
+                onClick={() => {
+                  navigate("/booth/detail");
+                }}
+              >
+                부스 전체보기
+              </BoothButton>
+              <BarButton
+                onClick={() => {
+                  navigate("/booth/bar");
+                }}
+              >
+                주점 전체보기
+              </BarButton>
+            </div>
+          </Wrapper>
+          <Footer />
+          {/* </Layout> */}
+        </Section>
+      </SectionsContainer>
+    </div>
+  );
+}
 
 const BoothButton = styled.button`
   color: white;
@@ -59,60 +131,14 @@ const Wrapper = styled.div`
   flex-direction: column; /* Add this line to arrange buttons vertically */
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   margin-bottom: 90px;
   @media (min-width: 350px) and (max-width: 720px) {
-    height: 70vh;
+    height: 60vh;
   } //small
   @media (min-width: 721px) and (max-width: 1080px) {
     height: 70vh;
   } //medium
 `;
-
-function IndexPage() {
-  const navigate = useNavigate();
-  return (
-    <div>
-      <SectionsContainer {...options}>
-        <Section anchors="banner">
-          <BannerImg />
-        </Section>
-        <Section anchors="timetable">
-          <TimeTable />
-        </Section>
-        <Section anchors="booth">
-          {/* <Layout> */}
-          <Wrapper>
-            <div>
-              <StampButton
-                onClick={() => {
-                  navigate("/sponser");
-                }}
-              >
-                스탬프
-              </StampButton>
-              <BoothButton
-                onClick={() => {
-                  navigate("/booth/detail");
-                }}
-              >
-                부스 전체보기
-              </BoothButton>
-              <BarButton
-                onClick={() => {
-                  navigate("/booth/bar");
-                }}
-              >
-                주점 전체보기
-              </BarButton>
-            </div>
-          </Wrapper>
-          <Footer />
-          {/* </Layout> */}
-        </Section>
-      </SectionsContainer>
-    </div>
-  );
-}
 
 export default IndexPage;

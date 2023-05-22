@@ -1,5 +1,6 @@
 import TimeTableDetail from "../../../hooks/components/TimeTable/WednesDay/hook";
 import { FaArrowRight } from "react-icons/fa";
+
 export default function WednesDayTimeTable() {
   const { wedNight } = TimeTableDetail();
 
@@ -15,14 +16,14 @@ export default function WednesDayTimeTable() {
             <p className=" text-lg mb-2 text-center sm:text-[16px] sm:mb-0">
               {item.time}
             </p>
-            <h3 className="text-xl font-bold mb-2 text-center text-blue-400 sm:text-[14px] sm:mb-0">
+            <h3 className="text-xl font-bold mb-2 text-center text-blue-400 sm:text-[18px] sm:mb-0">
               {item.title}
             </h3>
 
             {item.description.map((desc, idx) => (
               <p
                 key={idx}
-                className={`list-disc mb-2 font-bold sm:text-[12px] sm:font-semibold sm:mb-1`}
+                className={`list-disc mb-2 font-bold sm:text-[15px] sm:font-semibold sm:mb-1`}
               >
                 {desc ? `${idx + 1}. ${desc}` : desc}
               </p>

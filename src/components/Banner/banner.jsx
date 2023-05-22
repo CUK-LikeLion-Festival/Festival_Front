@@ -1,12 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Banner from "../../assets/cuk_back.png";
 import JSConfetti from "js-confetti";
 import Lion from "../../assets/가대멋사로고.svg";
 import CUK from "../../assets/cuk.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FaAngleDoubleDown } from "react-icons/fa";
 
 const BannerImg = () => {
+  const scrollButtonRef = useRef(null);
+
+  useEffect(() => {
+    const scrollButton = scrollButtonRef.current;
+
+    const scrollPage = () => {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth",
+      });
+    };
+
+    scrollButton.addEventListener("click", scrollPage);
+
+    return () => {
+      scrollButton.removeEventListener("click", scrollPage);
+    };
+  }, []);
+
   useEffect(() => {
     const jsConfetti = new JSConfetti({
       startVelocity: 50,
@@ -27,8 +47,8 @@ const BannerImg = () => {
         <img src={CUK} alt="cuk" className={`object-contain w-20 h-20 `} />
       </div>
       <div className="my-2 sm:my-0">
-        <p className="sm:text-sm">
-          가톨릭대학교 멋쟁이 사자처럼 X 가톨릭대학교 축제 위원회
+        <p className="text-black sm:text-sm">
+          가톨릭대학교 멋쟁이 사자처럼 X 아우름제 중앙축제운영단
         </p>
       </div>
       <img
@@ -36,6 +56,19 @@ const BannerImg = () => {
         alt="Banner"
         className={`object-contain max-w-full max-h-full transition-opacity duration-1000 hover:opacity-40`}
       />
+      <div className="text-center mt-24 lg:hidden xl:hidden">
+        <button
+          ref={scrollButtonRef}
+          onClick={() => {
+            window.scrollTo({
+              top: window.innerHeight,
+              behavior: "smooth",
+            });
+          }}
+        >
+          <FaAngleDoubleDown color="red" size={40} />
+        </button>
+      </div>
     </div>
   );
 };

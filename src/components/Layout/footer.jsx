@@ -6,13 +6,13 @@ const Footer = () => {
   const { data, copyright } = useFooterDetail();
   return (
     <footer className="text-white border-t-[2px] border-solid border-cyan-200  py-4 px-4 sm:flex sm:flex-col sm:justify-center  sm:text-xs">
-      <div className="flex justify-center  mb-2 sm:mb-0">
+      <div className="flex justify-center mb-2 sm:mb-2 ">
         {/* 추후에 hook으로 묶을 예정 */}
         <a
           href="https://github.com/CUK-LikeLion-Festival/festival_front"
           target="_blank"
           rel="noopener noreferrer"
-          className="mr-2"
+          className="mr-2 transition-opacity duration-1000 hover:opacity-40"
         >
           <FaGithub size={32} />
         </a>
@@ -20,7 +20,7 @@ const Footer = () => {
           href="https://www.instagram.com/likelioncuk/"
           target="_blank"
           rel="noopener noreferrer"
-          className="mr-2"
+          className="mr-2 transition-opacity duration-1000 hover:opacity-40"
         >
           <FaInstagram size={32} />
         </a>
@@ -28,13 +28,14 @@ const Footer = () => {
           href="https://likelioncuk.notion.site/likelioncuk/ade52330317b445998c7b066071bbff4"
           target="_blank"
           rel="noopener noreferrer"
+          className="transition-opacity duration-1000 hover:opacity-40"
         >
           <FaHome size={32} />
         </a>
         {/*  */}
       </div>
       <div className="flex justify-center  mb-2 sm:mb-0">
-        <p className="text-center sm:text-left hover:text-red-500 hover:font-bold">
+        <p className="text-center sm:text-left hover:text-red-500 hover:font-bold transition-opacity duration-1000 hover:opacity-40">
           {copyright.map((item, index) => {
             return (
               <a href={item.url} key={index}>
