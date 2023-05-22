@@ -1,10 +1,10 @@
-import Layout from "../components/Layout/layout";
 import React from "react";
 import { SectionsContainer, Section } from "react-fullpage";
 import BannerImg from "../components/Banner/banner";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import TimeTable from "../components/TimeTable/timeTable";
+import Footer from "../components/Layout/footer";
 
 const options = {
   activeClass: "active",
@@ -81,33 +81,34 @@ function IndexPage() {
           <TimeTable />
         </Section>
         <Section anchors="booth">
-          <Layout>
-            <Wrapper>
-              <div>
-                <StampButton
-                  onClick={() => {
-                    navigate("/sponser");
-                  }}
-                >
-                  스탬프
-                </StampButton>
-                <BoothButton
-                  onClick={() => {
-                    navigate("/booth/detail");
-                  }}
-                >
-                  부스 전체보기
-                </BoothButton>
-                <BarButton
-                  onClick={() => {
-                    navigate("/booth/bar");
-                  }}
-                >
-                  주점 전체보기
-                </BarButton>
-              </div>
-            </Wrapper>
-          </Layout>
+          {/* <Layout> */}
+          <Wrapper>
+            <div>
+              <StampButton
+                onClick={() => {
+                  navigate("/sponser");
+                }}
+              >
+                스탬프
+              </StampButton>
+              <BoothButton
+                onClick={() => {
+                  navigate("/booth/detail");
+                }}
+              >
+                부스 전체보기
+              </BoothButton>
+              <BarButton
+                onClick={() => {
+                  navigate("/booth/bar");
+                }}
+              >
+                주점 전체보기
+              </BarButton>
+            </div>
+          </Wrapper>
+          <Footer />
+          {/* </Layout> */}
         </Section>
       </SectionsContainer>
     </div>
