@@ -37,12 +37,7 @@ function Booth() {
   };
 
   return (
-    <div
-    // style={{
-    //   background: "#6E4ABC",
-    // }}
-    //=> 위에 배경색은 부스 색깔 깨지면 이 색 쓰면 될것같아요
-    >
+    <div>
       <Header />
 
       <Img>
