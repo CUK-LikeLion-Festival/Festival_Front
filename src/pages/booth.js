@@ -37,7 +37,11 @@ function Booth() {
   };
 
   return (
-    <div style={{ background: "#6E4ABC" }}>
+    <div
+      style={{
+        background: "#6E4ABC",
+      }}
+    >
       <Header />
 
       <Img>
