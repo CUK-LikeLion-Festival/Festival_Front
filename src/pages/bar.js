@@ -12,10 +12,10 @@ const Bar = () => {
           <Container>
             <InnerContainer>
               <GroundImage />
-              <div style={{ marginTop: "1rem" }}>
-                <BarList />
-              </div>
             </InnerContainer>
+            <Box>
+              <BarList />
+            </Box>
           </Container>
         </React.Fragment>
       </Layout>
@@ -29,6 +29,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding: 0;
 `;
 
 const InnerContainer = styled.div`
@@ -37,14 +38,16 @@ const InnerContainer = styled.div`
   align-items: center;
   justify-content: center;
   max-width: 70%;
-  height: 50%;
-  margin: auto;
+  height: 70%;
 `;
 
 const GroundImage = styled.img.attrs({ src: `${Playground}` })`
   max-width: 100%;
   max-height: 70vh;
   display: block;
+`;
+const Box = styled.dic`
+  margin-top: 0.5rem;
 `;
 
 export default Bar;

@@ -9,9 +9,6 @@ const BarModal = (props) => {
       {open && (
         <ModalSection>
           <ModalMain>{props.children}</ModalMain>
-          <ModalFooter>
-            <Button onClick={close}>{closeButton}</Button>
-          </ModalFooter>
         </ModalSection>
       )}
     </ModalContainer>
@@ -54,14 +51,6 @@ const ModalSection = styled.section`
       transform: translateY(0);
     }
   }
-`;
-
-const ModalHeader = styled.header`
-  position: relative;
-  padding: 0.5rem 1rem;
-  background-color: #e5e7eb;
-  font-weight: bold;
-  text-align: center;
 `;
 
 const ModalMain = styled.main`
