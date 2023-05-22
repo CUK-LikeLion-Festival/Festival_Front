@@ -29,7 +29,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  padding: 0;
 `;
 
 const InnerContainer = styled.div`
@@ -39,6 +38,7 @@ const InnerContainer = styled.div`
   justify-content: center;
   max-width: 70%;
   height: 70%;
+  padding: 0;
 `;
 
 const GroundImage = styled.img.attrs({ src: `${Playground}` })`
@@ -46,7 +46,7 @@ const GroundImage = styled.img.attrs({ src: `${Playground}` })`
   max-height: 70vh;
   display: block;
 `;
-const Box = styled.dic`
+const Box = styled.div`
   margin-top: 0.5rem;
 `;
 
