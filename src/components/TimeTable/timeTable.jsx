@@ -3,8 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import WednesDayTimeTable from "./WednesDay/wednesDayTimetable";
-import ThursDayTimeTable from "./ThursDay/thursDayTimeTable";
 import LineUp from "./Lineup/lineup";
+import ThursDayNight from "./ThursDay/thursDayNight";
+import ThursDayDay from "./ThursDay/thursDayDay";
 
 const TimeTable = () => {
   const settings = {
@@ -25,8 +26,11 @@ const TimeTable = () => {
         <div className=" ml-[640px] xl:mt-[50px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
           <WednesDayTimeTable />
         </div>
-        <div className="ml-[540px] xl:mt-[50px] sm:ml-0  md:ml-[0px] md:mt-[130px] md:px-4">
-          <ThursDayTimeTable />
+        <div className="ml-[640px] xl:mt-[50px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
+          <ThursDayDay />
+        </div>
+        <div className="ml-[640px] xl:mt-[50px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
+          <ThursDayNight />
         </div>
         <div>
           <LineUp />

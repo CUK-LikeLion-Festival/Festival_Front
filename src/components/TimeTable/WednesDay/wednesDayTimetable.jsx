@@ -34,7 +34,7 @@ export default function WednesDayTimeTable() {
             </div>
             <div
               key={index}
-              className="bg-[#9C85AD] bg-opacity-60 border-[10px] border-white border-double  grid grid-cols-2 grid-flow-row gap-4 rounded-3xl p-4 mb-4 sm:h-auto sm:mb-5 sm:mx-5 sm:p-2 md:gap-7 md:grid-rows-2 md:grid-flow-row md:items-center"
+              className="bg-[#9C85AD] bg-opacity-60 border-[9px] border-white border-double  grid grid-cols-2 grid-flow-row gap-4 rounded-3xl p-4 mb-4 sm:h-auto sm:mb-5 sm:mx-5 sm:p-2 md:gap-7 md:grid-rows-2 md:grid-flow-row md:items-center"
             >
               {item.description.map((desc, idx) => (
                 <p

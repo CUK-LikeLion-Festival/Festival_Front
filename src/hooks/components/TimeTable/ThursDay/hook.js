@@ -35,17 +35,17 @@ function ThursDayTimeTableDetail() {
 
     {
       time: "19:30 ~ 20:30",
-      title: "연예인 공연",
+      title: "연예인 공연1",
       description: ["거미", "자이언티"],
     },
     {
       time: "20:30 ~ 21:30",
-      title: "가대시그널 & 경품추첨",
+      title: "가대 시그널",
       description: [""],
     },
     {
       time: "21:30 ~ 22:00",
-      title: "연예인 공연",
+      title: "연예인 공연2",
       description: ["그레이"],
     },
   ];

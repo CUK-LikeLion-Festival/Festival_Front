@@ -37,11 +37,20 @@ const Header = () => {
           className={`${isMenuOpen ? "block" : "hidden"} w-full`}
           id="navbar-hamburger"
         >
-          <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+          <ul className="flex flex-col font-medium mt-4 rounded-lg  dark:border-gray-700">
+            <li>
+              <a
+                href="/"
+                className="block py-2 pl-3 pr-4 text-white rounded  hover:text-red-200"
+                aria-current="page"
+              >
+                홈
+              </a>
+            </li>
             <li>
               <a
                 href="/sponser"
-                className="block py-2 pl-3 pr-4 text-white  rounded "
+                className="block py-2 pl-3 pr-4 text-white rounded  hover:text-red-200"
                 aria-current="page"
               >
                 스탬프
@@ -50,7 +59,7 @@ const Header = () => {
             <li>
               <a
                 href="/booth/detail"
-                className="block py-2 pl-3 pr-4 text-white rounded"
+                className="block py-2 pl-3 pr-4 text-white rounded hover:text-red-200"
               >
                 부스 전체보기
               </a>
@@ -58,7 +67,7 @@ const Header = () => {
             <li>
               <a
                 href="/booth/bar"
-                className="block py-2 pl-3 pr-4 text-white rounded "
+                className="block py-2 pl-3 pr-4 text-white rounded  hover:text-red-200"
               >
                 주점 전체보기
               </a>
