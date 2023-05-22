@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
 import BoothCard from "../components/Booth/boothCard";
 import booth_Map_default from "../assets/booth_Map_default.png";
 import booth_Map_Kim from "../assets/booth_Map_Kim.png";
 import booth_Map_Ni from "../assets/booth_Map_Ni.png";
 import booth_Map_Square from "../assets/booth_Map_Square.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Header from "../components/Layout/header";
 
 function Booth() {
-  const navigate = useNavigate();
   const Map = [booth_Map_Kim, booth_Map_Square, booth_Map_Ni];
   const [isClicked, setIsClicked] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
@@ -40,17 +38,7 @@ function Booth() {
   };
   return (
     <div>
-      <button
-        onClick={() => {
-          navigate("/");
-        }}
-        style={{
-          color: "white",
-          fontSize: "25px",
-        }}
-      >
-        <FontAwesomeIcon icon={faArrowLeft} />
-      </button>
+      <Header />
       <div>
         <Img>
           <img src={mapimg} alt="boothImage" />
