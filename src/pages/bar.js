@@ -4,6 +4,8 @@ import styled from "styled-components";
 import BarList from "../components/bar/barlist";
 import Layout from "../components/Layout/layout";
 
+
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -19,6 +21,7 @@ const InnerContainer = styled.div`
   justify-content: center;
   max-width: 70%;
   height: 70%;
+  padding:0;
 `;
 
 const GroundImage = styled.img.attrs({ src: `${Playground}` })`
@@ -26,9 +29,8 @@ const GroundImage = styled.img.attrs({ src: `${Playground}` })`
   max-height: 70vh;
   display: block;
 `;
-const Box = styled.dic `
-  margin-top: 1rem;
-  height:80vh;
+const Box = styled.div `
+  margin-top: 0.5rem;
 `;
 
 const Bar = () => {
@@ -40,11 +42,12 @@ const Bar = () => {
             <GroundImage />
           </InnerContainer>
           <Box>
-            <BarList />
+          <BarList />
           </Box>
         </Container>
       </React.Fragment>
-    </Layout>
+      </Layout>
+    
   );
 };
 
