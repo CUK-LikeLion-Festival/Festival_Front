@@ -8,8 +8,6 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FaAngleDoubleDown } from "react-icons/fa";
 
 const BannerImg = () => {
-  const text = "가톨릭대학교 멋쟁이 사자처럼 X 아우름제 중앙축제운영단";
-
   const scrollButtonRef = useRef(null);
 
   useEffect(() => {
@@ -43,9 +41,7 @@ const BannerImg = () => {
     <div className="flex flex-col justify-center items-center mt-10 h-5/6 ">
       <div className="flex flex-row mt-10 sm:mt-0 sm:space-x-7 space-x-16">
         <img src={Lion} alt="Lion" className={`object-contain w-20 h-20 `} />
-        {/* <p className="flex justify-center text-2xl items-center mx-2 text-white">
-          <FontAwesomeIcon icon={faTimes} />
-        </p> */}
+
         <img src={CUK} alt="cuk" className={`object-contain w-20 h-20 `} />
       </div>
       <div className="my-2 sm:my-0 sm:ml-5 flex flex-row">
@@ -66,7 +62,7 @@ const BannerImg = () => {
         alt="Banner"
         className={`mt-2 object-contain rounded-t-[200px] sm:rounded-t-[100px] sm:rounded-b-[70px] max-w-full max-h-full transition-opacity duration-1000 hover:opacity-40 hover:border-2 hover:border-black`}
       />
-      <div className="text-center mt-10 lg:hidden xl:hidden">
+      <div className="text-center mt-2 lg:hidden xl:hidden">
         <button
           ref={scrollButtonRef}
           onClick={() => {
@@ -78,6 +74,7 @@ const BannerImg = () => {
         >
           <FaAngleDoubleDown color="white" size={40} />
         </button>
+        <p className="text-center text-white">아래로 슬라이드 해주세요.</p>
       </div>
     </div>
   );
