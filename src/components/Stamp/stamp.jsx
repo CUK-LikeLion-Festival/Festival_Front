@@ -7,7 +7,7 @@ export default function Stamp() {
 
   return (
     <div className="flex flex-col">
-      <div className="flex justify-center my-10 text-5xl font-bold sm:text-3xl sm:my-20">
+      <div className="flex text-white justify-center my-10 text-5xl font-bold sm:text-3xl sm:my-20">
         <h2>{data.title}</h2>
       </div>
       <div className="flex flex-row justify-center sm:flex-col md:flex-col ">
