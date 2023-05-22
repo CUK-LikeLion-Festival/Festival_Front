@@ -19,12 +19,17 @@ const BannerImg = () => {
 
   return (
     <div className="flex flex-col justify-center items-center mt-10 h-5/6 ">
-      <div className="flex flex-row">
+      <div className="flex flex-row mt-5 sm:mt-0">
         <img src={Lion} alt="Lion" className={`object-contain w-20 h-20 `} />
         <p className="flex justify-center text-2xl items-center mx-2 text-black">
           <FontAwesomeIcon icon={faTimes} />
         </p>
         <img src={CUK} alt="cuk" className={`object-contain w-20 h-20 `} />
+      </div>
+      <div className="my-2 sm:my-0">
+        <p className="sm:text-sm">
+          가톨릭대학교 멋쟁이 사자처럼 X 가톨릭대학교 축제 위원회
+        </p>
       </div>
       <img
         src={Banner}
