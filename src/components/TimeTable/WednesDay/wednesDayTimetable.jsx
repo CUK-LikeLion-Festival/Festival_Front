@@ -11,7 +11,7 @@ export default function WednesDayTimeTable() {
         {wedNight.map((item, index) => (
           <div
             key={index}
-            className={`bg-white rounded-3xl p-4 mb-4 sm:h-auto sm:mb-2 sm:mx-5 sm:p-2 `}
+            className={`bg-white rounded-3xl p-4 mb-4 sm:h-auto sm:mb-5 sm:mx-5 sm:p-2 `}
           >
             <p className=" text-lg mb-2 text-center sm:text-[16px] sm:mb-0">
               {item.time}

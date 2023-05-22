@@ -3,32 +3,35 @@ import Playground from "../../src/assets/playground.png";
 import styled from "styled-components";
 import BarList from "../components/bar/barlist";
 import { useNavigate } from "react-router-dom";
+import Layout from "../components/Layout/layout";
 
 const Bar = () => {
   const navigate = useNavigate();
   return (
-    <React.Fragment>
-      <Button>
-        <button
-          style={{
-            color: "white",
-          }}
-          onClick={() => {
-            navigate("/");
-          }}
-        >
-          Home
-        </button>
-      </Button>
-      <Container>
-        <InnerContainer>
-          <GroundImage />
-          <div style={{ marginTop: "1rem" }}>
-            <BarList />
-          </div>
-        </InnerContainer>
-      </Container>
-    </React.Fragment>
+    <Layout>
+      <React.Fragment>
+        <Button>
+          <button
+            style={{
+              color: "white",
+            }}
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Home
+          </button>
+        </Button>
+        <Container>
+          <InnerContainer>
+            <GroundImage />
+            <div style={{ marginTop: "1rem" }}>
+              <BarList />
+            </div>
+          </InnerContainer>
+        </Container>
+      </React.Fragment>
+    </Layout>
   );
 };
 

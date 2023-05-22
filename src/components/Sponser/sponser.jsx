@@ -2,6 +2,71 @@ import styled from "styled-components";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import SponserDetail from "../../hooks/components/Sponser/hook";
 
+function Sponser() {
+  const { data } = SponserDetail();
+  // 이전 슬라이드 이동 함수
+  const handlePrevSlide = () => {
+    const slideContainer = document.getElementById("slide-container");
+    if (slideContainer) {
+      slideContainer.scrollLeft -= slideContainer.offsetWidth;
+    }
+  };
+  // 다음 슬라이드 이동 함수
+  const handleNextSlide = () => {
+    const slideContainer = document.getElementById("slide-container");
+    if (slideContainer) {
+      slideContainer.scrollLeft += slideContainer.offsetWidth;
+    }
+  };
+
+  return (
+    <div>
+      <SlideContainer>
+        <Slide id="slide-container">
+          <Container>
+            <Wrapper>
+              {data.map((item, index) => (
+                <div key={index}>
+                  <CardContainer>
+                    <ImageWrapper
+                      style={{
+                        backgroundColor: item.background,
+                      }}
+                    >
+                      <Image src={item.img} alt="Booth Image" />
+                    </ImageWrapper>
+                    <BoothName
+                      style={{
+                        color: item.color,
+                      }}
+                    >
+                      {item.boothName}
+                    </BoothName>
+                    <ClubName
+                      style={{
+                        color: item.color,
+                      }}
+                    >
+                      {item.clubName}
+                    </ClubName>
+                    <Discript>{item.discript}</Discript>
+                  </CardContainer>
+                </div>
+              ))}
+            </Wrapper>
+          </Container>
+        </Slide>
+        <SlideButton onClick={handlePrevSlide}>
+          <FaChevronLeft />
+        </SlideButton>
+        <SlideButton right onClick={handleNextSlide}>
+          <FaChevronRight />
+        </SlideButton>
+      </SlideContainer>
+    </div>
+  );
+}
+
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -169,70 +234,5 @@ const SlideContainer = styled.div`
   width: 100%;
   height: auto;
 `;
-
-function Sponser() {
-  const { data } = SponserDetail();
-  // 이전 슬라이드 이동 함수
-  const handlePrevSlide = () => {
-    const slideContainer = document.getElementById("slide-container");
-    if (slideContainer) {
-      slideContainer.scrollLeft -= slideContainer.offsetWidth;
-    }
-  };
-  // 다음 슬라이드 이동 함수
-  const handleNextSlide = () => {
-    const slideContainer = document.getElementById("slide-container");
-    if (slideContainer) {
-      slideContainer.scrollLeft += slideContainer.offsetWidth;
-    }
-  };
-
-  return (
-    <div>
-      <SlideContainer>
-        <Slide id="slide-container">
-          <Container>
-            <Wrapper>
-              {data.map((item, index) => (
-                <div key={index}>
-                  <CardContainer>
-                    <ImageWrapper
-                      style={{
-                        backgroundColor: item.background,
-                      }}
-                    >
-                      <Image src={item.img} alt="Booth Image" />
-                    </ImageWrapper>
-                    <BoothName
-                      style={{
-                        color: item.color,
-                      }}
-                    >
-                      {item.boothName}
-                    </BoothName>
-                    <ClubName
-                      style={{
-                        color: item.color,
-                      }}
-                    >
-                      {item.clubName}
-                    </ClubName>
-                    <Discript>{item.discript}</Discript>
-                  </CardContainer>
-                </div>
-              ))}
-            </Wrapper>
-          </Container>
-        </Slide>
-        <SlideButton onClick={handlePrevSlide}>
-          <FaChevronLeft />
-        </SlideButton>
-        <SlideButton right onClick={handleNextSlide}>
-          <FaChevronRight />
-        </SlideButton>
-      </SlideContainer>
-    </div>
-  );
-}
 
 export default Sponser;

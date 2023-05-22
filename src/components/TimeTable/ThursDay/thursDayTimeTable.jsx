@@ -11,7 +11,7 @@ export default function ThursDayTimeTable() {
           5/25 낮
         </h2>
         {ThursDay.map((item, index) => (
-          <div key={index} className="bg-white rounded-3xl p-4 mb-4 ">
+          <div key={index} className="bg-white rounded-3xl p-4 mb-4 sm:mb-5">
             <div className="flex flex-col justify-center items-center">
               <p className="text-lg sm:text-[14px] sm:mb-0">{item.time}</p>
               <h3 className="text-xl font-bold mb-5 text-blue-400 sm:text-[14px] sm:mb-0">
@@ -35,7 +35,7 @@ export default function ThursDayTimeTable() {
           5/25 밤
         </h2>
         {ThursNight.map((item, index) => (
-          <div key={index} className="bg-white rounded-3xl p-4 mb-4">
+          <div key={index} className="bg-white rounded-3xl p-4 mb-4 sm:mb-5">
             <div className="flex flex-col justify-center items-center">
               <p className="text-lg mb-2 sm:text-[14px] sm:mb-0">{item.time}</p>
               <h3 className="text-xl font-bold mb-2 text-blue-400 sm:text-[12px] sm:mb-1">
