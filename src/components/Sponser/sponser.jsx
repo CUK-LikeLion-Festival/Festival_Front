@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import SponserDetail from "../../hooks/components/Sponser/hook";
 
@@ -194,72 +192,6 @@ const Discript = styled.p`
   @media (min-width: 721px) and (max-width: 1080px) {
     bottom: 15px;
     font-size: 25px;
-  }
-`;
-const Button = styled.button`
-  font-size: 30px;
-  /* &: hover {
-    color: #d77d89;
-  } */
-
-  @media (min-width: 350px) and (max-width: 720px) {
-    font-size: 15px;
-  }
-  @media (min-width: 721px) and (max-width: 1080px) {
-    font-size: 20px;
-  } //medium
-  align-self: flex-start;
-  color: ${(props) =>
-    props.isClicked ? props.theme.colors.green : props.theme.colors.white};
-  margin: 15px;
-`;
-
-const Img = styled.div`
-  float: right;
-  margin-right: 25%;
-  padding-top: 20px;
-  width: 500px;
-  height: 500px;
-  @media (min-width: 350px) and (max-width: 720px) {
-    width: 200px;
-    height: 200px;
-    margin-right: 20%;
-    padding-top: 100px;
-  }
-  @media (min-width: 721px) and (max-width: 1080px) {
-    width: 300px;
-    height: 300px;
-  }
-`;
-const BuildingName = styled.div`
-  margin-top: 100px;
-  margin-left: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  white-space: nowrap;
-
-  position: relative;
-  @media (min-width: 350px) and (max-width: 720px) {
-    margin-top: 15px;
-    position: absolute;
-    right: 30px;
-    flex-direction: row;
-
-    &::after {
-      position: absolute;
-      top: 90%;
-      left: -0px;
-      width: 320px;
-      height: 2px;
-      background-color: white;
-      transform: translateY(-50%);
-      opacity: 0.5;
-      z-index: -1;
-    }
-  }
-  @media (min-width: 721px) and (max-width: 1080px) {
-    margin-top: 20px;
   }
 `;
 
