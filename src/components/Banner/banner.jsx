@@ -54,7 +54,7 @@ const BannerImg = () => {
       <img
         src={Banner}
         alt="Banner"
-        className={`object-contain max-w-full max-h-full transition-opacity duration-1000 hover:opacity-40`}
+        className={`mt-2 object-contain rounded-t-[200px] sm:rounded-t-[100px] max-w-full max-h-full transition-opacity duration-1000 hover:opacity-40`}
       />
       <div className="text-center mt-24 lg:hidden xl:hidden">
         <button
