@@ -6,18 +6,20 @@ import Layout from "../components/Layout/layout";
 
 const Bar = () => {
   return (
-    <Layout>
-      <React.Fragment>
-        <Container>
-          <InnerContainer>
-            <GroundImage />
-            <div style={{ marginTop: "1rem" }}>
-              <BarList />
-            </div>
-          </InnerContainer>
-        </Container>
-      </React.Fragment>
-    </Layout>
+    <div className="bg-gradient-to-b from-indigo-900 to-rose-400">
+      <Layout>
+        <React.Fragment>
+          <Container>
+            <InnerContainer>
+              <GroundImage />
+              <div style={{ marginTop: "1rem" }}>
+                <BarList />
+              </div>
+            </InnerContainer>
+          </Container>
+        </React.Fragment>
+      </Layout>
+    </div>
   );
 };
 

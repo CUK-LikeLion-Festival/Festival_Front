@@ -4,7 +4,7 @@ import Stamp from "../components/Stamp/stamp";
 
 export default function SponcerStamp() {
   return (
-    <div>
+    <div className="bg-gradient-to-b from-indigo-900 to-rose-400">
       <Layout>
         <Stamp />
         <Sponser />
