@@ -28,33 +28,25 @@ function ThursDayTimeTableDetail() {
   ];
   const ThursNight = [
     {
-      time: "19:00 ~ 19:10",
-      title: "오프닝",
-      description: [""],
-    },
-    {
-      time: "19:10 ~ 20:20",
+      time: "18:30 ~ 19:10",
       title: "동아리 공연",
-      description: [
-        "조환희",
-        "서루와 아이들",
-        "박현우",
-        "예나와 선배들",
-        "파라솔",
-        "팥양갱",
-        "트웬티즈",
-        "김민지",
-      ],
+      description: ["헤니현지윤서", "스플렌디드", "파이브 칙스", "30CM"],
+    },
+
+    {
+      time: "19:30 ~ 20:30",
+      title: "연예인 공연",
+      description: ["거미", "자이언티"],
     },
     {
-      time: "20:30 ~ 21:20",
-      title: "추첨 & 불꽃놀이",
+      time: "20:30 ~ 21:30",
+      title: "가대시그널 & 경품추첨",
       description: [""],
     },
     {
-      time: "21:30 ~ 22:30",
+      time: "21:30 ~ 22:00",
       title: "연예인 공연",
-      description: ["케이시", "10cm"],
+      description: ["그레이"],
     },
   ];
 
