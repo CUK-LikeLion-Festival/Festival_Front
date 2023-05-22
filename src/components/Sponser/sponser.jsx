@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import SponserDetail from "../../hooks/components/Sponser/hook";
 
@@ -96,7 +95,8 @@ const CardContainer = styled.div`
   align-items: center;
   width: 200px;
   height: 300px;
-  background-color: #f1f1f1;
+
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   box-shadow: 2px 5px 12px 2px rgb(0, 0, 0);
   @media (min-width: 350px) and (max-width: 720px) {
@@ -110,25 +110,27 @@ const CardContainer = styled.div`
     height: 480px;
   }
 `;
+
 const ImageWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 100%;
-  height: 100%; */
   border-radius: 10px;
+  margin-top: 35px;
   @media (min-width: 350px) and (max-width: 720px) {
-    width: 260px;
+    width: 240px;
     height: 150px;
   }
   @media (min-width: 721px) and (max-width: 1080px) {
-    width: 500px;
-    height: 300px;
+    margin-top: 60px;
+    width: 450px;
+    height: 280px;
   }
+  transition: transform 0.6s;
 `;
 const Image = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 8px;
   @media (min-width: 350px) and (max-width: 720px) {
     width: 110px;
@@ -137,19 +139,20 @@ const Image = styled.img`
   }
 `;
 const BoothName = styled.h1`
-  font-size: 30px;
-  margin-top: -70px;
-  color: black;
+  font-size: 28px;
+  margin-top: -75px;
+  color: white;
   font-weight: bolder;
   top: 80px;
+
   position: absolute;
   @media (min-width: 350px) and (max-width: 720px) {
     font-size: 17px;
-    margin-top: -75px;
+    margin-top: -65px;
     font-weight: bolder;
   }
   @media (min-width: 721px) and (max-width: 1080px) {
-    margin-top: -60px;
+    margin-top: -70px;
     font-size: 40px;
   }
 `;
@@ -161,6 +164,7 @@ const ClubName = styled.p`
   height: 10%;
   top: 150px;
   position: absolute;
+
   @media (min-width: 350px) and (max-width: 720px) {
     font-size: 15px;
     margin-top: -20px;
@@ -176,10 +180,12 @@ const Discript = styled.p`
   margin-top: 10px;
   font-weight: 500;
   padding-bottom: 0px;
-  color: #313d79;
+  color: white;
   position: absolute;
   font-weight: bold;
-  bottom: 50px;
+  white-space: pre-line;
+  bottom: 20px;
+
   @media (min-width: 350px) and (max-width: 720px) {
     font-size: 17px;
     margin-top: 30px;
@@ -190,14 +196,88 @@ const Discript = styled.p`
     font-size: 25px;
   }
 `;
+const Button = styled.button`
+  font-size: 30px;
+  /* &: hover {
+    color: #d77d89;
+  } */
 
+  @media (min-width: 350px) and (max-width: 720px) {
+    font-size: 15px;
+  }
+  @media (min-width: 721px) and (max-width: 1080px) {
+    font-size: 20px;
+  } //medium
+  align-self: flex-start;
+  color: ${(props) =>
+    props.isClicked ? props.theme.colors.green : props.theme.colors.white};
+  margin: 15px;
+`;
+
+const Img = styled.div`
+  float: right;
+  margin-right: 25%;
+  padding-top: 20px;
+  width: 500px;
+  height: 500px;
+  @media (min-width: 350px) and (max-width: 720px) {
+    width: 200px;
+    height: 200px;
+    margin-right: 20%;
+    padding-top: 100px;
+  }
+  @media (min-width: 721px) and (max-width: 1080px) {
+    width: 300px;
+    height: 300px;
+  }
+`;
+const BuildingName = styled.div`
+  margin-top: 100px;
+  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  white-space: nowrap;
+
+  position: relative;
+  @media (min-width: 350px) and (max-width: 720px) {
+    margin-top: 15px;
+    position: absolute;
+    right: 30px;
+    flex-direction: row;
+
+    &::after {
+      position: absolute;
+      top: 90%;
+      left: -0px;
+      width: 320px;
+      height: 2px;
+      background-color: white;
+      transform: translateY(-50%);
+      opacity: 0.5;
+      z-index: -1;
+    }
+  }
+  @media (min-width: 721px) and (max-width: 1080px) {
+    margin-top: 20px;
+  }
+`;
+
+const SlideContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 250px;
+`;
 const Slide = styled.div`
   display: flex;
   overflow-x: auto;
   width: 100%;
   height: auto;
   scroll-behavior: smooth;
-
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
   &::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 4px;
@@ -211,7 +291,7 @@ const Slide = styled.div`
 // 화살표 버튼
 const SlideButton = styled.button`
   position: absolute;
-  top: 60%;
+  top: 40%;
   transform: translateY(-50%);
   font-size: 30px;
   background: none;
@@ -229,11 +309,6 @@ const SlideButton = styled.button`
     top: 50%;
   } //medium
   ${(props) => (props.right ? "right: 0" : "left: 0")}
-`;
-const SlideContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: auto;
 `;
 
 export default Sponser;

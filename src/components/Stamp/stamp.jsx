@@ -9,8 +9,13 @@ export default function Stamp() {
   const { data } = StampDetail();
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col">
-      <div className="ml-5 sm:ml-1 md:ml-1">
+    <div
+      className="flex flex-col"
+      style={{
+        marginTop: "-30px",
+      }}
+    >
+      {/* <div className="ml-5 sm:ml-1 md:ml-1">
         <button
           onClick={() => {
             navigate("/");
@@ -19,9 +24,9 @@ export default function Stamp() {
         >
           <FontAwesomeIcon icon={faArrowLeft} />
         </button>
-      </div>
+      </div> */}
       <div className="flex justify-center my-10 text-5xl font-bold sm:text-3xl sm:my-20">
-        <h2>{data.title}</h2>
+        <h2 className="text-white">{data.title}</h2>
       </div>
       <div className="flex flex-row justify-center sm:flex-col md:flex-col ">
         <img
