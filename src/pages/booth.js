@@ -28,19 +28,24 @@ function Booth() {
   const handlePrevSlide = () => {
     const slideContainer = document.getElementById("slide-container");
     if (slideContainer) {
-      slideContainer.scrollLeft -= slideContainer.offsetWidth;
+      slideContainer.scrollLeft -= slideContainer.clientWidth * 1.1 + 5;
     }
   };
   // 다음 슬라이드 이동 함수
   const handleNextSlide = () => {
     const slideContainer = document.getElementById("slide-container");
     if (slideContainer) {
-      slideContainer.scrollLeft += slideContainer.offsetWidth;
+      slideContainer.scrollLeft += slideContainer.clientWidth * 1.05 + 5;
     }
   };
 
   return (
-    <div>
+    <div
+    // style={{
+    //   background: "#6E4ABC",
+    // }}
+    //=> 위에 배경색은 부스 색깔 깨지면 이 색 쓰면 될것같아요
+    >
       <button
         onClick={() => {
           navigate("/");
@@ -56,6 +61,7 @@ function Booth() {
       <Img>
         <img src={mapimg} alt="boothImage" />
       </Img>
+
       <BuildingName>
         <Button onClick={() => handleButtonClick(0)}>김수환관</Button>
         <Button onClick={() => handleButtonClick(1)}>광장</Button>
@@ -116,6 +122,11 @@ const Img = styled.div`
     height: 300px;
   }
 `;
+const Line = styled.div`
+  border: "3px solid white";
+  padding-top: 20px;
+`;
+
 const BuildingName = styled.div`
   margin-top: 100px;
   margin-left: 200px;
