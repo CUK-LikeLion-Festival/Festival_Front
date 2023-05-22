@@ -131,7 +131,7 @@ function Booth() {
     <div>
       <button
         onClick={() => {
-          navigate("/detail/menus");
+          navigate("/");
         }}
         style={{
           color: "white",

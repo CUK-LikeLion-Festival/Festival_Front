@@ -9,7 +9,6 @@ import ModalDetail from "./hooks/components/Modals/Modal/hook";
 import { useCookies } from "react-cookie";
 import Bar from "./pages/bar";
 import SponcerStamp from "./pages/sponserstamp";
-import Menus from "./pages/menus";
 
 function App() {
   const { data } = ModalDetail();
@@ -87,7 +86,6 @@ function App() {
             <Route path="/booth/detail" element={<Booth />} />
             <Route path="/sponser" element={<SponcerStamp />} />
             <Route path="/booth/bar" element={<Bar />} />
-            <Route path="/detail/menus" element={<Menus />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

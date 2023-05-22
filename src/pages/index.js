@@ -5,7 +5,6 @@ import BannerImg from "../components/Banner/banner";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import TimeTable from "../components/TimeTable/timeTable";
-import Menus from "./menus";
 
 const options = {
   activeClass: "active",
@@ -82,7 +81,33 @@ function IndexPage() {
           <TimeTable />
         </Section>
         <Section anchors="booth">
-          <Menus />
+          <Layout>
+            <Wrapper>
+              <div>
+                <StampButton
+                  onClick={() => {
+                    navigate("/sponser");
+                  }}
+                >
+                  스탬프
+                </StampButton>
+                <BoothButton
+                  onClick={() => {
+                    navigate("/booth/detail");
+                  }}
+                >
+                  부스 전체보기
+                </BoothButton>
+                <BarButton
+                  onClick={() => {
+                    navigate("/booth/bar");
+                  }}
+                >
+                  주점 전체보기
+                </BarButton>
+              </div>
+            </Wrapper>
+          </Layout>
         </Section>
       </SectionsContainer>
     </div>
