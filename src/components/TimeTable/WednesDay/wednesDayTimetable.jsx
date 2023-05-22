@@ -7,7 +7,7 @@ export default function WednesDayTimeTable() {
   return (
     <div>
       <div className="w-1/3 sm:w-full ">
-        <h2 className="text-3xl text-center font-bold mb-4">5/24</h2>
+        <h2 className="text-3xl text-center font-bold mb-4 sm:text-xl">5/24</h2>
         {wedNight.map((item, index) => (
           <div
             key={index}
@@ -31,9 +31,9 @@ export default function WednesDayTimeTable() {
           </div>
         ))}
         <div className="flex justify-end items-center">
-          <p className="mr-2 font-semibold text-blue-200">옆으로 넘기세요</p>
+          <p className="mr-2 font-semibold text-white">옆으로 넘기세요</p>
 
-          <FaArrowRight size={42} color="red" />
+          <FaArrowRight size={42} color="white" />
         </div>
       </div>
     </div>

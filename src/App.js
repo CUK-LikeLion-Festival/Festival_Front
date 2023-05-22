@@ -1,4 +1,5 @@
 import "./App.css";
+import "./assets/Font/SDSamliphopangcheTTFBasic.ttf";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import IndexPage from "./pages";
 import { ThemeProvider } from "styled-components";
@@ -47,7 +48,7 @@ function App() {
   };
 
   return (
-    <div className="font-[LOTTERIADDAG]">
+    <div className="font-[SDSamliphopangcheTTFBasic]">
       <div>
         {modalOpen && !hasCookie && (
           <NoticeModal
