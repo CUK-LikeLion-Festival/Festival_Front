@@ -5,14 +5,13 @@ import booth_Map_default from "../assets/booth_Map_default.png";
 import booth_Map_Kim from "../assets/booth_Map_Kim.png";
 import booth_Map_Ni from "../assets/booth_Map_Ni.png";
 import booth_Map_Square from "../assets/booth_Map_Square.png";
-
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Header from "../components/Layout/header";
 
 function Booth() {
   const Map = [booth_Map_Kim, booth_Map_Square, booth_Map_Ni];
-  const [isClicked, setIsClicked] = useState(false);
-  const [selectedId, setSelectedId] = useState(null);
+  const [isClicked, setIsClicked] = useState(true);
+  const [selectedId, setSelectedId] = useState(0);
   const [showBoothCard, setShowBoothCard] = useState(true);
   const [mapimg, setImg] = useState(booth_Map_default);
 
@@ -51,19 +50,21 @@ function Booth() {
           </Button>
         </BuildingName>
       </div>
-      {isClicked && (
-        <SlideContainer>
-          <Slide id="slide-container">
-            {showBoothCard && <BoothCard selectedId={selectedId} />}
-          </Slide>
-          <SlideButton onClick={handlePrevSlide}>
-            <FaChevronLeft />
-          </SlideButton>
-          <SlideButton right onClick={handleNextSlide}>
-            <FaChevronRight />
-          </SlideButton>
-        </SlideContainer>
-      )}
+      <div>
+        {isClicked && (
+          <SlideContainer>
+            <Slide id="slide-container">
+              {showBoothCard && <BoothCard selectedId={selectedId} />}
+            </Slide>
+            <SlideButton onClick={handlePrevSlide}>
+              <FaChevronLeft />
+            </SlideButton>
+            <SlideButton right onClick={handleNextSlide}>
+              <FaChevronRight />
+            </SlideButton>
+          </SlideContainer>
+        )}
+      </div>
     </div>
   );
 }
