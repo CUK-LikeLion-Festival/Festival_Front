@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import BoothCard from "../components/Booth/boothCard";
-import booth_Map_default from "../assets/booth_Map_default.png";
+import booth_Map_default from "../assets/booth_Map_Kim.png";
 import booth_Map_Kim from "../assets/booth_Map_Kim.png";
 import booth_Map_Ni from "../assets/booth_Map_Ni.png";
 import booth_Map_Square from "../assets/booth_Map_Square.png";
