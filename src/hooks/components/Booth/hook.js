@@ -30,9 +30,9 @@ import shieldDetail from "../../../assets/clubImg/쉴드부스.jpg";
 function BoothDetail() {
   const Kim = [
     {
-      boothName: "태권도부",
+      boothName: "태권도부 ",
 
-      discript: "2:20 ~ 2:40", //설명
+      discript: "25일\n2:20 ~ 2:40", //설명
       location: "1층",
       background: "#ECECEC",
       color: "balck",
@@ -41,7 +41,7 @@ function BoothDetail() {
     {
       boothName: "세이크리드",
 
-      discript: "2:40 ~ 3:00", //설명
+      discript: "25일\n2:40 ~ 3:00", //설명
       location: "2층",
       img: sacred,
       background: "#FFFFFF",
@@ -50,7 +50,7 @@ function BoothDetail() {
     {
       boothName: "밴드실험",
 
-      discript: "3:00 ~ 3:15", //설명
+      discript: "25일\n3:00 ~ 3:15", //설명
       location: "3층",
       img: silhum,
       background: "#E61F2E",
@@ -59,7 +59,7 @@ function BoothDetail() {
     {
       boothName: "콘서트홀등반가",
       img: default_Img,
-      discript: "3:15 ~ 3:30", //설명
+      discript: "25일\n3:15 ~ 3:30", //설명
       location: "층",
       background: "#CD7988",
       color: "white",
@@ -67,7 +67,7 @@ function BoothDetail() {
     {
       boothName: "남현식밴드",
       img: default_Img,
-      discript: "3:30 ~ 3:45", //설명
+      discript: "25일\n3:30 ~ 3:45", //설명
       location: "3층",
       background: "#CD7988",
       color: "white",
@@ -337,25 +337,26 @@ function BoothDetail() {
       boothName: "고고판다", //동아리이름
       clubName: "Night Only 🌙",
       img: foodtruck,
-      discript: "목살스테이크-10,000원 ", //설명
+      discript: "<대운동장>\n목살스테이크-10,000원 ", //설명
     },
     {
       boothName: "스트리트텐동", //동아리이름
       clubName: "Night Only 🌙",
       img: foodtruck,
-      discript: "텐동-10,000원\n에비텐동-12,000원\n아나고텐동-15,000원", //설명
+      discript:
+        "<대운동장>\n텐동-10,000원\n에비텐동-12,000원\n아나고텐동-15,000원", //설명
     },
     {
       boothName: "곱창야시장", //동아리이름
       clubName: "Night Only 🌙",
       img: foodtruck,
-      discript: "야채곱창순대볶음\n13,000~20,000원", //설명
+      discript: "<대운동장>\n야채곱창순대볶음\n13,000~20,000원", //설명
     },
     {
       boothName: "두리곱창", //동아리이름
       clubName: "Night Only 🌙",
       img: foodtruck,
-      discript: "닭발-12,000원\n닭갈비-12,000원\n오돌뼈-12,000원", //설명
+      discript: "<대운동장>\n닭발-12,000원\n닭갈비-12,000원\n오돌뼈-12,000원", //설명
     },
   ];
 

@@ -236,7 +236,7 @@ const BoothName = styled.h1`
 `;
 const ClubName = styled.p`
   font-size: 20px;
-  margin-top: 30px;
+  margin-top: 40px;
   color: black;
   font-weight: 700;
   height: 10%;
@@ -245,7 +245,7 @@ const ClubName = styled.p`
 
   @media (min-width: 350px) and (max-width: 720px) {
     font-size: 15px;
-    margin-top: 5px;
+    margin-top: 30px;
   }
   @media (min-width: 721px) and (max-width: 1080px) {
     margin-top: 110px;
@@ -261,7 +261,7 @@ const Discript = styled.p`
   color: white;
   position: absolute;
   font-weight: lighter;
-
+  text-align: center;
   white-space: pre-line;
   bottom: 20px;
 
