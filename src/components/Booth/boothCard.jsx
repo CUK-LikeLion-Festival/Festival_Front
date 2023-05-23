@@ -152,6 +152,7 @@ const Container = styled.div`
   margin-left: 100px;
   @media (min-width: 350px) and (max-width: 720px) {
     margin-left: 50px;
+    margin-top: 200px;
   } //small
   @media (min-width: 721px) and (max-width: 1080px) {
     margin-top: 265px;
@@ -282,9 +283,9 @@ const Detail = styled.div`
   margin-top: 25px;
   cursor: pointer;
   font-size: 20px;
-  /* &: hover {
+  &:hover {
     color: #d77d89;
-  } */
+  }
 `;
 
 const ModalContainer = styled.div`
