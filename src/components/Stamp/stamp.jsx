@@ -12,7 +12,7 @@ export default function Stamp() {
         marginTop: "-30px",
       }}
     >
-      <div className="flex text-white justify-center my-10 text-5xl font-bold sm:text-3xl sm:my-20">
+      <div className="flex text-white justify-center my-10 text-5xl font-bold sm:text-3xl sm:my-10">
         <h2 className="text-white">{data.title}</h2>
       </div>
       <div className="flex flex-row justify-center sm:flex-col md:flex-col ">
