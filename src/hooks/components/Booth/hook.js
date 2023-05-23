@@ -12,13 +12,14 @@ import coma from "../../../assets/clubImg/coma.png";
 import joy from "../../../assets/clubImg/joy.jpg";
 import shield from "../../../assets/clubImg/shield.jpeg";
 import cine from "../../../assets/clubImg/씨네필부스.jpg";
-import mod from "../../../assets/clubImg/mod.png";
+import mod from "../../../assets/clubImg/mod 부스.jpg";
 import anicat from "../../../assets/clubImg/애니캣 부스.jpg";
 import taekwondo from "../../../assets/clubImg/태권도.jpg";
 import sacred from "../../../assets/clubImg/sacred.jpeg";
 import silhum from "../../../assets/clubImg/silhum.jpg";
 import foodtruck from "../../../assets/clubImg/foodtruck.png";
-import special from "../../../assets/clubImg/특수교육과.jpeg";
+import special from "../../../assets/clubImg/특교과.jpg";
+import specialDetail from "../../../assets/clubImg/특교과부스.jpg";
 import child from "../../../assets/clubImg/아동학과.jpg";
 import default_Img from "../../../assets/default_Img.png";
 import rightDetail from "../../../assets/clubImg/인권부스상세.jpg";
@@ -85,13 +86,12 @@ function BoothDetail() {
     },
     {
       boothName: "MOD",
-
-      discript: "😥상세정보를 받아오지 못했습니다", //설명
+      discript: "", //설명
       location: "3층",
       img: mod,
       detailImg: mod,
-      background: "white",
-      color: "black",
+      background: "#48B80C",
+      color: "white",
     },
     {
       boothName: "CDZ",
@@ -188,12 +188,11 @@ function BoothDetail() {
     {
       boothName: "특수교육과",
 
-      discript:
-        "아이스티 2000원\n쫀드기튀김 2000원\n치킨볼 3000원\n가격은 변동 될수 있습니다.", //설명
-      detailImg: default_Img,
+      discript: "",
+      detailImg: specialDetail,
       location: "3층",
       img: special,
-      background: "white",
+      background: "#F6E1AC",
       color: "#FFC9C9",
     },
     {
