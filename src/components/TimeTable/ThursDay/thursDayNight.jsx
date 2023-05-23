@@ -32,7 +32,7 @@ export default function ThursDayNight() {
             </div>
             <div
               key={index}
-              className="bg-[#9C85AD] bg-opacity-60 border-[3px] border-white border-dashed  grid grid-cols-2 grid-flow-row gap-4 rounded-3xl p-4 mb-4 sm:h-auto sm:mb-2 sm:mx-5 sm:p-2 md:gap-7 md:grid-rows-2 md:grid-flow-row md:items-center"
+              className="bg-[#9C85AD] bg-opacity-60 border-[3px] border-white border-double  grid grid-cols-2 grid-flow-row gap-4 rounded-3xl p-4 mb-4 sm:h-auto sm:mb-2 sm:mx-5 sm:p-2 md:gap-7 md:grid-rows-2 md:grid-flow-row md:items-center"
             >
               {item.description.map((desc, idx) => (
                 <p
@@ -54,7 +54,7 @@ export default function ThursDayNight() {
             </div>
             <div
               key={index}
-              className="bg-[#9C85AD] bg-opacity-60 border-[3px] border-white border-dashed  grid grid-cols-2 grid-flow-row gap-4 rounded-3xl p-4 mb-4 sm:h-auto sm:mb-2 sm:mx-5 sm:p-2 md:gap-7 md:grid-rows-2 md:grid-flow-row md:items-center"
+              className="bg-[#9C85AD] bg-opacity-60 border-[3px] border-white border-double  grid grid-cols-2 grid-flow-row gap-4 rounded-3xl p-4 mb-4 sm:h-auto sm:mb-2 sm:mx-5 sm:p-2 md:gap-7 md:grid-rows-2 md:grid-flow-row md:items-center"
             >
               {item.description.map((desc, idx) => (
                 <p
@@ -83,7 +83,7 @@ export default function ThursDayNight() {
             </div>
             <div
               key={index}
-              className="bg-[#9C85AD] bg-opacity-60 border-[3px] border-white border-dashed  grid grid-cols-2 grid-flow-row gap-4 rounded-3xl p-4 mb-4 sm:h-auto sm:mb-2 sm:mx-5 sm:p-0  sm:rounded-3xl md:gap-7 md:grid-rows-2 md:grid-flow-row md:items-center"
+              className="bg-[#9C85AD] bg-opacity-60 border-[3px] border-white border-double  grid grid-cols-2 grid-flow-row gap-4 rounded-3xl p-4 mb-4 sm:h-auto sm:mb-2 sm:mx-5 sm:p-0  sm:rounded-3xl md:gap-7 md:grid-rows-2 md:grid-flow-row md:items-center"
             >
               {item.description.map((desc, idx) => (
                 <p
