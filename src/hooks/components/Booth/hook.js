@@ -1,19 +1,19 @@
 import cdz from "../../../assets/clubImg/cdz.jpeg";
-import catLove from "../../../assets/clubImg/가대사랑.jpg";
+import catLove from "../../../assets/clubImg/가대사랑부스.jpg";
 import caritas from "../../../assets/clubImg/까리따스.jpg";
 import show from "../../../assets/clubImg/성심극.jpg";
 import peopleRight from "../../../assets/clubImg/인권.jpg";
-import history from "../../../assets/clubImg/호우회.jpeg";
-import aisec from "../../../assets/clubImg/aisec.png";
-import cahong from "../../../assets/clubImg/cahong.jpg";
+import history from "../../../assets/clubImg/호우회부스.jpg";
+import aisec from "../../../assets/clubImg/아이섹부스.jpg";
+import cahong from "../../../assets/clubImg/가홍이부스.jpg";
 import catfactory from "../../../assets/clubImg/catfactory.jpg";
 import ccc from "../../../assets/clubImg/ccc.png";
 import coma from "../../../assets/clubImg/coma.png";
 import joy from "../../../assets/clubImg/joy.jpg";
 import shield from "../../../assets/clubImg/shield.jpeg";
-import cine from "../../../assets/clubImg/cine.png";
+import cine from "../../../assets/clubImg/씨네필부스.jpg";
 import mod from "../../../assets/clubImg/mod.png";
-import anicat from "../../../assets/clubImg/anicat.jpg";
+import anicat from "../../../assets/clubImg/애니캣 부스.jpg";
 import taekwondo from "../../../assets/clubImg/태권도.jpg";
 import sacred from "../../../assets/clubImg/sacred.jpeg";
 import silhum from "../../../assets/clubImg/silhum.jpg";
@@ -75,8 +75,8 @@ function BoothDetail() {
       discript: "준비중", //설명
       location: "2층",
       img: cine,
-      background: "#1A1A1A",
-      color: "white",
+      background: "white",
+      color: "black",
     },
     {
       boothName: "MOD",
@@ -115,7 +115,7 @@ function BoothDetail() {
 
       location: "3층",
       img: anicat,
-      background: "white",
+      background: "#006547",
       color: "black",
     },
     {
