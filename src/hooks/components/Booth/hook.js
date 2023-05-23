@@ -2,7 +2,7 @@ import cdz from "../../../assets/clubImg/cdz.jpeg";
 import catLove from "../../../assets/clubImg/가대사랑부스.jpg";
 import caritas from "../../../assets/clubImg/까리따스.jpg";
 import show from "../../../assets/clubImg/성심극.jpg";
-import peopleRight from "../../../assets/clubImg/인권.jpg";
+import peopleRight from "../../../assets/clubImg/인권부스.jpg";
 import history from "../../../assets/clubImg/호우회부스.jpg";
 import aisec from "../../../assets/clubImg/아이섹부스.jpg";
 import cahong from "../../../assets/clubImg/가홍이부스.jpg";
@@ -151,12 +151,13 @@ function BoothDetail() {
     {
       boothName: "인권위원회",
 
-      discript: "", //설명
+      discript:
+        "사은품: 솜사탕과 간단한 간식\n참여방법: 구글 폼 작성\n온라인으로 참여 후 폼 화면을 보여주세요!", //설명
 
       location: "3층",
       img: peopleRight,
-      background: "white",
-      color: "black",
+      background: "#FFF6E0",
+      color: "#FCED2C",
     },
     {
       boothName: "JOY",
@@ -205,8 +206,8 @@ function BoothDetail() {
 
       location: "3층",
       img: aisec,
-      background: "#037EF3",
-      color: "white",
+      background: "#5C449C",
+      color: "#007FF2",
     },
     {
       boothName: "가홍이",
@@ -245,8 +246,8 @@ function BoothDetail() {
 
       location: "3층",
       img: history,
-      background: "#FFFFFF",
-      color: "black",
+      background: "#F6D9DE",
+      color: "#F26A7E",
     },
     {
       boothName: "쉴드",
@@ -265,7 +266,7 @@ function BoothDetail() {
 
       location: "3층",
       img: child,
-      background: "black",
+      background: "#FCCCBE",
       color: "white",
     },
   ];
