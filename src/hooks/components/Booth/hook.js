@@ -228,7 +228,8 @@ function BoothDetail() {
     {
       boothName: "캣팩토리",
 
-      discript: "😥상세정보를 받아오지 못했습니다", //설명
+      discript:
+        "칼선 스티커, 엽서, 투명 포토카드, 포스트잇, 학과별 리무버블 스티커(수량은 학과별 20개 이내) 판매 예정", //설명
       detailImg: catfactory,
       location: "3층",
       img: catfactory,
