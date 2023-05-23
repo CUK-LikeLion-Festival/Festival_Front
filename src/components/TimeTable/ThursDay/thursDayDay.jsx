@@ -18,7 +18,7 @@ export default function ThursDayDay() {
             className="text-white text-center mb-4 sm:my-5  sm:mx-5 sm:p-2"
           >
             <h3 className="text-3xl font-bold sm:text-2xl">{item.title}</h3>
-            <p className="text-base sm:text-sm">{item.time}</p>
+            <p className="text-base sm:text-sm">({item.time})</p>
             <hr className="border-white border-[1px] my-4 sm:mt-2 sm:my-2  sm:mx-7" />
           </div>
         ))}
@@ -26,7 +26,7 @@ export default function ThursDayDay() {
           <p className="mr-2 text-2xl text-white sm:text-xl">
             옆으로 슬라이드 해주세요
           </p>
-          <FaArrowRight size={42} color="white" />
+          <FaArrowRight size={38} color="white" />
         </div>
       </div>
     </div>
