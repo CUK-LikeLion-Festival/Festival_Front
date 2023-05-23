@@ -1,10 +1,18 @@
 import styled from "styled-components";
-import React from "react";
 import useBoothDetail from "../../hooks/components/Booth/hook";
+import React, { useState } from "react";
+import { IoIosClose } from "react-icons/io";
 
 const BoothCard = (props) => {
   const { Nichols, Kim, Plaza } = useBoothDetail();
   const { selectedId } = props;
+  const [showModal, setShowModal] = useState(false);
+  const [selectedBooth, setSelectedBooth] = useState(null);
+
+  const toggleModal = (booth) => {
+    setSelectedBooth(booth);
+    setShowModal(!showModal);
+  };
 
   if (selectedId === 0) {
     return (
@@ -75,10 +83,27 @@ const BoothCard = (props) => {
               >
                 {item.clubName}
               </ClubName>
-              <Discript>{item.discript}</Discript>
+              <Detail onClick={() => toggleModal(item)}>자세히 보기</Detail>
             </CardContainer>
           ))}
         </Wrapper>
+        {/* 모달 부분 */}
+        {showModal && (
+          <ModalContainer>
+            <ModalContent>
+              <h1>{selectedBooth.boothName}</h1>
+              {selectedBooth.discript !== "" ? (
+                <p>{selectedBooth.discript}</p>
+              ) : (
+                <img src={selectedBooth.detailImg} alt="Detail" />
+              )}
+              {/* <p>{selectedBooth.discript}</p> */}
+              <button>
+                <IoIosClose onClick={toggleModal} />
+              </button>
+            </ModalContent>
+          </ModalContainer>
+        )}
       </Container>
     );
   } else if (selectedId === 2) {
@@ -127,6 +152,7 @@ const Container = styled.div`
   margin-left: 100px;
   @media (min-width: 350px) and (max-width: 720px) {
     margin-left: 50px;
+    margin-top: 200px;
   } //small
   @media (min-width: 721px) and (max-width: 1080px) {
     margin-top: 265px;
@@ -184,8 +210,8 @@ const Image = styled.img`
   height: 180px;
   border-radius: 8px;
   @media (min-width: 350px) and (max-width: 720px) {
-    width: 110px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 4px;
   }
 `;
@@ -250,6 +276,68 @@ const Discript = styled.p`
     font-size: 25px;
     font-weight: lighter;
   }
+`;
+
+const Detail = styled.div`
+  color: white;
+  margin-top: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  &:hover {
+    color: #d77d89;
+  }
+`;
+
+const ModalContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const ModalContent = styled.div`
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  height: 450px;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-top: 100px;
+    top: 30px;
+
+    margin-bottom: 20px;
+  }
+  button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #888;
+    font-size: 50px;
+  }
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 350px) and (max-width: 720px) {
+  } //small
+  @media (min-width: 721px) and (max-width: 1080px) {
+    margin-top: 265px;
+  } //medium
 `;
 
 export default BoothCard;

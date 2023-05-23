@@ -21,6 +21,10 @@ import foodtruck from "../../../assets/clubImg/foodtruck.png";
 import special from "../../../assets/clubImg/특수교육과.jpeg";
 import child from "../../../assets/clubImg/아동학과.jpg";
 import default_Img from "../../../assets/default_Img.png";
+import rightDetail from "../../../assets/clubImg/인권부스상세.jpg";
+import food from "../../../assets/clubImg/식영과부스.jpg";
+import foodDetail from "../../../assets/clubImg/식영과부스 상세.jpg";
+import shieldDetail from "../../../assets/clubImg/쉴드부스.jpg";
 
 function BoothDetail() {
   const Kim = [
@@ -75,23 +79,25 @@ function BoothDetail() {
       discript: "", //설명
       location: "2층",
       img: cine,
+      detailImg: cine,
       background: "white",
       color: "black",
     },
     {
       boothName: "MOD",
 
-      discript: "", //설명
+      discript: "😥상세정보를 받아오지 못했습니다", //설명
       location: "3층",
       img: mod,
+      detailImg: mod,
       background: "white",
       color: "black",
     },
     {
       boothName: "CDZ",
 
-      discript: "", //설명
-
+      discript: "😥상세정보를 받아오지 못했습니다", //설명
+      detailImg: cdz,
       location: "1층",
       img: cdz,
       background: "black",
@@ -102,17 +108,17 @@ function BoothDetail() {
       boothName: "가대사랑",
 
       discript: "", //설명
-
+      detailImg: catLove,
       location: "3층",
       img: catLove,
-      background: "#039ECC",
+      background: "white",
       color: "white",
     },
     {
       boothName: "애니캣",
 
       discript: "", //설명
-
+      detailImg: anicat,
       location: "3층",
       img: anicat,
       background: "#006547",
@@ -121,8 +127,8 @@ function BoothDetail() {
     {
       boothName: "까리따스",
 
-      discript: "", //설명
-
+      discript: "😥상세정보를 받아오지 못했습니다", //설명
+      detailImg: caritas,
       location: "3층",
       img: caritas,
       background: "white",
@@ -131,8 +137,8 @@ function BoothDetail() {
     {
       boothName: "포쿠",
 
-      discript: "", //설명
-
+      discript: "😥상세정보를 받아오지 못했습니다", //설명
+      detailImg: default_Img,
       location: "3층",
       img: default_Img,
       background: "#CD7988",
@@ -141,8 +147,8 @@ function BoothDetail() {
     {
       boothName: "성심극연구회",
 
-      discript: "", //설명
-
+      discript: "😥상세정보를 받아오지 못했습니다", //설명
+      detailImg: show,
       location: "3층",
       img: show,
       background: "white",
@@ -151,9 +157,9 @@ function BoothDetail() {
     {
       boothName: "인권위원회",
 
-      discript:
-        "사은품: 솜사탕과 간단한 간식\n참여방법: 구글 폼 작성\n온라인으로 참여 후 폼 화면을 보여주세요!", //설명
-
+      discript: "",
+      // "사은품: 솜사탕과 간단한 간식\n참여방법: 구글 폼 작성\n온라인으로 참여 후 폼 화면을 보여주세요!", //설명
+      detailImg: rightDetail,
       location: "3층",
       img: peopleRight,
       background: "#FFF6E0",
@@ -162,8 +168,8 @@ function BoothDetail() {
     {
       boothName: "JOY",
 
-      discript: "", //설명
-
+      discript: "😥상세정보를 받아오지 못했습니다", //설명
+      detailImg: joy,
       location: "3층",
       img: joy,
       background: "#18D8FF",
@@ -172,8 +178,8 @@ function BoothDetail() {
     {
       boothName: "CCC",
 
-      discript: "", //설명
-
+      discript: "😥상세정보를 받아오지 못했습니다", //설명
+      detailImg: ccc,
       location: "3층",
       img: ccc,
       background: "#F7CBCB",
@@ -184,7 +190,7 @@ function BoothDetail() {
 
       discript:
         "아이스티 2000원\n쫀드기튀김 2000원\n치킨볼 3000원\n가격은 변동 될수 있습니다.", //설명
-
+      detailImg: default_Img,
       location: "3층",
       img: special,
       background: "white",
@@ -196,15 +202,15 @@ function BoothDetail() {
       discript: "", //설명
 
       location: "3층",
-      img: default_Img,
-
-      background: "#CD7988",
+      img: food,
+      detailImg: foodDetail,
+      background: "#C7EEFF",
       color: "white",
     },
     {
       boothName: "아이섹",
       discript: "", //설명
-
+      detailImg: aisec,
       location: "3층",
       img: aisec,
       background: "#5C449C",
@@ -214,7 +220,7 @@ function BoothDetail() {
       boothName: "가홍이",
 
       discript: "", //설명
-
+      detailImg: cahong,
       location: "3층",
       img: cahong,
       background: "white",
@@ -223,8 +229,8 @@ function BoothDetail() {
     {
       boothName: "캣팩토리",
 
-      discript: "", //설명
-
+      discript: "😥상세정보를 받아오지 못했습니다", //설명
+      detailImg: catfactory,
       location: "3층",
       img: catfactory,
       background: "white",
@@ -233,8 +239,8 @@ function BoothDetail() {
     {
       boothName: "COMA",
 
-      discript: "", //설명
-
+      discript: "😥상세정보를 받아오지 못했습니다", //설명
+      detailImg: coma,
       location: "3층",
       img: coma,
       background: "white",
@@ -244,7 +250,7 @@ function BoothDetail() {
       boothName: "호우회",
 
       discript: "", //설명
-
+      detailImg: history,
       location: "3층",
       img: history,
       background: "#F6D9DE",
@@ -252,19 +258,18 @@ function BoothDetail() {
     },
     {
       boothName: "쉴드",
-
-      discript: "", //설명
-
+      discript: "",
       location: "3층",
-      img: shield,
-      background: "black",
-      color: "white",
+      img: shieldDetail,
+      detailImg: shieldDetail,
+      background: "#404040",
+      color: "black",
     },
     {
       boothName: "아동학과",
 
       discript: "", //설명
-
+      detailImg: child,
       location: "3층",
       img: child,
       background: "#FCCCBE",

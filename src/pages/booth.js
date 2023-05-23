@@ -25,14 +25,14 @@ function Booth() {
   const handlePrevSlide = () => {
     const slideContainer = document.getElementById("slide-container");
     if (slideContainer) {
-      slideContainer.scrollLeft -= slideContainer.clientWidth * 1.1 + 5;
+      slideContainer.scrollLeft -= 400;
     }
   };
   // 다음 슬라이드 이동 함수
   const handleNextSlide = () => {
     const slideContainer = document.getElementById("slide-container");
     if (slideContainer) {
-      slideContainer.scrollLeft += slideContainer.clientWidth * 1.05 + 5;
+      slideContainer.scrollLeft += 400;
     }
   };
 
@@ -100,10 +100,10 @@ const Img = styled.div`
   width: 500px;
   height: 500px;
   @media (min-width: 350px) and (max-width: 720px) {
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
     margin-right: 20%;
-    padding-top: 100px;
+    padding-top: 50px;
   }
   @media (min-width: 721px) and (max-width: 1080px) {
     width: 300px;
