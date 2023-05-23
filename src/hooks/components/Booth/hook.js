@@ -3,7 +3,8 @@ import catLove from "../../../assets/clubImg/가대사랑부스.jpg";
 import caritas from "../../../assets/clubImg/까리따스.jpg";
 import show from "../../../assets/clubImg/성심극.jpg";
 import peopleRight from "../../../assets/clubImg/인권부스.jpg";
-import history from "../../../assets/clubImg/호우회부스.jpg";
+import history from "../../../assets/clubImg/호우회.jpg";
+import historyDetail from "../../../assets/clubImg/호우회부스.jpg";
 import aisec from "../../../assets/clubImg/아이섹부스.jpg";
 import cahong from "../../../assets/clubImg/가홍이부스.jpg";
 import catfactory from "../../../assets/clubImg/catfactory.jpg";
@@ -250,7 +251,7 @@ function BoothDetail() {
       boothName: "호우회",
 
       discript: "", //설명
-      detailImg: history,
+      detailImg: historyDetail,
       location: "3층",
       img: history,
       background: "#F6D9DE",
