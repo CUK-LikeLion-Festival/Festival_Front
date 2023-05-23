@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import BarModal from "../Modals/BarModal";
 import Department from "../../assets/department.png";
+import Foodtruck from "../../assets/foodtruck.png";
 
 function BarList() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -39,7 +40,7 @@ function BarList() {
             }}
             closeButton={"창 닫기"}
           >
-            <BarImage />
+            {activeIndex === 0 ? <BarImage /> : <FoodTruckImage />}
           </BarModal>
         )}
       </Container>
@@ -70,7 +71,7 @@ function BarList() {
   );
 }
 
-const bars = ["주점 배치보기"];
+const bars = ["주점 배치보기", "푸드트럭"];
 
 const BarContainer = styled.div`
   ul {
@@ -121,6 +122,23 @@ const Container = styled.div`
 `;
 
 const BarImage = styled.img.attrs({ src: `${Department}` })`
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @media (min-width: 350px) and (max-width: 720px) {
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+  }
+  @media (min-width: 721px) {
+    max-height: 100vh;
+    width: auto;
+    height: auto;
+  }
+`;
+
+const FoodTruckImage = styled.img.attrs({ src: `${Foodtruck}` })`
   max-width: 100%;
   width: 100%;
   height: 100%;

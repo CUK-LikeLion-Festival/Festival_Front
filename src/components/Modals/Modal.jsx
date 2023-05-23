@@ -12,7 +12,7 @@ const NoticeModal = (props) => {
     >
       {open ? (
         <section className="w-11/12 max-w-sm mx-auto rounded-md bg-white shadow-lg overflow-hidden animate-modal-show">
-          <header className="relative px-4 py-2 bg-gray-200 text-2xl font-bold text-center">
+          <header className="relative px-4 py-2 bg-gray-200 text-2xl font-bold text-center sm:text-xl sm:py-0">
             {header}
             <button
               className="absolute top-[12px] right-2 w-6 h-6 text-xl font-bold text-gray-500 bg-transparent"
@@ -21,7 +21,7 @@ const NoticeModal = (props) => {
               <FaTimes color="red" />
             </button>
           </header>
-          <main className="px-4 py-6 border-t border-b border-gray-300">
+          <main className="px-4 py-6 border-t border-b border-gray-300 sm:py-3">
             {props.children}
           </main>
           <footer className="px-4 py-3 flex justify-between">

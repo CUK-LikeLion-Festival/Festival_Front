@@ -21,21 +21,23 @@ const TimeTable = () => {
   };
 
   return (
-    <div className="mt-10 overflow-hidden">
-      <Slider {...settings}>
-        <div className=" ml-[640px] xl:mt-[50px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
-          <WednesDayTimeTable />
-        </div>
-        <div className="ml-[640px] xl:mt-[80px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
-          <ThursDayDay />
-        </div>
-        <div className="ml-[640px] xl:mt-[50px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
-          <ThursDayNight />
-        </div>
-        <div>
-          <LineUp />
-        </div>
-      </Slider>
+    <div>
+      <div className="mt-2  overflow-hidden">
+        <Slider {...settings}>
+          <div className=" ml-[640px] xl:mt-[50px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
+            <WednesDayTimeTable />
+          </div>
+          <div className="ml-[640px] xl:mt-[80px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
+            <ThursDayDay />
+          </div>
+          <div className="ml-[640px] xl:mt-[50px] sm:ml-0 md:ml-[300px] md:mt-[80px] ">
+            <ThursDayNight />
+          </div>
+          <div>
+            <LineUp />
+          </div>
+        </Slider>
+      </div>
     </div>
   );
 };

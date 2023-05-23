@@ -14,13 +14,13 @@ const Header = () => {
           data-collapse-toggle="navbar-hamburger"
           onClick={toggleMenu}
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400  dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 ml-3 text-xl text-gray-500 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400  dark:focus:ring-gray-600"
           aria-controls="navbar-hamburger"
           aria-expanded={isMenuOpen ? "true" : "false"}
         >
           <span className="sr-only">Open main menu</span>
           <svg
-            className="w-6 h-6"
+            className="w-10 h-10 text-white"
             aria-hidden="true"
             fill="currentColor"
             viewBox="0 0 20 20"
