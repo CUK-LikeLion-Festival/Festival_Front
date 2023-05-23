@@ -182,7 +182,8 @@ function BoothDetail() {
     {
       boothName: "특수교육과",
 
-      discript: "", //설명
+      discript:
+        "아이스티 2000원\n쫀드기튀김 2000원\n치킨볼 3000원\n가격은 변동 될수 있습니다.", //설명
 
       location: "3층",
       img: special,
