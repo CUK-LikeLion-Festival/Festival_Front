@@ -25,14 +25,14 @@ function Booth() {
   const handlePrevSlide = () => {
     const slideContainer = document.getElementById("slide-container");
     if (slideContainer) {
-      slideContainer.scrollLeft -= slideContainer.clientWidth * 1.1 + 5;
+      slideContainer.scrollLeft -= 400;
     }
   };
   // 다음 슬라이드 이동 함수
   const handleNextSlide = () => {
     const slideContainer = document.getElementById("slide-container");
     if (slideContainer) {
-      slideContainer.scrollLeft += slideContainer.clientWidth * 1.05 + 5;
+      slideContainer.scrollLeft += 400;
     }
   };
 
