@@ -72,7 +72,7 @@ function BoothDetail() {
   const Plaza = [
     {
       boothName: "씨네필",
-      discript: "준비중", //설명
+      discript: "", //설명
       location: "2층",
       img: cine,
       background: "white",
@@ -81,7 +81,7 @@ function BoothDetail() {
     {
       boothName: "MOD",
 
-      discript: "준비중", //설명
+      discript: "", //설명
       location: "3층",
       img: mod,
       background: "white",
@@ -90,7 +90,7 @@ function BoothDetail() {
     {
       boothName: "CDZ",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "1층",
       img: cdz,
@@ -101,7 +101,7 @@ function BoothDetail() {
     {
       boothName: "가대사랑",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: catLove,
@@ -111,7 +111,7 @@ function BoothDetail() {
     {
       boothName: "애니캣",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: anicat,
@@ -121,7 +121,7 @@ function BoothDetail() {
     {
       boothName: "까리따스",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: caritas,
@@ -131,7 +131,7 @@ function BoothDetail() {
     {
       boothName: "포쿠",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: default_Img,
@@ -141,7 +141,7 @@ function BoothDetail() {
     {
       boothName: "성심극연구회",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: show,
@@ -151,7 +151,7 @@ function BoothDetail() {
     {
       boothName: "인권위원회",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: peopleRight,
@@ -161,7 +161,7 @@ function BoothDetail() {
     {
       boothName: "JOY",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: joy,
@@ -171,7 +171,7 @@ function BoothDetail() {
     {
       boothName: "CCC",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: ccc,
@@ -181,7 +181,7 @@ function BoothDetail() {
     {
       boothName: "특수교육과",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: special,
@@ -191,7 +191,7 @@ function BoothDetail() {
     {
       boothName: "식품영양학과",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: default_Img,
@@ -201,7 +201,7 @@ function BoothDetail() {
     },
     {
       boothName: "아이섹",
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: aisec,
@@ -211,7 +211,7 @@ function BoothDetail() {
     {
       boothName: "가홍이",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: cahong,
@@ -221,7 +221,7 @@ function BoothDetail() {
     {
       boothName: "캣팩토리",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: catfactory,
@@ -231,7 +231,7 @@ function BoothDetail() {
     {
       boothName: "COMA",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: coma,
@@ -241,7 +241,7 @@ function BoothDetail() {
     {
       boothName: "호우회",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: history,
@@ -251,7 +251,7 @@ function BoothDetail() {
     {
       boothName: "쉴드",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: shield,
@@ -261,7 +261,7 @@ function BoothDetail() {
     {
       boothName: "아동학과",
 
-      discript: "준비중", //설명
+      discript: "", //설명
 
       location: "3층",
       img: child,
