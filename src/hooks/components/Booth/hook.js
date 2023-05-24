@@ -11,7 +11,6 @@ import catfactory from "../../../assets/clubImg/catfactory.jpg";
 import ccc from "../../../assets/clubImg/ccc.png";
 import coma from "../../../assets/clubImg/coma.png";
 import joy from "../../../assets/clubImg/joy.jpg";
-import shield from "../../../assets/clubImg/shield.jpeg";
 import cine from "../../../assets/clubImg/씨네필부스.jpg";
 import mod from "../../../assets/clubImg/mod 부스.jpg";
 import anicat from "../../../assets/clubImg/애니캣 부스.jpg";
@@ -27,6 +26,9 @@ import rightDetail from "../../../assets/clubImg/인권부스상세.jpg";
 import food from "../../../assets/clubImg/식영과부스.jpg";
 import foodDetail from "../../../assets/clubImg/식영과부스 상세.jpg";
 import shieldDetail from "../../../assets/clubImg/쉴드부스.jpg";
+import playDetail from "../../../assets/clubImg/성심극부스.jpg";
+import cloth from "../../../assets/clubImg/의류학과.jpg";
+import clothDetail from "../../../assets/clubImg/의류학과부스.jpg";
 
 function BoothDetail() {
   const Kim = [
@@ -148,8 +150,8 @@ function BoothDetail() {
     {
       boothName: "성심극연구회",
 
-      discript: "😥상세정보를 받아오지 못했습니다", //설명
-      detailImg: show,
+      discript: "", //설명
+      detailImg: playDetail,
       location: "3층",
       img: show,
       background: "white",
@@ -240,7 +242,7 @@ function BoothDetail() {
     {
       boothName: "COMA",
 
-      discript: "😥상세정보를 받아오지 못했습니다", //설명
+      discript: "더티소다 판매예정🥤", //설명
       detailImg: coma,
       location: "3층",
       img: coma,
@@ -274,6 +276,16 @@ function BoothDetail() {
       location: "3층",
       img: child,
       background: "#FCCCBE",
+      color: "white",
+    },
+    {
+      boothName: "의류학과",
+
+      discript: "", //설명
+      detailImg: clothDetail,
+      location: "3층",
+      img: cloth,
+      background: "#3F55A1",
       color: "white",
     },
   ];

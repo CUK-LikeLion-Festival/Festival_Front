@@ -25,7 +25,7 @@ function ModalDetail() {
     },
     {
       title: "기숙사 통금시간",
-      description: ["1일차 : 기존 01시 유지", "2일차 : 02:00까지"],
+      description: ["1일차 : 02:00까지", "2일차 : 02:00까지"],
     },
   ];
   return { data };
