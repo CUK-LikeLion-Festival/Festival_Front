@@ -12,19 +12,19 @@ export default function Stamp() {
         marginTop: "-30px",
       }}
     >
-      <div className="flex text-white justify-center my-10 text-5xl font-bold sm:text-3xl sm:my-20">
+      <div className="flex text-white justify-center my-10 text-5xl font-bold sm:text-3xl sm:my-10 ">
         <h2 className="text-white">{data.title}</h2>
       </div>
-      <div className="flex flex-row justify-center sm:flex-col md:flex-col ">
+      <div className="flex flex-row justify-center  sm:flex-col md:flex-col ">
         <img
           src={StampMain}
           alt="StampMain"
-          className={`object-contain w-1/3 h-1/3 sm:w-full sm:mb-5 md:w-full md:mb-5`}
+          className={`object-contain w-1/3 h-1/3 sm:w-full sm:mb-10 md:w-full md:mb-5`}
         />
         <img
           src={StampMap}
           alt="StampMap"
-          className={`object-contain w-1/3 h-1/3 sm:w-full sm:mb-5 md:w-full md:mb-5`}
+          className={`object-contain w-1/3 h-1/3 sm:w-full sm:mb-10 md:w-full md:mb-5`}
         />
       </div>
     </div>
